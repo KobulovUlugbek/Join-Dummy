@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.join-icon {
+    color: white !important;
+}
+
+.header-left {
+    width: 20%;
+    height: 100%;
+    background-color: #2B3647;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-left a {
+    color: #C1C5CB;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.med-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+.med-container a {
+    margin-bottom: 15px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-weight: 300;
+}
+
+.legal-notice a {
+    margin-bottom: 15px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 300;
+}
+
+.med-container a:hover {
+    background-color: #081931;
+    color: white;
+}
+
+.legal-notice a:hover {
+    background-color: #081931;
+    color: white;
+}
+
+.header-right {
+    background-color: #F6F7F8;
+    width: 80%;
+    height: 100%;
+}
+
+/* Rechte Seite von der Container */
+
+
+.header {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 25px;
+    background-color: white;
+}
+
+.symbol{
+    width: 28px;
+}
+
+.profilbild {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 2px rgb(5, 5, 5);
+    padding: 2px;
+    background-color: rgb(248, 248, 248);
+}
+.summary{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.summary-80{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.summary h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.summary h3{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.strich{
+    width: 3px;
+    background-color:#28ABE2;
+    height: 60px;
+}
+.strich-gray{
+    width: 2px;
+    background-color:#DDDDDD;
+    height: 80px;
+}
+
+
+.boards-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform .2s;
+}
+
+.box1:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 170px;
+    height: 140px;
+}
+.box2:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 170px;
+    height: 140px;
+}
+
+.box3:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 170px;
+    height: 140px;
+}
+
+.box4:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 420px;
+    height: 135px;
+}
+.box5:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 213px;
+    height: 135px;
+}
+.box6:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 213px;
+    height: 135px;
+}
+
+
+.box{
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 2px;
+    font-weight: bolder;
+}
+.number{
+    font-weight: bolder;
+}
+.boards h4{
+    margin: 0;
+    font-weight: 100;
+    word-wrap: break-word;
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform .2s;
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform .2s;
+}
+
+.board-1{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   width: 80%;
+}
+
+.greeting p{
+    font-size: 30px;
+}
+.greeting {
+    display: inline-block;
+    vertical-align: top;
+}
+.board-2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.box4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 415px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    transition: transform .2s;
+    margin: 30px 0px 30px 0px;  
+    text-decoration: none;  
+    gap: 20px;
+    color:black ;
+}
+
+.box4 img{
+    height: 50px;
+}
+.box6 img{
+    height: 50px;
+}
+.box5 img{
+    height: 50px;
+}
+.number{
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+.board-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.box5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 207px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    transition: transform .2s;
+    gap: 20px;
+}
+.box6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 208px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border-radius: 20px;
+    transition: transform .2s;
+    gap: 20px;
+}
+
+
+
