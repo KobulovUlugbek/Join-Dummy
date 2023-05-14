@@ -163,12 +163,16 @@ body {
     color:white;
     width: 170px;
     height: 140px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
 }
 .box2:hover{
     background-color: #2B3647;
     color:white;
     width: 170px;
     height: 140px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
 }
 
 .box3:hover{
@@ -176,6 +180,8 @@ body {
     color:white;
     width: 170px;
     height: 140px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
 }
 
 .box4:hover{
@@ -183,20 +189,9 @@ body {
     color:white;
     width: 420px;
     height: 135px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
 }
-.box5:hover{
-    background-color: #2B3647;
-    color:white;
-    width: 213px;
-    height: 135px;
-}
-.box6:hover{
-    background-color: #2B3647;
-    color:white;
-    width: 213px;
-    height: 135px;
-}
-
 
 .box{
     font-size: 40px;
@@ -330,5 +325,28 @@ body {
     gap: 20px;
 }
 
+div.box5:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 213px;
+    height: 135px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
+}
 
+div.box5:hover .change-color{
+    filter: contrast(300%) invert(1);
+}
 
+div.box6:hover{
+    background-color: #2B3647;
+    color:white;
+    width: 213px;
+    height: 135px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
+}
+
+div.box6:hover .change-color{
+    filter: contrast(300%) invert(1);
+}
