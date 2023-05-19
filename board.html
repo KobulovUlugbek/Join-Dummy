@@ -6,175 +6,256 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join-Dummy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/add-task.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+    <div class="main">
+        <div class="main-container">
 
-    <div class="main-container">
+            <div class="header-left"> <!-- hier ist die linke Seite der Webseits -->
+                <div>
+                    <a href=""><img class="join-icon" src="img/Join-icon.png" alt=""></a>
+                </div>
 
-        <div class="header-left"> <!-- hier ist die linke Seite der Webseits -->
-            <div>
-                <a href=""><img class="join-icon" src="img/Join-icon.png" alt=""></a>
+                <div class="med-container">
+                    <a href=""><img src="img/summary-icon.png" alt=""> Summary</a>
+                    <a href=""><img src="img/board-icon.png" alt=""> Board</a>
+                    <a href=""><img src="img/add-task-icon.png" alt=""> Add Task</a>
+                    <a href=""><img src="img/contacts-icon.png" alt=""> Contacts</a>
+                </div>
+
+                <div class="legal-notice">
+                    <a href=""><img src="img/legal-notice-icon.png" alt=""> Legal notice</a>
+                </div>
             </div>
 
-            <div class="med-container">
-                <a href=""><img src="img/summary-icon.png" alt=""> Summary</a>
-                <a href=""><img src="img/board-icon.png" alt=""> Board</a>
-                <a href=""><img src="img/add-task-icon.png" alt=""> Add Task</a>
-                <a href=""><img src="img/contacts-icon.png" alt=""> Contacts</a>
+
+
+
+            <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
+
+                <div class="header">
+                    <a href=""><img class="symbol" src="img/f-zeich-neben-profil.png" alt=""></a>
+                    <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild"></a>
+                </div>
+
+
+                <div class="board">
+
+                    <h1>Board</h1>
+
+                    <div class="inp-container">
+
+                        <input class="find-task-input" type="text" placeholder="Find Task" maxlength="12">
+                        <div class="strich-gray2"></div>
+                        <img class="search-icon" src="img/search-icon.png" alt="">
+                        <button onclick="openPopup()" class="add-task-btn">Add task <b class="plus">+</b></button>
+                    </div>
+                </div>
+
+
+                <div class="add-task-container">
+                    <button>
+                        <p>To do</p>
+                        <img class="change-color2" src="img/plus-button.png" alt="">
+                    </button>
+
+                    <button>
+                        <p>In progress</p>
+                        <img class="change-color2" src="img/plus-button.png" alt="">
+                    </button>
+
+                    <button>
+                        <p>Awaiting Feedback</p>
+                        <img class="change-color2" src="img/plus-button.png" alt="">
+                    </button>
+
+                    <button>
+                        <p>Done</p>
+                        <img class="change-color2" src="img/plus-button.png" alt="">
+                    </button>
+                </div>
+
+
+                <div class="box-container">
+
+                    <div class="child-container-1">
+                        <button>Design</button>
+
+                        <p>Website redesign</p>
+
+                        <h4>Modify the contens of the main website...</h4>
+                        <div class="progressbar-container">
+                            <div class="progressbar"></div>
+                            <p>1/2 Done</p>
+                        </div>
+                        <div class="icon-container">
+                            <div>
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                            </div>
+                            <div>
+                                <img src="img/urgent-icon4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="child-container-2">
+                        <button>Design</button>
+
+                        <p>Website redesign</p>
+
+                        <h4>Modify the contens of the main website...</h4>
+                        <div class="progressbar-container">
+                            <div class="progressbar"></div>
+                            <p>1/2 Done</p>
+                        </div>
+                        <div class="icon-container">
+                            <div>
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                            </div>
+                            <div>
+                                <img src="img/urgent-icon4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="child-container-3">
+                        <button>Design</button>
+
+                        <p>Website redesign</p>
+
+                        <h4>Modify the contens of the main website...</h4>
+                        <div class="progressbar-container">
+                            <div class="progressbar"></div>
+                            <p>1/2 Done</p>
+                        </div>
+                        <div class="icon-container">
+                            <div>
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                            </div>
+                            <div>
+                                <img src="img/urgent-icon4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="child-container-4">
+                        <button>Design</button>
+
+                        <p>Website redesign</p>
+
+                        <h4>Modify the contens of the main website...</h4>
+                        <div class="progressbar-container">
+                            <div class="progressbar"></div>
+                            <p>1/2 Done</p>
+                        </div>
+                        <div class="icon-container">
+                            <div>
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                                <img class="profilbild2" src="img/profil-photo.png" alt="">
+                            </div>
+                            <div>
+                                <img src="img/urgent-icon4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="legal-notice">
-                <a href=""><img src="img/legal-notice-icon.png" alt=""> Legal notice</a>
-            </div>
         </div>
 
+        <div id="header-popup" class="header-popup">
 
+            <button onclick="closePopup()" class="close-btn">X</button>
 
+            <div>
+                <h1 class="add-task-h1">Add Task</h1>
 
-        <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
+                <div class="first-container">
 
-            <div class="header">
-                <a href=""><img class="symbol" src="img/f-zeich-neben-profil.png" alt=""></a>
-                <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild"></a>
-            </div>
+                    <div class="child-container-left">
 
-
-            <div class="board">
-
-                <h1>Board</h1>
-
-                <div class="inp-container">
-                    
-                    <input class="find-task-input" type="text" placeholder="Find Task" maxlength="12">
-                        <div class="strich-gray2"></div>
-                    <img class="search-icon" src="img/search-icon.png" alt="">
-                    <button class="add-task-btn">Add task <b class="plus">+</b></button>
-                </div>
-            </div>
-
-
-            <div class="add-task-container">
-                <button>
-                    <p>To do</p>
-                    <img class="change-color2" src="img/plus-button.png" alt="">
-                </button>
-            
-                <button>
-                    <p>In progress</p>
-                    <img class="change-color2" src="img/plus-button.png" alt="">
-                </button>
-            
-                <button>
-                    <p>Awaiting Feedback</p>
-                    <img class="change-color2" src="img/plus-button.png" alt="">
-                </button>
-            
-                <button>
-                    <p>Done</p>
-                    <img class="change-color2" src="img/plus-button.png" alt="">
-                </button>
-            </div>
-
-
-            <div class="box-container">
-
-                <div class="child-container-1">
-                    <button>Design</button>
-
-                    <p>Website redesign</p>
-
-                    <h4>Modify the contens of the main website...</h4>
-                    <div class="progressbar-container">
-                        <div class="progressbar"></div>
-                        <p>1/2 Done</p>
-                    </div>
-                    <div class="icon-container">
                         <div>
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
+                            <h4>Title</h4>
+                            <input class="title" type="text" placeholder="Enter a title">
                         </div>
+
                         <div>
-                            <img src="img/urgent-icon4.png" alt="">
+                            <h4>Description</h4>
+                            <textarea class="description" rows="6" cols="32"
+                                placeholder="Enter a Description"></textarea>
+                        </div>
+
+                        <div>
+                            <h4>Category</h4>
+                            <input class="category" type="text" placeholder="Enter a category">
+                        </div>
+
+                        <div>
+                            <h4>Assigned to</h4>
+                            <input class="category2" type="text" placeholder="Enter a category">
                         </div>
                     </div>
-                </div>
 
-                <div class="child-container-2">
-                    <button>Design</button>
 
-                    <p>Website redesign</p>
+                    <div class="strich-gray3"></div>
 
-                    <h4>Modify the contens of the main website...</h4>
-                    <div class="progressbar-container">
-                        <div class="progressbar"></div>
-                        <p>1/2 Done</p>
-                    </div>
-                    <div class="icon-container">
-                        <div>
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
+
+                    <div class="child-container-right">
+
+                        <div class="right1">
+
+                            <div>
+                                <h4>Due Date</h4>
+                                <input class="title" type="date" placeholder="Enter a date">
+                            </div>
+
+                            <div>
+                                <h4>Priority</h4>
+                                <div class="difficulty-level">
+                                    <button class="add-task-btn2">Urgent <b class="plus"></b></button>
+                                    <button class="add-task-btn2">Medium <b class="plus"></b></button>
+                                    <button class="add-task-btn2">Low <b class="plus"></b></button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4>Subtasks</h4>
+                                <input class="title" type="text" placeholder="Add new subtask">
+                            </div>
+
                         </div>
-                        <div>
-                            <img src="img/urgent-icon4.png" alt="">
+
+                        <div class="right2">
+                            <button class="add-task-btn3">Cancel <b class="plus">-</b></button>
+                            <button class="add-task-btn3">Create Task <b class="plus">+</b></button>
                         </div>
+
                     </div>
-                </div>
 
-                <div class="child-container-3">
-                    <button>Design</button>
-
-                    <p>Website redesign</p>
-
-                    <h4>Modify the contens of the main website...</h4>
-                    <div class="progressbar-container">
-                        <div class="progressbar"></div>
-                        <p>1/2 Done</p>
-                    </div>
-                    <div class="icon-container">
-                        <div>
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                        </div>
-                        <div>
-                            <img src="img/urgent-icon4.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="child-container-4">
-                    <button>Design</button>
-
-                    <p>Website redesign</p>
-
-                    <h4>Modify the contens of the main website...</h4>
-                    <div class="progressbar-container">
-                        <div class="progressbar"></div>
-                        <p>1/2 Done</p>
-                    </div>
-                    <div class="icon-container">
-                        <div>
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                            <img class="profilbild2" src="img/profil-photo.png" alt="">
-                        </div>
-                        <div>
-                            <img src="img/urgent-icon4.png" alt="">
-                        </div>
-                    </div>
                 </div>
 
             </div>
+
 
         </div>
 
     </div>
 
+    <script src="js/add-task.js"></script>
 </body>
 
 </html>

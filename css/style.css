@@ -363,13 +363,15 @@ div.box6:hover .change-color{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 68px;
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 70px;
 }
 
 .board h1{
     font-size: 45px;
+    font-weight: 600;
 }
 .find-task-input{
     font-size: 22px;
