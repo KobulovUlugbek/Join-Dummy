@@ -1,232 +1,218 @@
+/* Popup window */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .popup-window {
-    width: 100vw;
-    height: 100vh;
-    background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
 }
 
 .header-popup {
-    width: 75%;
-    height: 80%;
-    background-color:white;
-    padding: 10px;
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    right: 10%;
-    border-radius: 30px;
-     /* versteckt das Popup am Anfang */
-     transform: translate(50%, -50%) scale(1);
-     padding: 0 30px 30px;
-     visibility: hidden;
-     transition: transform 0.6s, right 0.6s;
-     /* füge right zur transition hinzu */
+  width: 75%;
+  height: 80%;
+  background-color: white;
+  padding: 10px;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  border-radius: 30px;
+  transform: translate(50%, -50%) scale(1);
+  padding: 0 30px 30px;
+  visibility: hidden;
+  transition: transform 0.6s, right 0.6s;
 }
 
 .close-btn {
-    font-weight: bolder;
-    border: none;
-    font-size: 20px;
-    background-color: transparent;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 31px;
-    margin-top: 21px;
+  font-weight: bolder;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 31px;
+  margin-top: 21px;
 }
 
 .add-task-h1 {
-    font-size: 45px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 40px;
-    margin-top: 40px;
+  font-size: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
 .strich-gray3 {
-    width: 1.5px;
-    background-color: #DDDDDD;
-    height: 62vh;
+  width: 1.5px;
+  background-color: #DDDDDD;
+  height: 62vh;
 }
 
 .first-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 .child-container-left {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 40%;
 }
-
 .child-container-left h4 {
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.child-container-right h4 {
-    margin-bottom: 5px;
-    font-weight: 500;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .child-container-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.child-container-right h4 {
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .right1 {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .right2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .title {
-    width: 98%;
-    height: 80%;
-    border-radius: 10px;
-    padding: 0px 2px 2px 12px;
-    border: solid 1px;
-    border-color: rgb(195, 189, 189);
+  width: 98%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 0px 2px 2px 12px;
+  border: solid 1px;
+  border-color: rgb(195, 189, 189);
+}
+.title:focus {
+  outline: none;
 }
 
 .description {
-    width: 98%;
-    height: 90%;
-    border-radius: 10px;
-    padding: 10px 2px 2px 12px;
-    border: solid 1px;
-    border-color: rgb(195, 189, 189);
-    resize: none;
+  width: 98%;
+  height: 90%;
+  border-radius: 10px;
+  padding: 10px 2px 2px 12px;
+  border: solid 1px;
+  border-color: rgb(195, 189, 189);
+  resize: none;
+}
+.description:focus {
+  outline: none;
 }
 
 .category {
-    width: 98%;
-    height: 80%;
-    border-radius: 10px;
-    padding: 0px 2px 2px 12px;
-    border: solid 1px;
-    border-color: rgb(195, 189, 189);
+  width: 98%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 0px 2px 2px 12px;
+  border: solid 1px;
+  border-color: rgb(195, 189, 189);
+}
+.category:focus {
+  outline: none;
 }
 
 .category2 {
-    width: 98%;
-    height: 80%;
-    border-radius: 10px;
-    padding: 0px 2px 2px 12px;
-    border: solid 1px;
-    border-color: rgb(195, 189, 189);
+  width: 98%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 0px 2px 2px 12px;
+  border: solid 1px;
+  border-color: rgb(195, 189, 189);
 }
-
-.title:focus {
-    outline: none;
-}
-
-.category:focus {
-    outline: none;
-}
-
 .category2:focus {
-    outline: none;
-}
-
-.description:focus {
-    outline: none;
+  outline: none;
 }
 
 .add-task-btn2 {
-    width: 85px;
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-    border-radius: 15px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    font-size: 15px;
+  width: 85px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  border-radius: 15px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  font-size: 15px;
 }
-
 .add-task-btn2:hover {
-    background-color: #fb5b5b;
-    transition: trasform ease-in-out 100ms;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    color: white;
+  background-color: #fb5b5b;
+  transition: trasform ease-in-out 100ms;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  color: white;
 }
 
 .difficulty-level {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .add-task-btn3 {
-    font-size: 17px;
-    width: 120px;
-    background-color: #2B3647;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 10px;
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    cursor: pointer;
+  font-size: 17px;
+  width: 120px;
+  background-color: #2B3647;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
 }
-
 .add-task-btn3:hover {
-    background-color: #2ebbda;
-    transition: trasform ease-in-out 100ms;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  background-color: #2ebbda;
+  transition: trasform ease-in-out 100ms;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
-
-/* Popup window */
 
 .popup {
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: fixed;
-    top: 50%;
-    right: -400px;
-    /* versteckt das Popup am Anfang */
-    transform: translate(50%, -50%) scale(1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, right 0.4s;
-    /* füge right zur transition hinzu */
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  right: -400px;
+  transform: translate(50%, -50%) scale(1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, right 0.4s;
 }
 
 .open-popup {
-    visibility: visible;
-    right: 50%;
-    /* ändere top auf right */
-    transform: translate(50%, -50%) scale(1);
+  visibility: visible;
+  right: 50%;
+  transform: translate(50%, -50%) scale(1);
 }
