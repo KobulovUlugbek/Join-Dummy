@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/login.css" />
+    </head>
+    <body>
+        <div class="login-header-container">
+            <img src="./img/Capa1.png" alt="" />
+            <div class="login-header-container-sign-up">
+                <span>Not a Join user?</span>
+                <button>Sign up</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="login-container">
+                <h1>Log in</h1>
+                <div class="log-in-underline"></div>
+                <form class="login-form-container">
+                    <input class="login-input" type="email" required placeholder="Email" style="background-image: url('./img/mail-icon.png')" />
+                    <input
+                        class="login-input"
+                        type="password"
+                        required
+                        placeholder="Password"
+                        style="background-image: url('./img/schloss-icon.png')" />
+                    <div class="remember-me-container">
+                        <input type="checkbox" />
+                        <span>Remember me</span>
+                        <span class="login-forgot-my-password">Forgot my password</span>
+                    </div>
+                    <div class="log-in-button-container">
+                        <button class="log-in-button">Log in</button>
+                        <button class="guest-log-in-button">Guest Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>
