@@ -1,0 +1,211 @@
+﻿$color_1: black;
+$color_2: white;
+$color_3: #333;
+$background-color_1: gray;
+$background-color_2: white;
+$background-color_3: transparent;
+$background-color_4: #DDDDDD;
+$background-color_5: #fb5b5b;
+$background-color_6: #2B3647;
+$background-color_7: #2ebbda;
+$border-color_1: rgb(195, 189, 189);
+
+/* Popup window */
+* {
+	margin: 0;
+	padding: 0;
+}
+.popup-window {
+	width: 100vw;
+	height: 100vh;
+	background-color: $background-color_1;
+}
+.header-popup {
+	width: 75%;
+	height: 80%;
+	background-color: $background-color_2;
+	padding: 10px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	right: 10%;
+	border-radius: 30px;
+	transform: translate(50%, -50%) scale(1);
+	padding: 0 30px 30px;
+	visibility: hidden;
+	transition: transform 0.6s, right 0.6s;
+}
+.close-btn {
+	font-weight: bolder;
+	border: none;
+	font-size: 20px;
+	background-color: $background-color_3;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 31px;
+	margin-top: 21px;
+}
+.add-task-h1 {
+	font-size: 45px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+.strich-gray3 {
+	width: 1.5px;
+	background-color: $background-color_4;
+	height: 62vh;
+}
+.first-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+.child-container-left {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 40%;
+	h4 {
+		margin-bottom: 5px;
+		font-weight: 500;
+	}
+}
+.child-container-right {
+	h4 {
+		margin-bottom: 5px;
+		font-weight: 500;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40%;
+}
+.right1 {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.right2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 10px;
+}
+.title {
+	width: 98%;
+	height: 80%;
+	border-radius: 10px;
+	padding: 0px 2px 2px 12px;
+	border: solid 1px;
+	border-color: $border-color_1;
+	&:focus {
+		outline: none;
+	}
+}
+.description {
+	width: 98%;
+	height: 90%;
+	border-radius: 10px;
+	padding: 10px 2px 2px 12px;
+	border: solid 1px;
+	border-color: $border-color_1;
+	resize: none;
+	&:focus {
+		outline: none;
+	}
+}
+.category {
+	width: 98%;
+	height: 80%;
+	border-radius: 10px;
+	padding: 0px 2px 2px 12px;
+	border: solid 1px;
+	border-color: $border-color_1;
+	&:focus {
+		outline: none;
+	}
+}
+.category2 {
+	width: 98%;
+	height: 80%;
+	border-radius: 10px;
+	padding: 0px 2px 2px 12px;
+	border: solid 1px;
+	border-color: $border-color_1;
+	&:focus {
+		outline: none;
+	}
+}
+.add-task-btn2 {
+	width: 85px;
+	background-color: $background-color_2;
+	color: $color_1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	border-radius: 15px;
+	border: solid 1px rgba(0, 0, 0, 0.1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	&:hover {
+		background-color: $background-color_5;
+		transition: trasform ease-in-out 100ms;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+		color: $color_2;
+	}
+}
+.difficulty-level {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.add-task-btn3 {
+	font-size: 17px;
+	width: 120px;
+	background-color: $background-color_6;
+	color: $color_2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: 10px;
+	border: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	cursor: pointer;
+	&:hover {
+		background-color: $background-color_7;
+		transition: trasform ease-in-out 100ms;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+	}
+}
+.popup {
+	width: 400px;
+	background: #fff;
+	border-radius: 6px;
+	position: fixed;
+	top: 50%;
+	right: -400px;
+	transform: translate(50%, -50%) scale(1);
+	text-align: center;
+	padding: 0 30px 30px;
+	color: $color_3;
+	visibility: hidden;
+	transition: transform 0.4s, right 0.4s;
+}
+.open-popup {
+	visibility: visible;
+	right: 50%;
+	transform: translate(50%, -50%) scale(1);
+}
