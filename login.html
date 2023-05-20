@@ -7,37 +7,77 @@
         <title>Login</title>
         <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/login.css" />
+        <script src="./js/login.js"></script>
     </head>
     <body>
         <div class="login-header-container">
             <img src="./img/Capa1.png" alt="" />
-            <div class="login-header-container-sign-up">
+            <div class="login-header-container-sign-up" id="login-sign-up-container">
                 <span>Not a Join user?</span>
-                <button>Sign up</button>
+                <button class="button-hover-lightblue" onclick="switchContainer('login-container', 'sign-up-container', 'login-sign-up-container')">
+                    Sign up
+                </button>
+            </div>
+            <div class="login-header-container-sign-up-hidden d-none" id="login-sign-up-container-hidden">
+                <span>Not a Join user?</span>
+                <button
+                    class="button-hover-lightblue"
+                    onclick="switchContainer('login-container', 'sign-up-container', 'login-sign-up-container-hidden')">
+                    Sign up
+                </button>
             </div>
         </div>
 
         <div class="container">
-            <div class="login-container">
-                <h1>Log in</h1>
+            <div class="login-container" id="login-container">
+                <h1 class="headline-one">Log in</h1>
                 <div class="log-in-underline"></div>
                 <form class="login-form-container">
-                    <input class="login-input" type="email" required placeholder="Email" style="background-image: url('./img/mail-icon.png')" />
-                    <input
-                        class="login-input"
-                        type="password"
-                        required
-                        placeholder="Password"
-                        style="background-image: url('./img/schloss-icon.png')" />
+                    <input class="inputs" type="email" required placeholder="Email" style="background-image: url('./img/mail-icon.png')" />
+                    <input class="inputs" type="password" required placeholder="Password" style="background-image: url('./img/schloss-icon.png')" />
                     <div class="remember-me-container">
                         <input type="checkbox" />
                         <span>Remember me</span>
-                        <span class="login-forgot-my-password">Forgot my password</span>
+                        <span
+                            onclick="switchContainer('login-container', 'forgot-my-password-container', 'login-sign-up-container', 'login-sign-up-container-hidden')"
+                            class="login-forgot-my-password"
+                            >Forgot my password</span
+                        >
                     </div>
                     <div class="log-in-button-container">
-                        <button class="log-in-button">Log in</button>
+                        <button class="dark-blue-button button-hover-lightblue">Log in</button>
                         <button class="guest-log-in-button">Guest Log in</button>
                     </div>
+                </form>
+            </div>
+            <div class="sign-up-container d-none" id="sign-up-container">
+                <img
+                    src="./img/Pfeil-links.png"
+                    onclick="backToLoginContainer('login-container', 'sign-up-container', 'login-sign-up-container-hidden')" />
+                <h1 class="headline-one">Sign up</h1>
+                <div class="log-in-underline"></div>
+                <form class="sign-up-form-container">
+                    <input class="inputs" type="text" placeholder="Name" required style="background-image: url('./img/user.png')" />
+                    <input class="inputs" type="email" placeholder="Email" required style="background-image: url('./img/mail-icon.png')" />
+                    <input class="inputs" type="password" placeholder="Password" required style="background-image: url('./img/schloss-icon.png')" />
+                    <div class="sign-up-button-container">
+                        <button class="dark-blue-button button-hover-lightblue">Sign up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="forgot-my-password-container d-none" id="forgot-my-password-container">
+                <img
+                    onclick="backToLoginContainer('login-container', 'forgot-my-password-container', 'login-sign-up-container-hidden')"
+                    src="./img/Pfeil-links.png" />
+                <h1 class="headline-one">I forgot my password</h1>
+                <div class="log-in-underline"></div>
+                <p>
+                    Don't worry! We will send you an email with the instructions to <br />
+                    reset your password.
+                </p>
+                <form class="forgot-my-password-form-container">
+                    <input type="email" class="inputs" placeholder="Email" required style="background-image: url('./img/mail-icon.png')" />
+                    <button class="button-hover-lightblue">Send me the email</button>
                 </form>
             </div>
         </div>
