@@ -32,7 +32,7 @@ body {
 }
 
 .login-header-container-sign-up {
-    opacity: 0;
+    opacity: 0; 
     animation: fadeIn 0.5s ease-in forwards 1.2s;
 }
 
