@@ -151,7 +151,7 @@
 }
 
 .add-task-btn2 {
-  width: 85px;
+  width: 95px;
   background-color: white;
   color: black;
   display: flex;
@@ -161,8 +161,8 @@
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   border-radius: 10px;
   border: solid 1px rgba(0, 0, 0, 0.1);
-  padding: 8px 50px 8px 50px;
   cursor: pointer;
+  padding: 8px 40px 8px 40px;
   font-size: 15px;
 }
 .add-task-btn2:hover {
@@ -267,4 +267,16 @@
   display: flex;
   flex-direction: column;
   margin: 0px 30px 0px 30px;
+}
+.checkbox1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.checkbox1 h5{
+  margin: 0;
+  font-weight: lighter;
+  font-family:Arial, Helvetica, sans-serif;
 }

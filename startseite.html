@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 
-<body>
+<body onload="date(), actualDate()">
 
     <div class="main-container">
 
@@ -86,7 +86,7 @@
                             <div class="strich-gray"></div> <!-- hier kommt ein grauer Stricht -->
 
                             <div>
-                                <p>Hier kommt aktueller Datum</p>
+                                <p id="todays-date">Hier kommt aktueller Datum</p>
                                 <h4>Upcoming Deadline</h4>
                             </div>
                         </a>
@@ -121,7 +121,7 @@
 
 
                 <div class="greeting">
-                    <p>Good Morning,</p>
+                    <p id="greeting">Good Morning,</p>
                     <h1 class="g-name">Ulugbek</h1>
                 </div>
 
@@ -132,7 +132,8 @@
         </div>
 
     </div>
-
+    
+<script src="js/date.js"></script>
 </body>
 
 </html>

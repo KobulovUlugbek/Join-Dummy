@@ -649,3 +649,9 @@ div.box6:hover .change-color{
 .g-name{
     color: #28ABE2;
 }
+
+#todays-date{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
