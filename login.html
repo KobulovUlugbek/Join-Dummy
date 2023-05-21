@@ -8,7 +8,7 @@
         <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/login.css" />
     </head>
-    <body onload="deleteAnimations()">
+    <body onload="init()">
         <div class="login-header-container">
             <img src="./img/Capa1.png" class="move-logo-animation" />
             <div class="login-header-container-sign-up" id="login-sign-up-container">
@@ -42,7 +42,7 @@
                         id="log-in-password" />
                     <span id="user-not-found" class="user-not-found d-none">Error: Invalid username or password.</span>
                     <div class="remember-me-container">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="login-checkbox" />
                         <span>Remember me</span>
                         <span
                             onclick="switchContainer('login-container', 'forgot-my-password-container', 'login-sign-up-container')"
@@ -99,7 +99,9 @@
                 </form>
             </div>
         </div>
-        <script src="./js/register.js"></script>
+
+        <script src="./js/backend.js"></script>
         <script src="./js/login.js"></script>
+        <script src="./js/register.js"></script>
     </body>
 </html>
