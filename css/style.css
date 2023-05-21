@@ -89,7 +89,7 @@ body {
     background-color: white;
 }
 
-.symbol{
+.symbol {
     width: 28px;
 }
 
@@ -101,13 +101,14 @@ body {
     padding: 2px;
     background-color: rgb(248, 248, 248);
 }
-.summary{
+
+.summary {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.summary-80{
+.summary-80 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -115,28 +116,30 @@ body {
     margin-left: 50px;
 }
 
-.summary h1{
+.summary h1 {
     font-size: 60px;
     font-weight: 600;
 }
-.summary h3{
+
+.summary h3 {
     font-size: 20px;
     font-weight: 100;
 }
 
-.strich{
+.strich {
     width: 3px;
-    background-color:#28ABE2;
+    background-color: #28ABE2;
     height: 60px;
 }
-.strich-gray{
+
+.strich-gray {
     width: 2px;
-    background-color:#DDDDDD;
+    background-color: #DDDDDD;
     height: 80px;
 }
 
 
-.boards-container{
+.boards-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,7 +147,7 @@ body {
     margin-right: 50px;
 }
 
-.box1{
+.box1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,63 +155,67 @@ body {
     width: 190px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     padding: 25px;
     transition: transform .2s;
 }
 
-.box1:hover{
+.box1:hover {
     background-color: #2B3647;
-    color:white;
-    width: 195px;
-    height: 165px;
-    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
-    border: none;
-}
-.box2:hover{
-    background-color: #2B3647;
-    color:white;
+    color: white;
     width: 195px;
     height: 165px;
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
 }
 
-.box3:hover{
+.box2:hover {
     background-color: #2B3647;
-    color:white;
+    color: white;
     width: 195px;
     height: 165px;
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
 }
 
-.box4:hover{
+.box3:hover {
     background-color: #2B3647;
-    color:white;
+    color: white;
+    width: 195px;
+    height: 165px;
+    box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
+    border: none;
+}
+
+.box4:hover {
+    background-color: #2B3647;
+    color: white;
     width: 490px;
     height: 165px;
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
 }
 
-.box{
+.box {
     font-size: 40px;
     margin: 0;
     margin-bottom: 2px;
     font-weight: bolder;
 }
-.number{
+
+.number {
     font-weight: bolder;
 }
-.boards h4{
+
+.boards h4 {
     margin: 0;
     font-weight: 100;
     word-wrap: break-word;
 }
 
-.box2{
+.box2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,13 +223,14 @@ body {
     width: 190px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     padding: 25px;
     transition: transform .2s;
 }
 
-.box3{
+.box3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,22 +238,23 @@ body {
     width: 190px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     padding: 25px;
     transition: transform .2s;
 }
 
-.board-1{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   gap: 20px;
-   width: 80%;
+.board-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
 }
 
-.greeting p{
+.greeting p {
     font-size: 30px;
 }
 
@@ -256,13 +265,14 @@ body {
     right: 0px;
     position: absolute;
 }
-.board-2{
+
+.board-2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.box4{
+.box4 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -270,31 +280,35 @@ body {
     width: 485px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     transition: transform .2s;
-    margin: 30px 0px 30px 0px;  
-    text-decoration: none;  
+    margin: 30px 0px 30px 0px;
+    text-decoration: none;
     gap: 20px;
-    color:black ;
+    color: black;
 }
 
-.box4 img{
+.box4 img {
     height: 50px;
 }
-.box6 img{
+
+.box6 img {
     height: 50px;
 }
-.box5 img{
+
+.box5 img {
     height: 50px;
 }
-.number{
+
+.number {
     font-size: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
 }
 
-.board-3{
+.board-3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -303,7 +317,7 @@ body {
     width: 80%;
 }
 
-.box5{
+.box5 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -311,12 +325,14 @@ body {
     width: 237px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
 }
-.box6{
+
+.box6 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -324,35 +340,36 @@ body {
     width: 238px;
     height: 160px;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
 }
 
-div.box5:hover{
+div.box5:hover {
     background-color: #2B3647;
-    color:white;
+    color: white;
     width: 242px;
     height: 170px;
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
 }
 
-div.box5:hover .change-color{
+div.box5:hover .change-color {
     filter: contrast(300%) invert(1);
 }
 
-div.box6:hover{
+div.box6:hover {
     background-color: #2B3647;
-    color:white;
+    color: white;
     width: 243px;
     height: 170px;
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
 }
 
-div.box6:hover .change-color{
+div.box6:hover .change-color {
     filter: contrast(300%) invert(1);
 }
 
@@ -363,7 +380,7 @@ div.box6:hover .change-color{
 
 
 
-.board{
+.board {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -374,11 +391,12 @@ div.box6:hover .change-color{
     margin-bottom: 70px;
 }
 
-.board h1{
+.board h1 {
     font-size: 45px;
     font-weight: 600;
 }
-.find-task-input{
+
+.find-task-input {
     font-size: 22px;
     width: 200px;
     border-radius: 10px;
@@ -387,27 +405,28 @@ div.box6:hover .change-color{
     padding-left: 20px;
     font-size: 20px;
 }
-.find-task-input:focus{
+
+.find-task-input:focus {
     outline: none;
 }
 
-.plus{
+.plus {
     font-size: 30px;
     font-weight: 100;
     align-items: center;
     justify-content: center;
 }
 
-.add-task-btn{
+.add-task-btn {
     font-size: 20px;
     width: 120px;
     background-color: #2B3647;
-    color:white;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
     border: none;
     padding-top: 5px;
@@ -415,39 +434,39 @@ div.box6:hover .change-color{
     cursor: pointer;
 }
 
-.add-task-btn:hover{
+.add-task-btn:hover {
     background-color: #2ebbda;
     transition: trasform ease-in-out 100ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
-.inp-container{
+.inp-container {
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
 }
 
-.search-icon{
-    height: 22px; 
-    position: absolute;  
-    right:197px;
+.search-icon {
+    height: 22px;
+    position: absolute;
+    right: 197px;
     top: 155px;
 }
 
-.strich-gray2{
+.strich-gray2 {
     width: 1.5px;
-    background-color:rgb(167, 166, 166);
+    background-color: rgb(167, 166, 166);
     height: 30px;
     margin: 0;
     padding: 0;
-    position: absolute;  
-    right:223px;
+    position: absolute;
+    right: 223px;
     top: 151px;
 }
 
 
 
-.add-task-container{
+.add-task-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -457,7 +476,7 @@ div.box6:hover .change-color{
     margin-right: 40px;
 }
 
-.add-task-container button{
+.add-task-container button {
     width: 150px;
     display: flex;
     align-items: center;
@@ -468,14 +487,15 @@ div.box6:hover .change-color{
     border: none;
     background-color: transparent;
     cursor: pointer;
-   /*  white-space:nowrap; */
+    /*  white-space:nowrap; */
 }
 
-.add-task-container button:hover{
-    filter: saturate(var(--value, 1)); --value: 120;
+.add-task-container button:hover {
+    filter: saturate(var(--value, 1));
+    --value: 120;
 }
 
-.change-color2{
+.change-color2 {
     width: 23px;
     padding-left: 5px;
 }
@@ -486,7 +506,7 @@ div.box6:hover .change-color{
     border-radius: 50%;
 }
 
-.box-container{
+.box-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -497,161 +517,195 @@ div.box6:hover .change-color{
     gap: 30px;
 }
 
-.child-container-1{
+.child-container-1 {
     width: 165px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-.child-container-2{
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-.child-container-3{
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-.child-container-4{
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee; /* diese farbe immer für buttons nehmen */
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
     border-radius: 25px;
     transition: transform .2s;
     gap: 8px;
     padding: 15px 15px 15px 15px;
 }
 
-.child-container-1 button{
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color:white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
+.child-container-2 {
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
+    border-radius: 25px;
+    transition: transform .2s;
+    gap: 8px;
+    padding: 15px 15px 15px 15px;
 }
-.child-container-2 button{
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color:white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
+
+.child-container-3 {
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
+    border-radius: 25px;
+    transition: transform .2s;
+    gap: 8px;
+    padding: 15px 15px 15px 15px;
 }
-.child-container-3 button{
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color:white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
+
+.child-container-4 {
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: solid 1px #f1eeee;
+    /* diese farbe immer für buttons nehmen */
+    border-radius: 25px;
+    transition: transform .2s;
+    gap: 8px;
+    padding: 15px 15px 15px 15px;
 }
-.child-container-4 button{
+
+.child-container-1 button {
     width: 100px;
     border: none;
     border-radius: 5px;
-    color:white;
+    color: white;
     background-color: rgb(255, 140, 0);
     height: 20px;
 }
 
-.child-container-1 p{
+.child-container-2 button {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 140, 0);
+    height: 20px;
+}
+
+.child-container-1,
+.child-container-2,
+.child-container-3,
+.child-container-4 {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.child-container-1:active,
+.child-container-2:active,
+.child-container-3:active,
+.child-container-4:active {
+    transform: rotate(5deg);
+}
+
+.child-container-3 button {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 140, 0);
+    height: 20px;
+}
+
+.child-container-4 button {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 140, 0);
+    height: 20px;
+}
+
+.child-container-1 p {
     font-weight: 600;
     font-size: 18px;
     margin: 0;
 }
-.child-container-2 p{
+
+.child-container-2 p {
     font-weight: 600;
     font-size: 18px;
     margin: 0;
 }
-.child-container-3 p{
+
+.child-container-3 p {
     font-weight: 600;
     font-size: 18px;
     margin: 0;
 }
-.child-container-4 p{
+
+.child-container-4 p {
     font-weight: 600;
     font-size: 18px;
     margin: 0;
 }
-.child-container-1 h4{
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-.child-container-2 h4{
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-.child-container-3 h4{
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-.child-container-4 h4{
+
+.child-container-1 h4 {
     font-weight: 300;
     color: gray;
     font-size: 15px;
     margin: 0;
 }
 
-.progressbar{
+.child-container-2 h4 {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+    margin: 0;
+}
+
+.child-container-3 h4 {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+    margin: 0;
+}
+
+.child-container-4 h4 {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+    margin: 0;
+}
+
+.progressbar {
     width: 60%;
-    background-color:#F4F4F4;
+    background-color: #F4F4F4;
     height: 6px;
 }
-.progressbar-container{
+
+.progressbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
 }
-.progressbar-container p{
+
+.progressbar-container p {
     font-size: 12px;
     font-weight: 400;
 }
 
-.icon-container{
+.icon-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.g-name{
+.g-name {
     color: #28ABE2;
 }
 
-#todays-date{
+#todays-date {
     font-size: 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
