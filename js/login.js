@@ -69,6 +69,6 @@ function loginUser() {
     if (user) {
         window.location.href = 'startseite.html';
     } else {
-        console.log('falsche Daten');
+        document.getElementById('user-not-found').classList.remove('d-none');
     }
 }
