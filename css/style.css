@@ -3,6 +3,8 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Ich möchte gepusht werden. */
+
 .main-container {
     width:100%;
     height: 100vh;
@@ -78,7 +80,7 @@ body {
 
 .header-right {
     background-color: #F6F7F8;
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
