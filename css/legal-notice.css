@@ -7,10 +7,10 @@
 
 .fixed-header {
   position: fixed;
-  left: 267px;
+  left: 255px;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: 9;
 }
 
 .legal-notice-container-main {
