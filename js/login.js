@@ -72,22 +72,29 @@ function backToLoginContainer(id1, id2, id3) {
 }
 
 /**
- * Handles user login process by preventing the default form submission, saving the entered email into local storage,
- * and then attempting to find a user that matches the provided email and password.
- * The function first calls 'preventDefault()' on the event object to stop the form from causing a page refresh.
- * 'saveEmailInLocalStorage()' is then called, which presumably saves the user's entered email into local storage for future use.
- * The function then retrieves the values of the 'email' and 'password' input fields, and attempts to find a user
- * from the 'users' list that matches both these email and password.
- * If such a user is found, the page is redirected to 'startseite.html'
- * and the username of the user is saved into local storage.
- * If no matching user is found, an error message is displayed by removing the 'd-none'
+ * Handles the login process for a user.
+ * This function first prevents the default form submission event from occurring using 'event.preventDefault()'.
+ * The function then calls 'saveEmailInLocalStorage()', to save the user's entered email into local storage for future use.
+ * After retrieving the values of the 'email' and 'password' input fields, it calls 'ifUserGoLogin()' function
+ * with the 'email' and 'password' as parameters to handle the login process.
  */
 function loginUser(event) {
     event.preventDefault();
     saveEmailInLocalStorage();
+
     let email = document.getElementById('log-in-email');
     let password = document.getElementById('log-in-password');
+    ifUserGoLogin(email, password);
+}
 
+/**
+ * Checks if the entered email and password match any user and handles the login process accordingly.
+ * The function first searches the users for a user that matches both the entered email and password.
+ * If such a user is found, the page is redirected to 'startseite.html'.
+ * and the username of the user is saved into local storage.
+ * If no matching user is found, an error message is displayed.
+ */
+function ifUserGoLogin(email, password) {
     let user = users.find((u) => u.email === email.value && u.password === password.value);
     if (user) {
         window.location.href = 'startseite.html';
