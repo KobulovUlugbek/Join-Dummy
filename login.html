@@ -25,7 +25,7 @@
             <div class="login-container" id="login-container">
                 <h1 class="headline-one">Log in</h1>
                 <div class="log-in-underline"></div>
-                <form class="login-form-container" onsubmit="loginUser(); return false">
+                <form class="login-form-container" onsubmit="loginUser(event); return false">
                     <input
                         class="inputs"
                         type="email"
@@ -52,7 +52,7 @@
                     </div>
                     <div class="log-in-button-container">
                         <button class="dark-blue-button button-hover-lightblue">Log in</button>
-                        <button class="guest-log-in-button">Guest Log in</button>
+                        <button class="guest-log-in-button" onclick="loginGuest()">Guest Log in</button>
                     </div>
                 </form>
                 <div id="msg-box"></div>

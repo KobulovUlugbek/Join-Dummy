@@ -12,55 +12,56 @@
     <link rel="stylesheet" href="css/add-task.css">
 </head>
 
-<body onload="actualDate(), date()">
+    <body onload="actualDate(), date(), init()">
+        <div class="main-container">
+            <div id="sidebar-template"></div>
+            <!-- TEMPLATE für SIDEBAR -->
 
-    <div class="main-container">
-        <div id="sidebar-template"></div><!-- TEMPLATE für SIDEBAR -->
+            <div class="header-right">
+                <!-- hier ist die rechte Seite der Webseits -->
+                <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER -->
 
-        <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
-            <div id="header-template"></div><!-- TEMPLATE für HEADER -->
-
-            <div class="summary">
-                <div class="summary-80">
-                    <h1>Summary</h1>
-                    <div class="strich"></div> <!-- hier kommt ein hellblaue Strich zum trennen -->
-                    <h3>Everything in a nutshell!</h3>
-                </div>
-                <div class="prozent"></div>
-            </div>
-
-
-            <div class="boards-container">
-
-                <div class="boards">
-                    <div class="board-1">
-                        <button class="box1">
-                            <p class="box">5</p>
-                            <h4>Tasks in Board</h4>
-                        </button>
-
-                        <button class="box2">
-                            <p class="box">2</p>
-                            <h4>Tasks in Progress</h4>
-                        </button>
-
-                        <button class="box3">
-                            <p class="box">2</p>
-                            <h4>Awaiting Feedback</h4>
-                        </button>
+                <div class="summary">
+                    <div class="summary-80">
+                        <h1>Summary</h1>
+                        <div class="strich"></div>
+                        <!-- hier kommt ein hellblaue Strich zum trennen -->
+                        <h3>Everything in a nutshell!</h3>
                     </div>
+                    <div class="prozent"></div>
+                </div>
 
-                    <div class="board-2">
-                        <a class="box4" href="">
+                <div class="boards-container">
+                    <div class="boards">
+                        <div class="board-1">
+                            <button class="box1">
+                                <p class="box">5</p>
+                                <h4>Tasks in Board</h4>
+                            </button>
 
-                            <img src="img/urgent-icon.png" alt="">
+                            <button class="box2">
+                                <p class="box">2</p>
+                                <h4>Tasks in Progress</h4>
+                            </button>
 
-                            <div>
-                                <p class="number">1</p>
-                                <h4>Urgent</h4>
-                            </div>
+                            <button class="box3">
+                                <p class="box">2</p>
+                                <h4>Awaiting Feedback</h4>
+                            </button>
+                        </div>
 
-                            <div class="strich-gray"></div> <!-- hier kommt ein grauer Stricht -->
+                        <div class="board-2">
+                            <a class="box4" href="">
+                                <img src="img/urgent-icon.png" alt="" />
+
+                                <div>
+                                    <p class="number">1</p>
+                                    <h4>Urgent</h4>
+                                </div>
+
+                                <div class="strich-gray"></div>
+                                <!-- hier kommt ein grauer Stricht -->
 
                             <div>
                                 <p id="todays-date">Hier kommt aktueller Datum</p>
@@ -69,43 +70,32 @@
                         </a>
                     </div>
 
-                    <div class="board-3">
+                        <div class="board-3">
+                            <div class="box5">
+                                <img class="change-color" src="img/todo-icon.png" alt="" />
 
-                        <div class="box5">
-
-                            <img class="change-color" src="img/todo-icon.png" alt="">
-
-                            <div>
-                                <p class="number">1</p>
-                                <h4>To-do</h4>
+                                <div>
+                                    <p class="number">1</p>
+                                    <h4>To-do</h4>
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="box6">
+                                <img class="change-color" src="img/done-icon.png" alt="" />
 
-                        <div class="box6">
-
-                            <img class="change-color" src="img/done-icon.png" alt="">
-
-                            <div>
-                                <p class="number">1</p>
-                                <h4>Done</h4>
+                                <div>
+                                    <p class="number">1</p>
+                                    <h4>Done</h4>
+                                </div>
                             </div>
-
                         </div>
-
                     </div>
-                </div>
-
 
                 <div class="greeting">
                     <p id="greeting">Good Morning,</p>
                     <h1>Ulugbek</h1>
                 </div>
-
-
             </div>
-
-
         </div>
 
     </div>

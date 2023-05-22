@@ -1,7 +1,7 @@
 let users = [
     {
         name: 'Guest',
-        email: 'guest@com',
+        email: 'guest@web.de',
         password: 'guest123',
     },
 ];
