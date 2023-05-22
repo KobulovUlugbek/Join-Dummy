@@ -13,12 +13,6 @@
   z-index: 10;
 }
 
-.scroll {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 20px;
-}
-
 .legal-notice-container-main {
   display: flex;
   flex-direction: column;
@@ -27,4 +21,12 @@
 
 .color-legal-notice {
   color: #2b3647;
+}
+
+.legal-notice-h1 {
+  font-size: 45px;
+}
+
+.legal-notice-font-size {
+  font-size: 18px;
 }
