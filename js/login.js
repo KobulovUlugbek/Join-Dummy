@@ -72,14 +72,18 @@ function backToLoginContainer(id1, id2, id3) {
 }
 
 /**
- * This function is responsible for handling the user login process.
- * It first calls the function saveEmailInLocalStorage() which presumably saves the entered email in local storage for later use ('Remember me' feature).
- * It then retrieves the email and password entered by the user in the respective input fields.
- * Afterwards, it attempts to find a user in the 'users' list that matches both the entered email and password.
- * If such a user is found, it navigates to 'startseite.html', presumably the home page of the logged-in user.
- * If no matching user is found, it displays an error message by removing the 'd-none' class from the element with the ID 'user-not-found'.
+ * Handles user login process by preventing the default form submission, saving the entered email into local storage,
+ * and then attempting to find a user that matches the provided email and password.
+ * The function first calls 'preventDefault()' on the event object to stop the form from causing a page refresh.
+ * 'saveEmailInLocalStorage()' is then called, which presumably saves the user's entered email into local storage for future use.
+ * The function then retrieves the values of the 'email' and 'password' input fields, and attempts to find a user
+ * from the 'users' list that matches both these email and password.
+ * If such a user is found, the page is redirected to 'startseite.html'
+ * and the username of the user is saved into local storage.
+ * If no matching user is found, an error message is displayed by removing the 'd-none'
  */
-function loginUser() {
+function loginUser(event) {
+    event.preventDefault();
     saveEmailInLocalStorage();
     let email = document.getElementById('log-in-email');
     let password = document.getElementById('log-in-password');
@@ -87,9 +91,24 @@ function loginUser() {
     let user = users.find((u) => u.email === email.value && u.password === password.value);
     if (user) {
         window.location.href = 'startseite.html';
+        localStorage.setItem('username', user.name);
     } else {
         document.getElementById('user-not-found').classList.remove('d-none');
     }
+}
+
+/**
+ * Provides a method for logging in a user as a guest.
+ * This function fills the 'email' and 'password' input fields with the predefined values of 'guest@web.de' and 'guest123'.
+ * After filling in these values, it redirects the page to 'startseite.html'.
+ * Lastly, it saves the string 'Guest' into local storage under the key 'username', presumably to identify the user as a guest throughout their session.
+ */
+function loginGuest() {
+    document.getElementById('log-in-email').value = 'guest@web.de';
+    document.getElementById('log-in-password').value = 'guest123';
+
+    window.location.href = 'startseite.html';
+    localStorage.setItem('username', 'Guest');
 }
 
 /**
