@@ -125,13 +125,16 @@ function loginGuest() {
  * If the checkbox is not checked, the function removes any previously saved 'email' item from local storage. This ensures that no email is remembered when the "Remember me" feature is not used.
  */
 function saveEmailInLocalStorage() {
+    let password = document.getElementById('log-in-password').value;
     let email = document.getElementById('log-in-email').value;
     let checkbox = document.getElementById('login-checkbox').checked;
 
     if (checkbox) {
         localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
     } else {
         localStorage.removeItem('email');
+        localStorage.removeItem('password');
     }
 }
 
@@ -143,8 +146,10 @@ function saveEmailInLocalStorage() {
  */
 function checkEmailInLocalStorage() {
     let savedEmail = localStorage.getItem('email');
+    let savedPassword = localStorage.getItem('password');
 
     if (savedEmail) {
+        document.getElementById('log-in-password').value = savedPassword;
         document.getElementById('log-in-email').value = savedEmail;
         document.getElementById('login-checkbox').checked = true;
     }
