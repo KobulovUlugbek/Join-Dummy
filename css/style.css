@@ -725,3 +725,8 @@ div.box6:hover .change-color {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
+
+.greeting h1{
+    color: #28ABE2;
+}
+
