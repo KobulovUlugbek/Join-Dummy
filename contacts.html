@@ -1,14 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join-Dummy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contacts</title>
+    <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/media.css">
+
     <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/template.js"></script>
+
 </head>
+
 <body>
-    
+    <div class="main">
+        <div class="main-container">
+
+            <div id="sidebar-template"></div><!-- TEMPLATE für SIDEBAR -->
+
+
+
+
+            <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
+
+                <div id="header-template"></div><!-- TEMPLATE für HEADER -->
+
+
+                <div class="contactBoard">
+                    <div class="contactContainer">
+                        <div class="contactListing">
+                            <div class="sorting">
+                                <span class="contactLetter">A</span>
+                                <div class="line"></div>
+                            </div>
+                            <div class="initialsSectionLeft">
+                                <div class="circleLeft">
+                                    <span class="initialsLeft">AM</span>
+                                </div>
+                                <div class="contactNameLeft">
+                                    <h2>Anton Mayer</h2>
+                                    <a href="anton@gmail.com" class="taskForNameLeft">anton@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="initialsSectionLeft">
+                                <div class="circleLeft">
+                                    <span class="initialsLeft">AS</span>
+                                </div>
+                                <div class="contactNameLeft">
+                                    <h2>Anja Schulz</h2>
+                                    <a href="schulz@gmail.com" class="taskForNameLeft">schulz@gmail.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="contactListing">
+                            <div class="sorting">
+                                <span class="contactLetter">B</span>
+                                <div class="line"></div>
+                            </div>
+                            <div class="initialsSectionLeft">
+                                <div class="circleLeft">
+                                    <span class="initialsLeft">BM</span>
+                                </div>
+                                <div class="contactNameLeft">
+                                    <h2>Benedigt Ziegler</h2>
+                                    <a href="ziegler@gmail.com" class="taskForNameLeft">ziegler@gmail.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="contactOverview">
+                        <div class="boardDescription">
+                            <div>
+                                <h1>Contacts</h1>
+                            </div>
+                            <div class="boardSlogan">Better with a team</div>
+                        </div>
+
+                        <div class="initialsSection">
+                            <div class="circle">
+                                <span class="initials">AM</span>
+                            </div>
+                            <div class="contactName">
+                                <h2>Anton Mayer</h2>
+                                <span class="taskForName">+ ADD Task</span>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="contactInformation">
+                                <div class="contactGeneral">
+                                    <p>Contact Information</p>
+                                </div>
+                                <div class="contactEdit">
+                                    <img class="editPencil" src="img/pencil-icon-edit.png">
+                                    <p>Edit Contact</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <p><b>Email</b></p>
+                            <a href="anton@gmail.com">anton@gmail.com</a>
+                        </div>
+                        <div class="">
+                            <p><b>Phone</b></p>
+                            <p>+49 1234 567 891</p>
+                        </div>
+
+                        <div class="addContactContainer">
+                            <button onclick="addContact()" class="addContactBtn">New contact <b
+                                    class="plus">+</b></button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
 </body>
+
 </html>
