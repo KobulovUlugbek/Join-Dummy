@@ -104,13 +104,12 @@ body {
 }
 
 /* Rechte Seite von der Container */
-.header-right, .Content {
+.Content {
     background-color: #F6F7F8;
     height: 100%;
     margin: 0 0 0 250px;
     padding: 100px 0 0 0
 }
-
 
 .symbol {
     width: 28px;
