@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidebar a {
@@ -90,6 +90,7 @@ body {
     padding: 0 25px 0 0;
     background-color: white;
     position: fixed;
+    z-index: 1;
 }
 
 .header h2 {
@@ -396,15 +397,10 @@ div.box6:hover .change-color {
 }
 
 
-
-
 /* Ab hier geht CSS für Board Seite */
-
-
 
 .board {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -480,6 +476,8 @@ div.box6:hover .change-color {
     margin: 7px 0 0 180px;  
 }
 
+/* DRAG DROP ZONE */
+
 .box-container {
     display: flex;
     justify-content: space-between;
@@ -494,6 +492,7 @@ div.box6:hover .change-color {
     align-items: center;
     width: 200px;
     height: 100vh;
+    border: dotted #081931 ; /* nur fürs orientieren drinnen */
 }
 
 .box-container button {
@@ -501,7 +500,7 @@ div.box6:hover .change-color {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 30px;
+    height: 50px;
     font-size: 16px;
     font-weight: 600;
     border: none;
