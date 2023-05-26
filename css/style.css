@@ -28,6 +28,13 @@ body {
     text-decoration: none;
  }
 
+ .sidebar a:active {
+    color: #C1C5CB;
+    text-decoration: none;
+    background-color: #081931;
+    color: white;
+ }
+
  
 .med-container {
     height: 50%;
@@ -67,16 +74,6 @@ body {
     font-weight: 300;
     display: flex;
     align-items: center;
-}
-
-.med-container a:hover {
-    background-color: #081931;
-    color: white;
-}
-
-.legal-notice a:hover {
-    background-color: #081931;
-    color: white;
 }
 
 .header {
