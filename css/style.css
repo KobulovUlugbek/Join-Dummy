@@ -482,6 +482,7 @@ div.box6:hover .change-color {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     margin-top: 50px;
     width: 95%;
 }
@@ -490,13 +491,17 @@ div.box6:hover .change-color {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
-    height: 100vh;
-    border: dotted #081931 ; /* nur fürs orientieren drinnen */
+    width: 250px;
+    height: 50vh;
 }
 
+.todo:hover, .progress:hover, .feedback:hover, .done:hover {
+    background-color: #a4aab4;
+}
+
+
 .box-container button {
-    width: 150px;
+    width: 190px;
     display: flex;
     align-items: center;
     justify-content: space-between;
