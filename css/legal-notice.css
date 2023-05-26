@@ -21,7 +21,7 @@ p {
 .legal-notice-container-main {
   display: flex;
   flex-direction: column;
-  margin: 50px 30px 0px 300px;
+  margin: 0 30px 0px 30px;
   padding-bottom: 30px;
 }
 

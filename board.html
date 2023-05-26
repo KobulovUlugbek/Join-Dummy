@@ -18,9 +18,8 @@
             <div class="main-container">
                 <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
 
-                <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
+                <div class="Content"> <!-- hier ist die rechte Seite der Webseits -->
                     
-
                     <div class="board">
                         <h1>Board</h1>
 
@@ -32,116 +31,83 @@
                         </div>
                     </div>
 
-                    <div class="add-task-container">
-                        <button>
-                            <p>To do</p>
-                            <img class="change-color2" src="img/plus-button.png" alt="" />
-                        </button>
-
-                        <button>
-                            <p>In progress</p>
-                            <img class="change-color2" src="img/plus-button.png" alt="" />
-                        </button>
-
-                        <button>
-                            <p>Awaiting Feedback</p>
-                            <img class="change-color2" src="img/plus-button.png" alt="" />
-                        </button>
-
-                        <button>
-                            <p>Done</p>
-                            <img class="change-color2" src="img/plus-button.png" alt="" />
-                        </button>
-                    </div>
-
                     <div class="box-container">
-                        <div class="child-container-1">
-                            <button>Design</button>
-
-                            <p>Website redesign</p>
-
-                            <h4>Modify the contens of the main website...</h4>
-                            <div class="progressbar-container">
-                                <div class="progressbar"></div>
-                                <p>1/2 Done</p>
-                            </div>
-                            <div class="icon-container">
-                                <div>
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                </div>
-                                <div>
-                                    <img src="img/urgent-icon4.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="child-container-2">
-                            <button>Design</button>
-
-                            <p>Website redesign</p>
-
-                            <h4>Modify the contens of the main website...</h4>
-                            <div class="progressbar-container">
-                                <div class="progressbar"></div>
-                                <p>1/2 Done</p>
-                            </div>
-                            <div class="icon-container">
-                                <div>
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                </div>
-                                <div>
-                                    <img src="img/urgent-icon4.png" alt="" />
+                        
+                        <div class="todo">
+                            <button>
+                                <p>To do</p>
+                                <img class="change-color2" src="img/plus-button.png" alt="" />
+                            </button>
+                            <div class="dragdrop" id="dragDrop1">
+                                <div class="child-container">
+                                    <button>Design</button>
+                                
+                                    <p>Website redesign</p>
+                                
+                                    <h4>Modify the contens of the main website...</h4>
+                                    <div class="progressbar-container">
+                                        <div class="progressbar"></div>
+                                        <p>1/2 Done</p>
+                                    </div>
+                                    <div class="icon-container">
+                                        <div>
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                        </div>
+                                        <div>
+                                            <img src="img/urgent-icon4.png" alt="" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="child-container-3">
-                            <button>Design</button>
-
-                            <p>Website redesign</p>
-
-                            <h4>Modify the contens of the main website...</h4>
-                            <div class="progressbar-container">
-                                <div class="progressbar"></div>
-                                <p>1/2 Done</p>
-                            </div>
-                            <div class="icon-container">
-                                <div>
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                </div>
-                                <div>
-                                    <img src="img/urgent-icon4.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="child-container-4">
-                            <button>Design</button>
-
-                            <p>Website redesign</p>
-
-                            <h4>Modify the contens of the main website...</h4>
-                            <div class="progressbar-container">
-                                <div class="progressbar"></div>
-                                <p>1/2 Done</p>
-                            </div>
-                            <div class="icon-container">
-                                <div>
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                    <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                </div>
-                                <div>
-                                    <img src="img/urgent-icon4.png" alt="" />
+                        <div class="progress">
+                            <button>
+                                <p>In progress</p>
+                                <img class="change-color2" src="img/plus-button.png" alt="" />
+                            </button>
+                            <div class="dragdrop" id="dragDrop2">
+                                <div class="child-container">
+                                    <button>Design</button>
+                                
+                                    <p>Website redesign</p>
+                                
+                                    <h4>Modify the contens of the main website...</h4>
+                                    <div class="progressbar-container">
+                                        <div class="progressbar"></div>
+                                        <p>1/2 Done</p>
+                                    </div>
+                                    <div class="icon-container">
+                                        <div>
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
+                                        </div>
+                                        <div>
+                                            <img src="img/urgent-icon4.png" alt="" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
+
+                        <div class="feedback">
+                            <button>
+                                <p>Awaiting Feedback</p>
+                                <img class="change-color2" src="img/plus-button.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="done">
+                            <button>
+                                <p>Done</p>
+                                <img class="change-color2" src="img/plus-button.png" alt="" />
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
