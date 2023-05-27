@@ -302,7 +302,7 @@
     align-items: center;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
-    width: 759px;
+    width: 1000px;
     height: 494px;
     /*position: relative;*/
     position: absolute;
@@ -312,16 +312,28 @@
     background-color: #2A3647;
     width: 453px;
     height: 100%;
-    color: white;
     border-radius: 30px 0px 0px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+    color: #FFFFFF;
 }
 
 .editSection {
-    background-color: white;
+    padding-left: 56px;
+}
+
+.initialsSectionOverlay {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.editInputs {
+    margin-left: 56px;
 }
 
 .inputs {
