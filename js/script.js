@@ -27,20 +27,35 @@ let todos = [{
 ]
 
 function dragDrop() {
-    const situations = ['todo', 'progress', 'awaiting', 'done'];
-    for (const situation of situations) {
-        const filteredTodos = todos.filter(t => t['situation'] === situation);
-        const containerElement = document.getElementById(situation);
-        containerElement.innerHTML = '';
-        for (const element of filteredTodos) {
-            containerElement.innerHTML += generateTodoHTML(element);
-        }
+    let todo = todos.filter(t => t['situation'] == 'todo');
+    document.getElementById('todo').innerHTML= '';
+    for (let index = 0; index < todo.length; index++) {
+        const element = todo[index];
+        document.getElementById('todo').innerHTML += generateTodoHTML(element);
+    }
+    let progress = todos.filter(t => t['situation'] == 'progress');
+    document.getElementById('progress').innerHTML= '';
+    for (let index = 0; index < progress.length; index++) {
+        const element = progress[index];
+        document.getElementById('progress').innerHTML += generateTodoHTML(element);
+    }
+    let awaiting = todos.filter(t => t['situation'] == 'awaiting');
+    document.getElementById('awaiting').innerHTML= '';
+    for (let index = 0; index < awaiting.length; index++) {
+        const element = awaiting[index];
+        document.getElementById('awaiting').innerHTML += generateTodoHTML(element);
+    }
+    let done = todos.filter(t => t['situation'] == 'done');
+    document.getElementById('done').innerHTML= '';
+    for (let index = 0; index < done.length; index++) {
+        const element = done[index];
+        document.getElementById('done').innerHTML += generateTodoHTML(element);
     }
 }
 
 function generateTodoHTML(element) {
     return `
-    <div id="task${element['id']}" draggable="true" ondragstart="startdragging(${element['id']})" class="child-container">
+    <div draggable="true" ondragstart="startdragging(${element['id']})" class="child-container">
         <div class="${element['category']}">${element['category']}</div>
         <p>Website redesign</p>
         <h4>${element['discription']}</h4>
@@ -49,7 +64,7 @@ function generateTodoHTML(element) {
             <p>1/2 Done</p>
         </div>
         <div class="icon-container">
-            <div class="teammates">
+            <div>
                 <img class="profilbild2" src="img/profil-photo.png" alt="" />
                 <img class="profilbild2" src="img/profil-photo.png" alt="" />
                 <img class="profilbild2" src="img/profil-photo.png" alt="" />
