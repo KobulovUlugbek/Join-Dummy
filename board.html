@@ -39,7 +39,8 @@
                                 <p>To do</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" id="todo" ondrop="changePos('progress', 'awaiting', 'done')" ondragover="allowDrop(event)"></div>
+                            <div id="todo"></div>
+                            <div id="dragdrop_todo" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('todo')"></div> 
                         </div>
 
                         <div class="progress">
@@ -47,7 +48,8 @@
                                 <p>In progress</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" id="progress" ondrop="changePos('todo', 'awaiting', 'done')" ondragover="allowDrop(event)"></div>
+                            <div id="progress"></div>
+                            <div id="dragdrop_progress" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('progress')"></div>                        
                         </div>
 
                         <div class="awaiting">
@@ -55,7 +57,8 @@
                                 <p>Awaiting Feedback</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" ondrag="" id="awaiting" ondrop="changePos('done', 'progress', 'todo')" ondragover="allowDrop(event)"></div>
+                            <div id="awaiting"></div>
+                            <div id="dragdrop_awaiting" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('awaiting')"></div>
                         </div>
 
                         <div class="done">
@@ -63,7 +66,8 @@
                                 <p>Done</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" id="done" ondrop="changePos('awaiting', 'progress', 'todo')" ondragover="allowDrop(event)"></div>
+                            <div id="done"></div>
+                            <div id="dragdrop_done" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('done')"></div>
                         </div>
 
                     </div>
