@@ -88,67 +88,15 @@
                                 <textarea class="description" rows="6" cols="32" placeholder="Enter a Description"></textarea>
                             </div>
 
-
                             <div>
                                 <h4>Category</h4>
-                                <div class="drop-down-selector category ">
-                                    <div id="select-tsk" class="select-tsk" onclick="toggleDropdown()">
-                                        <h4 id="change" class="margin-null">Select task category</h4>
-                                        <div><img src="img/arrow-down.png" alt="arrow-down"></div>
-                                    </div>
-                                    <div class="overflow">
-                                        <div id="subfolder-1" class="subfolder hidden">
-                                            <h4>New category</h4>
-                                        </div>
-    
-                                        <div id="subfolder-2" class="subfolder hidden">
-                                            <h4>Sales<div class="circle-0"></div>
-                                            </h4>
-                                        </div>
-    
-                                        <div id="subfolder-3" class="subfolder hidden">
-                                            <h4>Backoffice <div class="circle-1"></div>
-                                            </h4>
-                                        </div>
-    
-                                        <div id="subfolder-4" class="subfolder hidden">
-                                            <h4>Other <div class="circle-2"></div>
-                                            </h4>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
-    
-    
-    
-                            <div>
-                                <h4>Assigned to</h4>
-                                <div class="drop-down-selector2 category">
-                                    <div id="select-tsk2" class="select-tsk2" onclick="toggleDropdown2()">
-                                        <h4 class="margin-null">Select contacts to assign</h4>
-                                        <div><img src="img/arrow-down.png" alt="arrow-down"></div>
-                                    </div>
-                                    <div class="overflow">
-                                        <div id="subfolder-2" class="subfolder2 hidden"
-                                            onclick="toggleCheckbox('checkbox-2')">
-                                            <h4>You</h4>
-                                            <input class="checkbox" type="checkbox" name="checkbox-2" id="checkbox-2">
-                                        </div>
-                                        <div id="subfolder-3" class="subfolder2 hidden"
-                                            onclick="toggleCheckbox('checkbox-3')">
-                                            <h4>Maximillian Vogel</h4>
-                                            <input class="checkbox" type="checkbox" name="checkbox-3" id="checkbox-3">
-                                        </div>
-                                        <div id="subfolder-4" class="subfolder2 hidden"
-                                            onclick="toggleCheckbox('checkbox-4')">
-                                            <h4>Invite new contact</h4>
-                                            <img class="invite-png" src="img/invite-contact.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
+                                <input class="category" type="text" placeholder="Enter a category" />
                             </div>
 
+                            <div>
+                                <h4>Assigned to</h4>
+                                <input class="category2" type="text" placeholder="Enter a category" />
+                            </div>
                         </div>
 
                         <div class="strich-gray3"></div>
@@ -192,6 +140,5 @@
         <script src="js/add-task.js"></script>
         <script src="js/template.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/drop-down.js"></script>
     </body>
 </html>
