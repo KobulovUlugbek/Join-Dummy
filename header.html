@@ -1,18 +1,18 @@
 <div class="sidebar">
     <div>
-        <a href=""><img src="img/Join-icon.png" alt=""></a>
+        <a href=""><img src="img/Join-icon.png" alt="" /></a>
     </div>
 
     <div class="med-container">
         <div class="helpdiv">
-            <a href="startseite.html"><img src="img/summary-icon.png" alt=""> Summary</a>
-            <a href="board.html"><img src="img/board-icon.png" alt=""> Board</a>
-            <a href="add-task.html"><img src="img/add-task-icon.png" alt=""> Add Task</a>
-            <a href="contacts.html"><img src="img/contacts-icon.png" alt=""> Contacts</a>
+            <a href="startseite.html"><img src="img/summary-icon.png" alt="" /> Summary</a>
+            <a href="board.html"><img src="img/board-icon.png" alt="" /> Board</a>
+            <a href="add-task.html"><img src="img/add-task-icon.png" alt="" /> Add Task</a>
+            <a href="contacts.html"><img src="img/contacts-icon.png" alt="" /> Contacts</a>
         </div>
 
         <div class="legal-notice">
-            <a href="legal-notice.html"><img src="img/legal-notice-icon.png" alt=""> Legal notice</a>
+            <a href="legal-notice.html"><img src="img/legal-notice-icon.png" alt="" /> Legal notice</a>
         </div>
     </div>
 </div>
@@ -21,7 +21,12 @@
         <h2>Kanban Project Management Tool</h2>
     </div>
     <div class="header2">
-        <a href="help.html"><img class="symbol" src="img/f-zeich-neben-profil.png" alt=""></a>
-        <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild"></a>
+        <div class="help-and-profile-container">
+            <a href="help.html"><img class="symbol" src="img/f-zeich-neben-profil.png" alt="" /></a>
+            <img onclick="showLogoutButton()" class="profilbild" src="img/profil-photo.png" alt="profilbild" />
+        </div>
+        <div class="profile-logout-container d-none" id="logout-container">
+            <a href="login.html" class="logout-link">Logout</a>
+        </div>
     </div>
 </div>

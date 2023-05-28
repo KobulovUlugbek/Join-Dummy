@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Task</title>
     <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/add-task.css">
@@ -16,24 +15,25 @@
 <body>
 
     <div class="main-container">
-        <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
+        <div id="sidebar-template"></div><!-- TEMPLATE für SIDEBAR -->
 
-        <div class="Content"> <!-- hier ist die rechte Seite der Webseits -->
+        <div class="header-right"> <!-- hier ist die rechte Seite der Webseits -->
+            <div id="header-template"></div><!-- TEMPLATE für HEADER -->
+
             <div class="add-task-container-main">
                 <h1 class="add-task-h1">Add Task</h1>
 
-                <div class="first-container">
-                    <div class="child-container-left">
-                        <div>
-                            <h4>Title</h4>
-                            <input class="title" type="text" placeholder="Enter a title" />
-                        </div>
+                    <div class="first-container">
+                        <div class="child-container-left">
+                            <div>
+                                <h4>Title</h4>
+                                <input class="title" type="text" placeholder="Enter a title" />
+                            </div>
 
-                        <div>
-                            <h4>Description</h4>
-                            <textarea class="description" rows="6" cols="32"
-                                placeholder="Enter a Description"></textarea>
-                        </div>
+                            <div>
+                                <h4>Description</h4>
+                                <textarea class="description" rows="6" cols="32" placeholder="Enter a Description"></textarea>
+                            </div>
 
                         <div>
                             <h4>Category</h4>
@@ -66,8 +66,6 @@
                             </div>
                         </div>
 
-
-
                         <div>
                             <h4>Assigned to</h4>
                             <div class="drop-down-selector2 category">
@@ -98,55 +96,46 @@
 
                     </div>
 
-                    <div class="strich-gray3"></div>
+                        <div class="strich-gray3"></div>
 
-                    <div class="child-container-right">
-                        <div class="right1">
-                            <div>
-                                <h4>Due Date</h4>
-                                <input class="title" type="date" placeholder="Enter a date" />
-                            </div>
+                        <div class="child-container-right">
+                            <div class="right1">
+                                <div>
+                                    <h4>Due Date</h4>
+                                    <input class="title" type="date" placeholder="Enter a date" />
+                                </div>
 
                             <div>
                                 <h4>Priority</h4>
                                 <div class="difficulty-level">
-                                    <button class="add-task-btn2">Urgent <b class="plus"><img src="img/urgent.icon2.png"
-                                                alt=""></b></button>
-                                    <button class="add-task-btn2">Medium <b class="plus"><img src="img/urgent-icon3.png"
-                                                alt=""></b></button>
-                                    <button class="add-task-btn2">Low <b class="plus"><img src="img/urgent-icon4.png"
-                                                alt=""></b></button>
+                                    <button class="add-task-btn2">Urgent <b class="plus"><img src="img/urgent.icon2.png" alt=""></b></button>
+                                    <button class="add-task-btn2">Medium <b class="plus"><img src="img/urgent-icon3.png" alt=""></b></button>
+                                    <button class="add-task-btn2">Low <b class="plus"><img src="img/urgent-icon4.png" alt=""></b></button>
+                                </div>
+
+                                <div>
+                                    <h4>Subtasks</h4>
+                                    <input class="title" type="text" placeholder="Add new subtask" />
+                                </div>
+                                <div class="checkbox1">
+                                    <input type="checkbox" name="" id="" />
+                                    <h5>Subtask 1</h5>
                                 </div>
                             </div>
 
-                            <div>
-                                <h4>Subtasks</h4>
-                                <input class="title" type="text" placeholder="Add new subtask" />
-                            </div>
-                            <div class="checkbox1">
-                                <input type="checkbox" name="" id="">
-                                <h5>Subtask 1</h5>
-                            </div>
-                        </div>
-
                         <div class="right2">
-                            <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b
-                                        class="plus-x">x</b></button></a>
-                            <button class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png"
-                                        alt=""></b></button>
+                            <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b class="plus-x">x</b></button></a>
+                            <button class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png" alt=""></b></button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
     </div>
 
     <script src="js/template.js"></script>
 
-    <script src="js/drop-down.js"></script>
 </body>
 
 </html>
