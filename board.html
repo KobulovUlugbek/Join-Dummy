@@ -6,19 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Board</title>
         <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/fonts.css">
        <link rel="stylesheet" href="css/style.css">
        <link rel="stylesheet" href="css/media.css">
        <link rel="stylesheet" href="css/add-task.css">
     
     </head>
 
-    <body>
+    <body onload="dragDrop()">
         
         <div class="main">
             <div class="main-container">
                 <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
 
-                <div class="Content"> <!-- hier ist die rechte Seite der Webseits -->
+                <div class="Content" > <!-- hier ist die rechte Seite der Webseits -->
                     
                     <div class="board">
                         <h1>Board</h1>
@@ -38,29 +39,7 @@
                                 <p>To do</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" id="dragDrop1">
-                                <div class="child-container">
-                                    <button>Design</button>
-                                
-                                    <p>Website redesign</p>
-                                
-                                    <h4>Modify the contens of the main website...</h4>
-                                    <div class="progressbar-container">
-                                        <div class="progressbar"></div>
-                                        <p>1/2 Done</p>
-                                    </div>
-                                    <div class="icon-container">
-                                        <div>
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                        </div>
-                                        <div>
-                                            <img src="img/urgent-icon4.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="dragdrop" id="todo" ondrop="changePos('progress', 'awaiting', 'done')" ondragover="allowDrop(event)"></div>
                         </div>
 
                         <div class="progress">
@@ -68,44 +47,23 @@
                                 <p>In progress</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
-                            <div class="dragdrop" id="dragDrop2">
-                                <div class="child-container">
-                                    <button>Design</button>
-                                
-                                    <p>Website redesign</p>
-                                
-                                    <h4>Modify the contens of the main website...</h4>
-                                    <div class="progressbar-container">
-                                        <div class="progressbar"></div>
-                                        <p>1/2 Done</p>
-                                    </div>
-                                    <div class="icon-container">
-                                        <div>
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                            <img class="profilbild2" src="img/profil-photo.png" alt="" />
-                                        </div>
-                                        <div>
-                                            <img src="img/urgent-icon4.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="dragdrop" id="progress" ondrop="changePos('todo', 'awaiting', 'done')" ondragover="allowDrop(event)"></div>
                         </div>
 
-
-
-                        <div class="feedback">
+                        <div class="awaiting">
                             <button>
                                 <p>Awaiting Feedback</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
+                            <div class="dragdrop" ondrag="" id="awaiting" ondrop="changePos('done', 'progress', 'todo')" ondragover="allowDrop(event)"></div>
                         </div>
+
                         <div class="done">
                             <button>
                                 <p>Done</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
+                            <div class="dragdrop" id="done" ondrop="changePos('awaiting', 'progress', 'todo')" ondragover="allowDrop(event)"></div>
                         </div>
 
                     </div>
@@ -181,5 +139,6 @@
 
         <script src="js/add-task.js"></script>
         <script src="js/template.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

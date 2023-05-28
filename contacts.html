@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
     <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/contacts.css">
     <link rel="stylesheet" href="css/media.css">
 
-    <script src="script.js"></script>
+
     <script src="js/script.js"></script>
+    <script src="js/contacts.js"></script>
     <script src="js/template.js"></script>
 
 </head>
 
-<body>
+<body onload="initContacts()">
     <div class="main">
         <div class="main-container">
 
@@ -34,49 +35,48 @@
 
                 <div class="contactBoard">
                     <div class="contactContainer">
-                        <div class="contactListing">
-                            <div class="sorting">
+                        <div class="contactListing" id="sortContactListing">
+                            <div class="sorting" style="display: none;">
                                 <span class="contactLetter">A</span>
                                 <div class="line"></div>
-                            </div>
-                            <div class="initialsSectionLeft">
-                                <div class="circleLeft">
-                                    <span class="initialsLeft">AM</span>
-                                </div>
-                                <div class="contactNameLeft">
-                                    <h2>Anton Mayer</h2>
-                                    <a href="anton@gmail.com" class="taskForNameLeft">anton@gmail.com</a>
-                                </div>
-                            </div>
 
-                            <div class="initialsSectionLeft">
-                                <div class="circleLeft">
-                                    <span class="initialsLeft">AS</span>
+                                <div class="initialsSectionLeft">
+                                    <div class="circleLeft">
+                                        <span class="initialsLeft">AM</span>
+                                    </div>
+                                    <div class="contactNameLeft">
+                                        <h2>Anton Mayer</h2>
+                                        <a href="anton@gmail.com" class="taskForNameLeft">anton@gmail.com</a>
+                                    </div>
                                 </div>
-                                <div class="contactNameLeft">
-                                    <h2>Anja Schulz</h2>
-                                    <a href="schulz@gmail.com" class="taskForNameLeft">schulz@gmail.com</a>
+
+                                <div class="initialsSectionLeft">
+                                    <div class="circleLeft">
+                                        <span class="initialsLeft">AS</span>
+                                    </div>
+                                    <div class="contactNameLeft">
+                                        <h2>Anja Schulz</h2>
+                                        <a href="schulz@gmail.com" class="taskForNameLeft">schulz@gmail.com</a>
+                                    </div>
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="contactListing">
-                            <div class="sorting">
+                            <div class="sorting" style="display: none;">
                                 <span class="contactLetter">B</span>
                                 <div class="line"></div>
-                            </div>
-                            <div class="initialsSectionLeft">
-                                <div class="circleLeft">
-                                    <span class="initialsLeft">BM</span>
-                                </div>
-                                <div class="contactNameLeft">
-                                    <h2>Benedigt Ziegler</h2>
-                                    <a href="ziegler@gmail.com" class="taskForNameLeft">ziegler@gmail.com</a>
+
+                                <div class="initialsSectionLeft">
+                                    <div class="circleLeft">
+                                        <span class="initialsLeft">BM</span>
+                                    </div>
+                                    <div class="contactNameLeft">
+                                        <h2>Benedigt Ziegler</h2>
+                                        <a href="ziegler@gmail.com" class="taskForNameLeft">ziegler@gmail.com</a>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
+
 
                     </div>
                     <div class="contactOverview">
@@ -86,38 +86,38 @@
                             </div>
                             <div class="boardSlogan">Better with a team</div>
                         </div>
-
-                        <div class="initialsSection">
-                            <div class="circle">
-                                <span class="initials">AM</span>
-                            </div>
-                            <div class="contactName">
-                                <h2>Anton Mayer</h2>
-                                <span class="taskForName">+ ADD Task</span>
-                            </div>
-                        </div>
-
-                        <div class="">
-                            <div class="contactInformation">
-                                <div class="contactGeneral">
-                                    <p>Contact Information</p>
+                        <div>
+                            <div class="initialsSection">
+                                <div class="circle">
+                                    <span class="initials">AM</span>
                                 </div>
-                                <div class="contactEdit">
-                                    <img class="editPencil" src="img/pencil-icon-edit.png">
-                                    <p>Edit Contact</p>
+                                <div class="contactName">
+                                    <h2>Anton Mayer</h2>
+                                    <span class="taskForName">+ ADD Task</span>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="">
-                            <p><b>Email</b></p>
-                            <a href="anton@gmail.com">anton@gmail.com</a>
-                        </div>
-                        <div class="">
-                            <p><b>Phone</b></p>
-                            <p>+49 1234 567 891</p>
-                        </div>
+                            <div class="">
+                                <div class="contactInformation">
+                                    <div class="contactGeneral">
+                                        <p>Contact Information</p>
+                                    </div>
+                                    <div class="contactEdit">
+                                        <img class="editPencil" src="img/pencil-icon-edit.png">
+                                        <p>Edit Contact</p>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="">
+                                <p><b>Email</b></p>
+                                <a href="anton@gmail.com">anton@gmail.com</a>
+                            </div>
+                            <div class="">
+                                <p><b>Phone</b></p>
+                                <p>+49 1234 567 891</p>
+                            </div>
+                        </div>
                         <div class="addContactContainer">
                             <button onclick="addContact()" class="addContactBtn">New contact <b
                                     class="plus">+</b></button>
