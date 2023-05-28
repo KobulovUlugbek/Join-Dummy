@@ -137,7 +137,6 @@
   width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  gap: 10px;
   border: solid 1px;
   border-color: rgb(195, 189, 189);
   display: flex;
@@ -379,6 +378,7 @@
   visibility: visible;
   right: 50%;
   transform: translate(50%, -50%) scale(1);
+  z-index: 3;
 }
 
 .difficulty-level img {
@@ -463,5 +463,11 @@
 .invite-png{
   height: 17px;
   margin-right: 16px;
+}
+
+.overflow{
+  overflow: auto;
+  max-height: 70px;
+  width: 100%;
 }
 
