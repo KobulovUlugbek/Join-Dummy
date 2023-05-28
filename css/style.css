@@ -9,6 +9,9 @@ button{
 }
 
 /* Ich möchte gepusht werden. */
+.d-none {
+    display: none;
+}
 
 .main-container {
     width:100%;
@@ -161,7 +164,6 @@ button{
     background-color: #DDDDDD;
     height: 80px;
 }
-
 
 .boards-container {
     display: flex;
@@ -492,13 +494,15 @@ div.box6:hover .change-color {
     flex-direction: column;
     align-items: center;
     width: 250px;
-    height: 50vh;
 }
 
-.todo:hover, .progress:hover, .awaiting:hover, .done:hover {
-    background-color: #a4aab4;
+.dragdrop {
+    width: 180px;
+    height: 180px;
+    border-radius: 25px;
+    border: dotted gray;
+    transition: transform .2s ease-in;
 }
-
 
 .box-container button {
     width: 190px;
@@ -528,6 +532,13 @@ div.box6:hover .change-color {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    border: solid white;
+    border-width: 2px;
+    margin: 0 0 0 -12px;
+}
+
+.teammates {
+    padding: 0 0 0 12px;
 }
 
 .child-container {
@@ -539,9 +550,10 @@ div.box6:hover .change-color {
     border: solid 1px #f1eeee;
     /* diese farbe immer für buttons nehmen */
     border-radius: 25px;
-    transition: transform .2s;
     gap: 8px;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;    
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .Design, .Sales, .Backoffice, .Marketing, .Media{
@@ -557,7 +569,6 @@ div.box6:hover .change-color {
 
 .Design {
     background-color: rgb(255, 122, 0);
-    
 }
 .Sales {
     background-color: rgb(252, 113, 255);
@@ -570,11 +581,6 @@ div.box6:hover .change-color {
 }
 .Media {
     background-color: rgb(255, 199, 1);
-}
-
-.child-container {
-    cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
 .child-container:active {
