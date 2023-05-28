@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Join-Dummy</title>
         <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/media.css" />
         <link rel="stylesheet" href="css/add-task.css" />
@@ -13,14 +14,11 @@
 
     <body onload="actualDate(), date(), init()">
         <div class="main-container">
-            <div id="sidebar-template"></div>
-            <!-- TEMPLATE für SIDEBAR -->
-
-            <div class="header-right">
+            <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER + SIDEBAR -->
+            <div class="Content">
                 <!-- hier ist die rechte Seite der Webseits -->
-                <div id="header-template"></div>
-                <!-- TEMPLATE für HEADER -->
-
+                
                 <div class="summary">
                     <div class="summary-80">
                         <h1>Summary</h1>
@@ -31,8 +29,27 @@
                     <div class="prozent"></div>
                 </div>
 
+
+                <div class="header-m" id="header-m">
+                    <div>
+                        <img class="join-m" src="img/Capa1.png" alt="">
+                    </div>
+                    <div class="header2">
+                        <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild"></a>
+                    </div>
+                </div>
+
                 <div class="boards-container">
+                
+                    
+    
                     <div class="boards">
+                        <div class="summary-m">
+                            <p>Kanban Project Management Tool</p>
+                            <h1>Summary</h1>
+                            <h3>Everything in a nutshell!</h3>
+                            <div class="prozent-m"></div>
+                        </div>
                         <div class="board-1">
                             <button class="box1">
                                 <p class="box">5</p>
@@ -102,10 +119,22 @@
     
     <footer class="footer">
         <div class="footer">
-            <h5>dqw</h5>
-            <h5>dqw</h5>
-            <h5>dqda</h5>
-            <h5>dqda</h5>
+            <div class="sm">
+                <img src="img/summary-icon.png" alt="">
+                <h4>Summary</h4>
+            </div>
+            <div class="bm">
+                <img src="img/board-icon.png" alt="">
+                <h4>Board</h4>
+            </div>
+            <div class="am">
+                <img src="img/add-task-icon.png" alt="">
+                <h4>Add Task</h4>
+            </div>
+            <div class="cm">
+                <img src="img/contacts-icon.png" alt="">
+                <h4>Contacts</h4>
+            </div>
         </div>
     </footer>
 

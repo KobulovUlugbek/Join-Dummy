@@ -58,6 +58,7 @@
     /* height: 0px; */
     /* border: 1px solid #D1D1D1; */
     border-radius: 3px;
+    width: 300px;
 }
 
 .line {
@@ -222,6 +223,11 @@
     align-items: center;
     /* Ligth blue */
     color: #29ABE2;
+    cursor: pointer;
+}
+
+.taskForName:hover {
+    border-bottom: #29ABE2;
 }
 
 .contactInformation {
@@ -293,4 +299,61 @@
     background-color: #2ebbda;
     transition: trasform ease-in-out 100ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
+
+.editContactContainer {
+    display: none;
+    /*display: flex;
+    position: absolute;*/
+    /*flex-direction: column;*/
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    width: 1000px;
+    height: 494px;
+    /*position: relative;*/
+
+}
+
+.headlineEdit {
+    background-color: #2A3647;
+    width: 453px;
+    height: 100%;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.editSection {
+    padding-left: 56px;
+}
+
+.initialsSectionOverlay {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.editInputs {
+    margin-left: 56px;
+}
+
+.inputs {
+    width: 320px;
+    height: 40px;
+    border-style: unset;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    padding-left: 15px;
+    padding-top: 5px;
+    font-size: 20px;
 }

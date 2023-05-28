@@ -1,7 +1,11 @@
 body {
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #F6F7F8;
+}
+
+button{
+    font-family: 'Inter', sans-serif;
 }
 
 /* Ich möchte gepusht werden. */
@@ -9,23 +13,30 @@ body {
 .main-container {
     width:100%;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
 }
 
 .sidebar {
     width: 20vh;
     height: 100vh;
     background-color: #2B3647;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index: 2;
 }
 
 .sidebar a {
     color: #C1C5CB;
     text-decoration: none;
+ }
+
+ .sidebar a:active {
+    color: #C1C5CB;
+    text-decoration: none;
+    background-color: #081931;
+    color: white;
  }
 
  
@@ -69,40 +80,37 @@ body {
     align-items: center;
 }
 
-.med-container a:hover {
-    background-color: #081931;
-    color: white;
-}
-
-.legal-notice a:hover {
-    background-color: #081931;
-    color: white;
-}
-
-.header-right {
-    background-color: #F6F7F8;
-    width: 100%;
-    height: 100%;
-}
-
-/* Rechte Seite von der Container */
-
-
 .header {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
     height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 0 25px 0 25px;
+    padding: 0 25px 0 0;
     background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+.header h2 {
+    padding-left: 350px;
 }
 
 .header2 {
     display: flex;
     align-items: center;
     gap: 40px;
+    padding: 0 20px 0 0 ;
+}
+
+/* Rechte Seite von der Container */
+.Content {
+    background-color: #F6F7F8;
+    height: -webkit-fill-available;
+    margin: 0 0 0 250px;
+    padding: 100px 0 0 0
 }
 
 .symbol {
@@ -320,7 +328,6 @@ body {
 
 .number {
     font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
 }
 
@@ -390,21 +397,12 @@ div.box6:hover .change-color {
 }
 
 
-
-
 /* Ab hier geht CSS für Board Seite */
-
-
 
 .board {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 68px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 70px;
 }
 
 .board h1 {
@@ -458,15 +456,14 @@ div.box6:hover .change-color {
 
 .inp-container {
     display: flex;
-    flex-direction: row;
     gap: 30px;
+    position: relative;
 }
 
 .search-icon {
     height: 22px;
     position: absolute;
-    right: 197px;
-    top: 155px;
+    margin: 10px 0 0 190px;    
 }
 
 .strich-gray2 {
@@ -476,28 +473,39 @@ div.box6:hover .change-color {
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 223px;
-    top: 151px;
+    margin: 7px 0 0 180px;  
+}
+
+/* DRAG DROP ZONE */
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 95%;
+}
+
+.todo, .progress, .awaiting, .done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 50vh;
+}
+
+.todo:hover, .progress:hover, .awaiting:hover, .done:hover {
+    background-color: #a4aab4;
 }
 
 
-
-.add-task-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.add-task-container button {
-    width: 150px;
+.box-container button {
+    width: 190px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 30px;
+    height: 50px;
     font-size: 16px;
     font-weight: 600;
     border: none;
@@ -506,7 +514,7 @@ div.box6:hover .change-color {
     /*  white-space:nowrap; */
 }
 
-.add-task-container button:hover {
+.box-container button:hover {
     filter: saturate(var(--value, 1));
     --value: 120;
 }
@@ -522,18 +530,7 @@ div.box6:hover .change-color {
     border-radius: 50%;
 }
 
-.box-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    align-items: stretch;
-    gap: 30px;
-}
-
-.child-container-1 {
+.child-container {
     width: 165px;
     display: flex;
     flex-direction: column;
@@ -547,145 +544,50 @@ div.box6:hover .change-color {
     padding: 15px 15px 15px 15px;
 }
 
-.child-container-2 {
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee;
-    /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-
-.child-container-3 {
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee;
-    /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-
-.child-container-4 {
-    width: 165px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: solid 1px #f1eeee;
-    /* diese farbe immer für buttons nehmen */
-    border-radius: 25px;
-    transition: transform .2s;
-    gap: 8px;
-    padding: 15px 15px 15px 15px;
-}
-
-.child-container-1 button {
+.Design, .Sales, .Backoffice, .Marketing, .Media{
     width: 100px;
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: rgb(255, 140, 0);
     height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.child-container-2 button {
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
+.Design {
+    background-color: rgb(255, 122, 0);
+    
+}
+.Sales {
+    background-color: rgb(252, 113, 255);
+}
+.Backoffice {
+    background-color: rgb(31, 215, 193);
+}
+.Marketing {
+    background-color: rgb(0, 56, 255);
+}
+.Media {
+    background-color: rgb(255, 199, 1);
 }
 
-.child-container-1,
-.child-container-2,
-.child-container-3,
-.child-container-4 {
+.child-container {
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-.child-container-1:active,
-.child-container-2:active,
-.child-container-3:active,
-.child-container-4:active {
+.child-container:active {
     transform: rotate(5deg);
 }
 
-.child-container-3 button {
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
-}
-
-.child-container-4 button {
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(255, 140, 0);
-    height: 20px;
-}
-
-.child-container-1 p {
+.child-container p {
     font-weight: 600;
     font-size: 18px;
     margin: 0;
 }
 
-.child-container-2 p {
-    font-weight: 600;
-    font-size: 18px;
-    margin: 0;
-}
-
-.child-container-3 p {
-    font-weight: 600;
-    font-size: 18px;
-    margin: 0;
-}
-
-.child-container-4 p {
-    font-weight: 600;
-    font-size: 18px;
-    margin: 0;
-}
-
-.child-container-1 h4 {
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-
-.child-container-2 h4 {
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-
-.child-container-3 h4 {
-    font-weight: 300;
-    color: gray;
-    font-size: 15px;
-    margin: 0;
-}
-
-.child-container-4 h4 {
+.child-container h4 {
     font-weight: 300;
     color: gray;
     font-size: 15px;
@@ -722,7 +624,6 @@ div.box6:hover .change-color {
 
 #todays-date {
     font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
 
