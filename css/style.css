@@ -279,14 +279,17 @@ button{
 }
 
 .greeting p {
-    font-size: 30px;
+    font-size: 70px;
+}
+#greet-user{
+    font-size: 60px;
 }
 
 .greeting {
     vertical-align: top;
     width: 20%;
-    top: 450px;
-    right: 0px;
+    top: 360px;
+    right: 100px;
     position: absolute;
 }
 

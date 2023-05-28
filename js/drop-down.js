@@ -5,7 +5,12 @@ function toggleDropdown() {
     });
   }
   
-
+  function changeCategory(category) {
+    const categoryElement = document.getElementById('change');
+    categoryElement.innerText = category;
+    toggleDropdown();
+  }
+  
   function toggleDropdown2() {
     const subfolders = document.querySelectorAll(".subfolder2");
     subfolders.forEach((subfolder) => {
@@ -17,3 +22,4 @@ function toggleDropdown() {
     const checkbox = document.getElementById(checkboxId);
     checkbox.checked = !checkbox.checked;
   }
+
