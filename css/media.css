@@ -130,32 +130,47 @@
     display: none;
   }
 }
-@media only screen and (max-width: 1135px) {
+@media only screen and (min-width: 1135px) {
   #greet-user {
-    font-size: 40px;
+    font-size: 80px;
   }
   #greeting {
-    font-size: 40px;
+    font-size: 70px;
   }
   .greeting {
     vertical-align: top;
     width: 15%;
-    top: 410px;
+    top: 350px;
+    right: 100px;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 1134px) {
+  #greet-user {
+    font-size: 60px;
+  }
+  #greeting {
+    font-size: 50px;
+  }
+  .greeting {
+    vertical-align: top;
+    width: 15%;
+    top: 385px;
     right: 100px;
     position: absolute;
   }
 }
 @media only screen and (max-width: 1035px) {
   #greet-user {
-    font-size: 30px;
+    font-size: 50px;
   }
   #greeting {
-    font-size: 30px;
+    font-size: 50px;
   }
   .greeting {
     vertical-align: top;
     width: 10%;
-    top: 430px;
+    top: 390px;
     right: 100px;
     position: absolute;
   }
