@@ -8,6 +8,10 @@ button{
     font-family: 'Inter', sans-serif;
 }
 
+.d-none {
+    display: none !important;
+}
+
 /* Ich möchte gepusht werden. */
 
 .main-container {
@@ -99,10 +103,43 @@ button{
 }
 
 .header2 {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px 0 0 ;
+    position: relative;
+    height: 100px;
+}
+
+.help-and-profile-container {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 0 20px 0 0 ;
+}
+
+.help-and-profile-container img {
+    cursor: pointer;
+}
+
+.profile-logout-container {
+    position: absolute;
+    bottom: 10px;
+}
+
+.logout-link{
+    padding: 14px 32px;
+    background-color: #2B3647;
+    color: #7B818A;
+    text-decoration: none;
+    border-radius: 16px;
+    border-top-right-radius: 0px !important;
+}
+
+.logout-link:hover{
+    color: #98a3b5;
+    text-decoration: underline;
 }
 
 /* Rechte Seite von der Container */
