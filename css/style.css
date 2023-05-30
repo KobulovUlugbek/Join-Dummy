@@ -1,11 +1,26 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #F6F7F8;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F5F5F5;
 }
 
 button{
     font-family: 'Inter', sans-serif;
+}
+
+textarea{
+    font-family: 'Inter', sans-serif;
+}
+
+input{
+    font-family: 'Inter', sans-serif;
+    color: #D1D1D1
+}
+
+::placeholder {
+    color: #D1D1D1
 }
 
 /* Ich möchte gepusht werden. */

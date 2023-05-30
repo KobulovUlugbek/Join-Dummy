@@ -40,11 +40,11 @@
 }
 
 .add-task-h1 {
-  font-size: 45px;
+  font-size: 61px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 60px;
   margin-top: 40px;
 }
 
@@ -70,7 +70,7 @@
 
 .child-container-left h4 {
   margin-bottom: 5px;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .child-container-right {
@@ -82,7 +82,7 @@
 
 .child-container-right h4 {
   margin-bottom: 5px;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .right1 {
@@ -403,8 +403,8 @@
 
 .checkbox1 h5 {
   margin: 0;
-  font-weight: lighter;
   font-family:  'Inter', sans-serif;
+  font-weight: normal;
 }
 
 .circle-0 {
