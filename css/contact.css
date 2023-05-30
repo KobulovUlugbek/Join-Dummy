@@ -95,6 +95,8 @@
 .circle {
     display: flex;
     align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
 }
 
 .initials {
@@ -131,22 +133,25 @@
     align-items: flex-start;
     padding: 15px 25px;
     gap: 35px;
-
-
 }
 
 .initialsSectionLeft:hover {
-
     background: #2A3647;
     border-radius: 10px;
-    color: white;
-
+    color: var(--text-secondary-color);
 }
+
+
+:root {
+    --text-secondary-color: #ffffff;
+}
+
 
 .circleLeft {
     display: flex;
     align-items: center;
-    border-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
 }
 
 .initialsLeft {
@@ -271,34 +276,39 @@
 }
 
 .addContactBtn {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 120%;
-    width: 130px;
-    height: 25px;
-    background-color: #2B3647;
-    color: white;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    position: absolute;
-    width: 197.77px;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    width: 193px;
     height: 53px;
-    left: 963px;
-    /*top: 907px;*/
-    top: 670px;
-    gap: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    right: 52px;
+    top: 90%;
+    background-color: #2A3647;
+    border: 1px solid #2A3647;
     border-radius: 10px;
-    border: none;
-    padding: 18px 15px 18px 15px;
     cursor: pointer;
+    z-index: 10;
+
+}
+
+.contactBTNcontent {
+    line-height: 120%;
+    font-weight: 700;
+    font-family: inter;
+    color: white;
+    height: 25px;
+    width: 130px;
+    font-size: 20px;
 }
 
 .addContactBtn:hover {
     background-color: #2ebbda;
     transition: trasform ease-in-out 100ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    border: none;
 }
 
 .editContactContainer {
