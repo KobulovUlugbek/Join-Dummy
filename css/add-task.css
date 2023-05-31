@@ -26,6 +26,10 @@
   transition: transform 0.6s, right 0.6s;
 }
 
+.background{
+  background-color: gray;
+}
+
 .close-btn {
   font-weight: lighter;
   border: none;
@@ -137,7 +141,6 @@
   width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  gap: 10px;
   border: solid 1px;
   border-color: rgb(195, 189, 189);
   display: flex;
@@ -379,6 +382,7 @@
   visibility: visible;
   right: 50%;
   transform: translate(50%, -50%) scale(1);
+  z-index: 2;
 }
 
 .difficulty-level img {
@@ -410,7 +414,7 @@
 .circle-0 {
   width: 18px;
   height: 18px;
-  background-color: rgb(0, 255, 0);
+  background-color: #FF7900;
   border-radius: 50%;
   align-items: center;
 }
@@ -418,37 +422,68 @@
 .circle-1 {
   width: 18px;
   height: 18px;
-  background-color: red;
+  background-color: #FC71FF;
   border-radius: 50%;
 }
 
 .circle-2 {
   width: 18px;
   height: 18px;
-  background-color: rgb(0, 60, 255);
+  background-color: #20D7C0;
   border-radius: 50%;
 }
+
+.circle-3 {
+  width: 18px;
+  height: 18px;
+  background-color: #0038FF;;
+  border-radius: 50%;
+}
+
+.circle-4 {
+  width: 18px;
+  height: 18px;
+  background-color: #ffee00;
+  border-radius: 50%;
+}
+
+
+
 
 .subfolder:hover .circle-0{
   width: 14px;
   height: 14px;
   border: 1.5px solid white;
   margin: 1px;
-  background-color: rgb(0, 255, 0);
+  background-color: #FF7900;
 }
 .subfolder:hover .circle-1{
   width: 14px;
   height: 14px;
   border: 1.5px solid white;
   margin: 1px;
-  background-color: red;
+  background-color: #FC71FF;
 }
 .subfolder:hover .circle-2{
   width: 14px;
   height: 14px;
   border: 1.5px solid white;
   margin: 1px;
-  background-color: rgb(0, 60, 255);
+  background-color: #20D7C0;
+}
+.subfolder:hover .circle-3{
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid white;
+  margin: 1px;
+  background-color: #0038FF;;
+}
+.subfolder:hover .circle-4{
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid white;
+  margin: 1px;
+  background-color: #ffee00;
 }
 
 .hidden {
@@ -465,3 +500,37 @@
   margin-right: 16px;
 }
 
+.overflow{
+  overflow: auto;
+  max-height: 70px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.overflow::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 8px;
+	height:6px;
+}
+.overflow::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: #777;
+}
+.overflow::-webkit-scrollbar-corner {
+	background-color:transparent;
+}
+
+#change{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#change h4{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 12px;
+}
