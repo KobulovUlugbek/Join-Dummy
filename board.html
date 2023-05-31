@@ -21,6 +21,17 @@
                 <div class="Content">
                     <!-- hier ist die rechte Seite der Webseits -->
 
+
+                    <div class="header-m" id="header-m">
+                        <div>
+                            <img class="join-m" src="img/Capa1.png" alt="">
+                        </div>
+                        <div class="header2">
+                            <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild"></a>
+                        </div>
+                    </div>
+
+
                     <div class="board">
                         <h1>Board</h1>
 
@@ -29,6 +40,19 @@
                             <div class="strich-gray2"></div>
                             <img class="search-icon" src="img/search-icon.png" alt="" />
                             <button onclick="openPopup()" class="add-task-btn">Add task <b class="plus">+</b></button>
+                        </div>
+                    </div>
+
+                    <div class="board-m">
+                        <p>Kanban Project Management Tool</p>
+                        <div class="board-p">
+                            <p>Board</p>
+                            <a class="s-btn" href="add-task.html"><button onclick="openPopup()" class="add-task-btn"><b class="plus">+</b></button></a>
+                        </div>
+                        <div class="inp-container">
+                            <input class="find-task-input" type="text" placeholder="Find Task" maxlength="12" id="filterInput" />
+                            <div class="strich-gray2"></div>
+                            <img class="search-icon" src="img/search-icon.png" alt="" />
                         </div>
                     </div>
 
@@ -146,6 +170,42 @@
                 </div>
             </div>
         </div>
+
+        <footer class="footer">
+            <div class="footer">
+
+                <a href="startseite.html">
+                    <div class="sm">
+                        <img src="img/summary-icon.png" alt="">
+                        <h4>Summary</h4>
+                    </div>
+                </a>
+
+                <a href="board.html">
+                    <div class="bm">
+                        <img src="img/board-icon.png" alt="">
+                        <h4>Board</h4>
+                    </div>
+                </a>
+
+                <a href="add-task.html">
+                    <div class="am">
+                        <img src="img/add-task-icon.png" alt="">
+                        <h4>Add Task</h4>
+                    </div>
+                </a>
+
+                <a href="contacts.html">
+                    <div class="cm">
+                        <img src="img/contacts-icon.png" alt="">
+                        <h4>Contacts</h4>
+                    </div>
+                </a>
+
+            </div>
+        </footer>
+
+
 
         <script src="js/add-task.js"></script>
         <script src="js/template.js"></script>
