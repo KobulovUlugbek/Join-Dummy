@@ -208,6 +208,8 @@
 
 /**/
 
+/*Contact Details start*/
+
 .contactName h2 {
     font-weight: 500;
     font-size: 47px;
@@ -269,6 +271,10 @@
     padding-left: 45px;
 }
 
+/**/
+
+/*add Contact BTN start*/
+
 .addContactContainer {
     display: flex;
     flex-direction: row;
@@ -311,10 +317,14 @@
     border: none;
 }
 
+/*add Contact BTN end*/
+
+/*Overlay start*/
+
 .editContactContainer {
     display: none;
-    /*display: flex;
-    position: absolute;*/
+    /*display: flex;*/
+    /*position: fixed;*/
     /*flex-direction: column;*/
     align-items: center;
     background-color: white;
@@ -367,3 +377,81 @@
     padding-top: 5px;
     font-size: 20px;
 }
+
+.editContainer {
+    display: flex;
+    gap: 25px;
+    margin-left: 62px;
+}
+
+.editContactBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*position: fixed;*/
+    width: 153px;
+    height: 55px;
+    right: 52px;
+    /*top: 90%;*/
+    background-color: #2A3647;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+    /*z-index: 10;*/
+}
+
+.editcontactBTNcontent {
+    line-height: 120%;
+    font-weight: 700;
+    font-family: inter;
+    color: white;
+    height: 25px;
+    width: 130px;
+    font-size: 20px;
+}
+
+.editContactBtn:hover {
+    background-color: #2ebbda;
+    transition: trasform ease-in-out 100ms;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    border: none;
+}
+
+.deleteContactBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*position: fixed;*/
+    width: 98px;
+    height: 55px;
+    right: 52px;
+    /*top: 90%;*/
+    background-color: #ffffff;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+    /*z-index: 10;*/
+}
+
+.deletecontactBTNcontent {
+    line-height: 120%;
+    font-weight: 700;
+    font-family: inter;
+    color: #2A3647;
+    height: 25px;
+    width: 130px;
+    font-size: 20px;
+}
+
+.deleteContactBtn:hover {
+    background-color: #2ebbda;
+    transition: trasform ease-in-out 100ms;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    border: none;
+}
+
+/*Overlay end*/
