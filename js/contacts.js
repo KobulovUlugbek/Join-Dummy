@@ -44,7 +44,7 @@ function renderContactLeft() {
 
         // Erstellen des HTML-Codes für den Kontakt
         document.getElementById('sortContactListing').innerHTML += `
-          <div class="initialsSectionLeft">
+          <div onclick="showContactDetails(${i})" class="initialsSectionLeft">
             <div class="circleLeft">
               <span class="initialsLeft">${initials}</span>
             </div>
@@ -56,3 +56,42 @@ function renderContactLeft() {
         `;
     }
 }
+
+function showContactDetails(index) {
+    const contact = contacts[index];
+    const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
+    document.getElementById(`initialsSectionRight`).innerHTML = '';
+
+    document.getElementById(`initialsSectionRight`).innerHTML = `
+    <div class="initialsSection">
+                                    <div class="circle">
+                                        <span class="initials">${initials}</span>
+                                    </div>
+                                    <div class="contactName">
+                                        <h2>${contact.firstName} ${contact.lastName}</h2>
+                                        <span class="taskForName">+ ADD Task</span>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="contactInformation">
+                                        <div class="contactGeneral">
+                                            <p>Contact Information</p>
+                                        </div>
+                                        <div class="contactEdit">
+                                            <img class="editPencil" src="img/pencil-icon-edit.png">
+                                            <p>Edit Contact</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <p><b>Email</b></p>
+                                    <a href="#">${contact.email}</a>
+                                </div>
+                                <div class="">
+                                    <p><b>Phone</b></p>
+                                    <p>${contact.phone}</p>
+                                </div>`;
+
+};
