@@ -6,26 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Board</title>
         <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
-        <link rel="stylesheet" href="css/fonts.css">
-       <link rel="stylesheet" href="css/style.css">
-       <link rel="stylesheet" href="css/media.css">
-       <link rel="stylesheet" href="css/add-task.css">
-    
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/add-task.css" />
     </head>
 
-    <body onload="dragDrop()">
-        
+    <body onload="init()">
         <div class="main">
             <div class="main-container">
-                <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
+                <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER + SIDEBAR -->
 
-                <div class="Content" > <!-- hier ist die rechte Seite der Webseits -->
-                    
+                <div class="Content">
+                    <!-- hier ist die rechte Seite der Webseits -->
+
                     <div class="board">
                         <h1>Board</h1>
 
                         <div class="inp-container">
-                            <input class="find-task-input" type="text" placeholder="Find Task" maxlength="12" />
+                            <input class="find-task-input" type="text" placeholder="Find Task" maxlength="12" id="filterInput" />
                             <div class="strich-gray2"></div>
                             <img class="search-icon" src="img/search-icon.png" alt="" />
                             <button onclick="openPopup()" class="add-task-btn">Add task <b class="plus">+</b></button>
@@ -33,14 +33,13 @@
                     </div>
 
                     <div class="box-container">
-                        
                         <div class="todo">
                             <button>
                                 <p>To do</p>
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
                             <div id="todo"></div>
-                            <div id="dragdrop_todo" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('todo')"></div> 
+                            <div id="dragdrop_todo" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('todo')"></div>
                         </div>
 
                         <div class="progress">
@@ -49,7 +48,7 @@
                                 <img class="change-color2" src="img/plus-button.png" alt="" />
                             </button>
                             <div id="progress"></div>
-                            <div id="dragdrop_progress" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('progress')"></div>                        
+                            <div id="dragdrop_progress" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('progress')"></div>
                         </div>
 
                         <div class="awaiting">
@@ -69,7 +68,6 @@
                             <div id="done"></div>
                             <div id="dragdrop_done" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('done')"></div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -115,9 +113,15 @@
                                 <div>
                                     <h4>Prio</h4>
                                     <div class="difficulty-level">
-                                        <button class="add-task-btn2">Urgent <b class="plus"><img src="img/urgent.icon2.png" alt=""></b></button>
-                                        <button class="add-task-btn2">Medium <b class="plus"><img src="img/urgent-icon3.png" alt=""></b></button>
-                                        <button class="add-task-btn2">Low <b class="plus"><img src="img/urgent-icon4.png" alt=""></b></button>
+                                        <button class="add-task-btn2">
+                                            Urgent <b class="plus"><img src="img/urgent.icon2.png" alt="" /></b>
+                                        </button>
+                                        <button class="add-task-btn2">
+                                            Medium <b class="plus"><img src="img/urgent-icon3.png" alt="" /></b>
+                                        </button>
+                                        <button class="add-task-btn2">
+                                            Low <b class="plus"><img src="img/urgent-icon4.png" alt="" /></b>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -126,14 +130,16 @@
                                     <input class="title" type="text" placeholder="Add new subtask" />
                                 </div>
                                 <div class="checkbox1">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" />
                                     <h5>Subtask 1</h5>
                                 </div>
                             </div>
 
                             <div class="right2">
                                 <button onclick="closePopup()" class="add-task-btn-cancel">Cancel <b class="plus-x">x</b></button>
-                                <button class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png" alt=""></b></button>
+                                <button class="add-task-btn3">
+                                    Create Task <b class="plus-done"><img src="img/done.png" alt="" /></b>
+                                </button>
                             </div>
                         </div>
                     </div>
