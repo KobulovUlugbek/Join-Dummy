@@ -322,23 +322,29 @@
 /*Overlay start*/
 
 .editContactContainer {
-    display: none;
-    /*display: flex;*/
-    /*position: fixed;*/
-    /*flex-direction: column;*/
+    /*display: none;*/
+    display: flex;
+    position: fixed;
+
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
     width: 1000px;
     height: 494px;
-    /*position: relative;*/
+}
 
+.overlayLogo {
+    position: absolute;
+    right: 93.43%;
+    top: 32.17%;
+    width: 40px;
+    height: auto;
 }
 
 .headlineEdit {
     background-color: #2A3647;
-    width: 453px;
+    width: 540px;
     height: 100%;
     border-radius: 30px 0px 0px 30px;
     display: flex;
@@ -351,8 +357,34 @@
     color: #FFFFFF;
 }
 
+.overlayLine {
+    height: 90px;
+    border: 1.5px solid #29ABE2;
+    transform: rotate(90deg);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    /* right: 22.43%; */
+    left: 7%;
+    top: 47.17%;
+    /* flex-direction: column; */
+    border-radius: 10px;
+}
+
 .editSection {
     padding-left: 56px;
+}
+
+.closingCross {
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    margin-right: 50px;
+    top: 6%;
+    left: 95%;
 }
 
 .initialsSectionOverlay {
@@ -365,7 +397,7 @@
 }
 
 .inputs {
-    width: 320px;
+    width: 400px;
     height: 40px;
     border-style: unset;
     border: 1px solid #D1D1D1;
@@ -381,7 +413,7 @@
 .editContainer {
     display: flex;
     gap: 25px;
-    margin-left: 62px;
+    margin-left: 140px;
 }
 
 .editContactBtn {

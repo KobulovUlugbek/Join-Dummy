@@ -131,13 +131,20 @@
                     </div>
 
                     <div class="editContactContainer">
-                        <div class="headlineEdit">Edit contact</div>
+                        <div class="headlineEdit">
+                            <img class="overlayLogo" src="img\Join-icon.png" alt="Join Logo">
+                            <div>Edit contact</div>
+                            <span class="overlayLine"></span>
+                        </div>
                         <div class="editSection">
                             <div class="initialsSectionOverlay">
                                 <div class="circle">
                                     <span class="initials">AM</span>
                                 </div>
                                 <div class="editInputs">
+                                    <div class="closingCross">
+                                        <img onclick="closeEditContact()" src="img\cross.png" alt="Close Edit">
+                                    </div>
                                     <input class="inputs" type="text" required="" placeholder="Name"
                                         style="background-image: url('./img/user.png')" id="">
                                     <input class="inputs" type="email" required="" placeholder="Email"
