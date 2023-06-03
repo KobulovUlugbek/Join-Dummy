@@ -447,6 +447,9 @@ div.box6:hover .change-color {
     align-items: center;
     justify-content: center;
 }
+footer{
+    display: none;
+}
 
 .add-task-btn {
     font-size: 20px;

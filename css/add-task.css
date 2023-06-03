@@ -272,7 +272,7 @@
 
 
 
-.add-task-btn2 {
+.add-task-btn21 {
   width: 95px;
   background-color: white;
   color: black;
@@ -288,12 +288,81 @@
   font-size: 15px;
 }
 
-.add-task-btn2:hover {
-  background-color: #fb5b5b;
+.add-task-btn21:hover {
   transition: trasform ease-in-out 100ms;
   width: 100px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 6px 2px, rgba(0, 0, 0, 0.09) 0px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.01) 0px 8px 4px, rgba(0, 0, 0, 0.01) 0px 6px 2px, rgba(0, 0, 0, 0.01) 0px 2px 2px;
 }
+.add-task-btn21:focus{
+  background-color: #FF3D00;
+  color: white;
+  font-weight: 600;
+}
+.add-task-btn21:focus .change-color-white {
+  filter: brightness(0) invert(1);
+}
+
+.add-task-btn23 {
+  width: 95px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 8px 40px 8px 40px;
+  font-size: 15px;
+}
+
+.add-task-btn23:hover {
+  transition: trasform ease-in-out 100ms;
+  width: 100px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.01) 0px 8px 4px, rgba(0, 0, 0, 0.01) 0px 6px 2px, rgba(0, 0, 0, 0.01) 0px 2px 2px;
+}
+.add-task-btn23:focus{
+  background-color: #7AE228;
+  color: white;
+  font-weight: 600;
+}
+.add-task-btn23:focus .change-color-white {
+  filter: brightness(0) invert(1);
+}
+
+.add-task-btn22 {
+  width: 95px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 8px 40px 8px 40px;
+  font-size: 15px;
+}
+
+.add-task-btn22:hover {
+  transition: trasform ease-in-out 100ms;
+  width: 100px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.01) 0px 8px 4px, rgba(0, 0, 0, 0.01) 0px 6px 2px, rgba(0, 0, 0, 0.01) 0px 2px 2px;
+}
+.add-task-btn22:focus{
+  background-color: #FFA800;
+  color: white;
+  font-weight: 600;
+}
+.add-task-btn22:focus .change-color-white {
+  filter: brightness(0) invert(1);
+}
+
+
 
 .difficulty-level {
   display: flex;
@@ -389,6 +458,9 @@
   width: 15px;
   display: flex;
   margin-left: 5px;
+}
+footer{
+  display: none;
 }
 
 .add-task-container-main {

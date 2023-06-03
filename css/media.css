@@ -240,6 +240,38 @@
     margin-left: 25px;
     margin-right: 25px;
   }
+
+
+  /* Add Task HTML*/
+
+
+  .add-task-container-main{
+    height: 130vh;
+    width: 100%;
+  }
+
+  .first-container{
+    display: flex;
+    width: 90%;
+    flex-direction: column !important;
+  }
+  .child-container-left{
+    width: 100% !important;
+    display: flex;
+  }
+  .child-container-right{
+    width: 100% !important;
+    display: flex;
+    margin-top: 40px;
+  }
+  .add-task-h1{
+    margin: 15px 0px 0px 30px !important;
+  }
+
+  .right2,
+  .strich-gray3{
+    display: none !important;
+  }
 }
 
 
