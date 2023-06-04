@@ -26,7 +26,7 @@ let todos = [{
 }
 ]
 
-function dragDrop() {
+function defineGenerationZone() {
     const situations = ['todo', 'progress', 'awaiting', 'done'];
     for (const situation of situations) {
         const filteredTodos = todos.filter(t => t['situation'] === situation);
@@ -68,10 +68,41 @@ function startdragging(id){
 }
 
 function allowDrop(ev) {
-    ev.preventDefault();
+    ev.preventDefault();   
 }
 
 function changePos(situation) {
     todos[currentlyDraggedElement]['situation'] = situation;
-    dragDrop();
+    defineGenerationZone(); 
+    showDropZone();
 }
+
+//arbeiten mit dragleave und dragend
+//wenn ich zone verlasse, soll Dropzone-Rand eingeblendet werden
+//wenn ich draggen beendet habe, sollen alle zonen ausgeblendet werden
+// mit For-Schleife durch situationen und elements be id getten `dragdrop_${element[situation]}`
+// if (situation === 'done)
+
+function showDropZone() {
+    if (todos[currentlyDraggedElement]['situation'] === 'todo') {
+        document.getElementById(`dragdrop_progress}`).classList.add('dragdrop'); 
+        document.getElementById(`dragdrop_awaiting}`).classList.add('dragdrop'); 
+        document.getElementById(`dragdrop_done}`).classList.add('dragdrop'); 
+        document.getElementById(`dragdrop_todo}`).classList.remove('dragdrop');
+    }
+
+}
+// document.getElementById(`dragrop_${element['situation']}`).classList.add('dragdrop');
+
+
+
+
+const draggables = document.querySelectorAll('.child-container')
+const containers = document.querySelectorAll('.dragdrop')
+
+draggables.forEach(containers => {
+    containers.addEventListener('dragstart', () => {
+        containers.classList.remove('dragdrop')
+    })
+})
+//funktioniert so nicht, wenn in unterschiedlichen Divs
