@@ -1,14 +1,20 @@
+/* (max-width: 1000px) */
+
+
 @media only screen and (max-width: 1000px) {
   #header-template {
     display: none;
   }
+
   .header-right {
     width: 100%;
   }
+
   footer {
     height: 10vh;
     background-color: #2B3647;
   }
+
   .footer {
     display: flex;
     flex-direction: row;
@@ -16,25 +22,37 @@
     align-items: center;
     width: 100%;
     color: white;
+    position: fixed;
   }
+
+  footer a{
+    text-decoration: none;
+    color: white;
+  }
+
   .footer h4 {
     font-weight: 300;
   }
+
   body {
     height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
   }
+
   .main-container {
     height: 90vh;
   }
+
   .greeting {
     display: none;
   }
+
   .summary {
     display: none;
   }
+
   .header-m {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
     height: 70px;
@@ -48,29 +66,34 @@
     position: fixed;
     z-index: 1;
   }
+
   .Content {
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
   }
+
   .boards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .join-m {
     width: 30px;
     margin-left: 20px;
   }
+
   .boards-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 98vh;
   }
+
   .summary-m {
     display: flex;
     flex-direction: column;
@@ -78,21 +101,31 @@
     line-height: 35px;
     width: 78%;
   }
+
   .summary-m h3 {
     font-weight: 300;
+    font-size: 25px;
   }
+
   .summary-m p {
     font-weight: 200;
+    font-size: 19px;
   }
+
   .summary-m h1 {
     font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
+
   .prozent-m {
     width: 20%;
     height: 3px;
     background-color: #28ABE2;
     margin-bottom: 20px;
   }
+
   .sm {
     display: flex;
     flex-direction: column;
@@ -100,6 +133,7 @@
     justify-content: center;
     gap: 12px;
   }
+
   .bm {
     display: flex;
     flex-direction: column;
@@ -107,6 +141,7 @@
     justify-content: center;
     gap: 12px;
   }
+
   .am {
     display: flex;
     flex-direction: column;
@@ -114,6 +149,7 @@
     justify-content: center;
     gap: 12px;
   }
+
   .cm {
     display: flex;
     flex-direction: column;
@@ -121,21 +157,159 @@
     justify-content: flex-end;
     gap: 12px;
   }
+
+  /* Board HTML */
+
+  .board {
+    padding-top: 100px;
+    display: none;
+  }
+
+  .box-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .board-m {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+  }
+
+  .board-m p {
+    font-size: 19px;
+  }
+
+  .board-p p {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .board-p {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .s-btn {
+    text-decoration: none;
+  }
+
+  .add-task-btn {
+    width: 45px;
+    height: 45px;
+    padding-top: 0;
+  }
+
+  .plus {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+  }
+
+  .inp-container {
+    width: 80%;
+    height: 43px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .box-container {
+    padding-top: 10px;
+    width: 90%;
+    margin-left: 45px;
+  }
+
+  .dragdrop {
+    width: 255px;
+    height: 220px;
+    margin-top: 10px;
+  }
+
+  .child-container {
+    width: 220px;
+    height: 200px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+
+  /* Add Task HTML*/
+
+
+  .add-task-container-main{
+    height: 130vh;
+    width: 100%;
+  }
+
+  .first-container{
+    display: flex;
+    width: 90%;
+    flex-direction: column !important;
+  }
+  .child-container-left{
+    width: 100% !important;
+    display: flex;
+  }
+  .child-container-right{
+    width: 100% !important;
+    display: flex;
+    margin-top: 40px;
+  }
+  .add-task-h1{
+    margin: 15px 0px 0px 30px !important;
+  }
+
+  .right2,
+  .strich-gray3{
+    display: none !important;
+  }
 }
+
+
+
+/* (min-width: 1001px) */
+
 @media only screen and (min-width: 1001px) {
   .summary-m {
     display: none;
   }
+  footer a{
+    text-decoration: none;
+  }
+
   .header-m {
     display: none;
   }
+
+  .board-m {
+    display: none;
+  }
+
 }
+
+
+/* (min-width: 1135px) */
+
+
 @media only screen and (min-width: 1135px) {
   #greet-user {
     font-size: 80px;
   }
+
   #greeting {
     font-size: 70px;
+  }
+  footer a{
+    text-decoration: none;
   }
   .greeting {
     vertical-align: top;
@@ -145,13 +319,22 @@
     position: absolute;
   }
 }
+
+/* (max-width: 1134px) */
+
+
 @media only screen and (max-width: 1134px) {
   #greet-user {
     font-size: 60px;
   }
+
   #greeting {
     font-size: 50px;
   }
+  footer a{
+    text-decoration: none;
+  }
+
   .greeting {
     vertical-align: top;
     width: 15%;
@@ -160,13 +343,23 @@
     position: absolute;
   }
 }
+
+
+/* (max-width: 1135px) */
+
+
 @media only screen and (max-width: 1035px) {
   #greet-user {
     font-size: 50px;
   }
+
   #greeting {
     font-size: 50px;
   }
+  footer a{
+    text-decoration: none;
+  }
+
   .greeting {
     vertical-align: top;
     width: 10%;
@@ -175,6 +368,9 @@
     position: absolute;
   }
 }
+
+/* (max-width: 550px) */
+
 @media only screen and (max-width: 550px) {
   .box1 {
     display: flex;
@@ -189,6 +385,10 @@
     padding: 25px;
     transition: transform 0.2s;
   }
+  footer a{
+    text-decoration: none;
+  }
+
   .box1:hover {
     background-color: #2B3647;
     color: white;
@@ -197,6 +397,7 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   .box2 {
     display: flex;
     flex-direction: column;
@@ -210,6 +411,7 @@
     padding: 25px;
     transition: transform 0.2s;
   }
+
   .box2:hover {
     background-color: #2B3647;
     color: white;
@@ -218,6 +420,7 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   .box3 {
     display: flex;
     flex-direction: column;
@@ -231,6 +434,7 @@
     padding: 25px;
     transition: transform 0.2s;
   }
+
   .box3:hover {
     background-color: #2B3647;
     color: white;
@@ -239,6 +443,7 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   .box4 {
     display: flex;
     flex-direction: row;
@@ -255,6 +460,7 @@
     gap: 20px;
     color: black;
   }
+
   .box4:hover {
     background-color: #2B3647;
     color: white;
@@ -263,6 +469,7 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   .box5 {
     display: flex;
     flex-direction: row;
@@ -276,6 +483,7 @@
     transition: transform 0.2s;
     gap: 20px;
   }
+
   div.box5:hover {
     background-color: #2B3647;
     color: white;
@@ -284,9 +492,11 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   div.box5:hover .change-color {
     filter: contrast(300%) invert(1);
   }
+
   div.box6:hover {
     background-color: #2B3647;
     color: white;
@@ -295,6 +505,7 @@
     box-shadow: rgb(66, 65, 65) 0px 2px 8px 0px;
     border: none;
   }
+
   .box6 {
     display: flex;
     flex-direction: row;
@@ -308,6 +519,7 @@
     transition: transform 0.2s;
     gap: 20px;
   }
+
   .summary-m {
     display: flex;
     flex-direction: column;
@@ -316,6 +528,7 @@
     margin-bottom: 20px;
     width: 78%;
   }
+
   .boards {
     display: flex;
     flex-direction: column;
@@ -323,5 +536,66 @@
     align-items: center;
     height: 100%;
     margin-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .box-container {
+    padding-top: 10px;
+    width: 460px;
+    justify-content: center;
+    margin-left: 45px;
+  }
+
+  .dragdrop {
+    width: 350px;
+    height: 250px;
+    margin-top: 10px;
+  }
+
+  .child-container {
+    width: 320px;
+    height: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+
+  .box-container {
+    padding-top: 10px;
+    width: 360px;
+    justify-content: center;
+  }
+
+  .dragdrop {
+    width: 350px;
+    height: 250px;
+    margin-top: 10px;
+  }
+
+  .child-container {
+    width: 320px;
+    height: 250px;
+  }
+  footer a{
+    text-decoration: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .boards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+  }
+  footer a{
+    text-decoration: none;
   }
 }

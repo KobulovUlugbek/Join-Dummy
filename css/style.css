@@ -34,7 +34,7 @@ input{
 }
 
 .sidebar {
-    width: 20vh;
+    width: 232px;
     height: 100vh;
     background-color: #2B3647;
     position: fixed;
@@ -43,6 +43,14 @@ input{
     justify-content: space-around;
     align-items: center;
     z-index: 2;
+}
+
+.logo{
+    position: absolute;
+    left: 28.44%;
+    right: 28.44%;
+    top: 6.45%;
+    bottom: 81.64%;
 }
 
 .sidebar a {
@@ -63,21 +71,21 @@ input{
     width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 600px;
     align-items: center;
 }
 
 .med-container a {
-    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 300;
-    padding: 5px 0 5px 40px;
+    gap: 20px;
+    font-size: 16px;
+    height: 46px;
+    padding: 8px 0 5px 53px;
 }
 .med-container img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .helpdiv {
@@ -90,17 +98,9 @@ input{
     width: -webkit-fill-available;
  }
 
-.legal-notice a {
-    margin-bottom: 15px;
-    gap: 10px;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-}
-
 .header {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
-    height: 70px;
+    height: 89px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -113,14 +113,17 @@ input{
 }
 
 .header h2 {
-    padding-left: 350px;
+    padding-left: 348px;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .header2 {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 0 20px 0 0 ;
+    gap: 30px;
+    padding: 0 33px 0 0 ;
 }
 
 /* Rechte Seite von der Container */
@@ -447,6 +450,9 @@ div.box6:hover .change-color {
     align-items: center;
     justify-content: center;
 }
+footer{
+    display: none;
+}
 
 .add-task-btn {
     font-size: 20px;
@@ -463,6 +469,7 @@ div.box6:hover .change-color {
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
+    margin-right: 80px;
 }
 
 .add-task-btn:hover {
