@@ -130,10 +130,10 @@
 
                     </div>
 
-                    <div class="editContactContainer">
+                    <div class="overlayEditContactContainer" style="display:none">
                         <div class="headlineEdit">
                             <img class="overlayLogo" src="img\Join-icon.png" alt="Join Logo">
-                            <div>Edit contact</div>
+                            <div class="overlayHeadlineEdit">Edit contact</div>
                             <span class="overlayLine"></span>
                         </div>
                         <div class="editSection">
@@ -158,6 +158,48 @@
                                             </button>
                                             <button onclick="editContact()" class="editContactBtn">
                                                 <h3 class="editcontactBTNcontent">Save</h3>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="overlayEditContactContainer" style="display:none">
+                        <div class=" headlineEdit">
+                            <img class="overlayLogo" src="img\Join-icon.png" alt="Join Logo">
+                            <div><span class="overlayHeadlineAdd">Add contact</span>
+
+                                <h6>Task are better with a team!</h6>
+                            </div>
+                            <span class="overlayLineAdd"></span>
+                        </div>
+                        <div class="editSection">
+                            <div class="initialsSectionOverlay">
+                                <div class="circle">
+                                    <span class="createUserPic"><img class="newUserPic" src="img\user.png"
+                                            alt="User Image"></span>
+                                </div>
+                                <div class="editInputs">
+                                    <div class="closingCross">
+                                        <img onclick="closeEditContact()" src="img\cross.png" alt="Close Edit">
+                                    </div>
+                                    <input class="inputs" type="text" required="" placeholder="Name"
+                                        style="background-image: url('./img/user.png')" id="">
+                                    <input class="inputs" type="email" required="" placeholder="Email"
+                                        style="background-image: url('./img/mail-icon.png')" id="">
+                                    <input class="inputs" type="number" required="" placeholder="Number"
+                                        style="background-image: url('./img/phone-icon.png')" id="">
+                                    <div>
+                                        <div class="createContainer">
+                                            <button onclick="deleteContact()" class="cancelContactBtn">
+                                                <h3 class="cancelcontactBTNcontent">Cancel</h3>
+                                            </button>
+                                            <button onclick="editContact()" class="createContactBtn">
+                                                <h3 class="createcontactBTNcontent">Create contact</h3>
                                             </button>
                                         </div>
                                     </div>
