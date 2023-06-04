@@ -35,7 +35,7 @@ let todos = [
 ];
 
 function init() {
-    dragDrop();
+    defineGenerationZone();
     document.getElementById('filterInput').addEventListener('keyup', filterTasks);
 }
 
@@ -103,5 +103,36 @@ function showDropZone() {
         document.getElementById(`dragdrop_done}`).classList.add('dragdrop'); 
         document.getElementById(`dragdrop_todo}`).classList.remove('dragdrop');
     }
+const draggables = document.querySelectorAll('.child-container')
+const containers = document.querySelectorAll('.dragdrop')
+//funktioniert so nicht, wenn in unterschiedlichen Divs
+containers.forEach(containers => {
+    containers.addEventListener('dragstart', () => {
+        containers.classList.remove('dragdrop')
+    })
+})
 
+
+}
+// document.getElementById(`dragrop_${element['situation']}`).classList.add('dragdrop');
+
+
+
+
+
+
+/* FILTER */
+
+function filterTasks() {
+    let filterValue = document.getElementById('filterInput').value.toUpperCase();
+
+    for (let i = 0; i < todos.length; i++) {
+        let taskElement = document.getElementById('task' + todos[i].id);
+
+        if (todos[i].title.toUpperCase().includes(filterValue)) {
+            taskElement.style.display = '';
+        } else {
+            taskElement.style.display = 'none';
+        }
+    }
 }
