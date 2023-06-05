@@ -6,6 +6,7 @@
 function init() {
     let username = localStorage.getItem('username');
     greetUser(username);
+    document.getElementById('tasks-in-board').innerHTML = todos.length;
 }
 
 /**

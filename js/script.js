@@ -1,3 +1,8 @@
+window.addEventListener('load', () => {
+    loadTodos();
+    updateTaskNumbers();
+});
+
 // BOARD drag and drop
 let todos = [
     {
@@ -7,6 +12,7 @@ let todos = [
         situation: 'todo',
         discription: 'Modify the contens of the main website...',
         team: 'contactA',
+        deadline: '2023-06-23T20:00:00',
     },
     {
         id: 1,
@@ -15,6 +21,7 @@ let todos = [
         situation: 'progress',
         discription: 'Modify the contens of the main website...',
         team: 'contactA',
+        deadline: '',
     },
     {
         id: 2,
@@ -23,6 +30,7 @@ let todos = [
         situation: 'awaiting',
         discription: 'Modify the contens of the main website...',
         team: 'contactA',
+        deadline: '',
     },
     {
         id: 3,
@@ -31,15 +39,18 @@ let todos = [
         situation: 'done',
         discription: 'Modify the contens of the main website...',
         team: 'contactA',
+        deadline: '',
     },
 ];
 
 function init() {
     defineGenerationZone();
     document.getElementById('filterInput').addEventListener('keyup', filterTasks);
+    updateTaskNumbers();
 }
 
 function defineGenerationZone() {
+    loadTodos();
     const situations = ['todo', 'progress', 'awaiting', 'done'];
     for (const situation of situations) {
         const filteredTodos = todos.filter((t) => t['situation'] === situation);
@@ -49,6 +60,8 @@ function defineGenerationZone() {
             containerElement.innerHTML += generateTodoHTML(element);
         }
     }
+    saveTodos();
+    updateTaskNumbers();
 }
 
 function generateTodoHTML(element) {
@@ -81,13 +94,39 @@ function startdragging(id) {
 }
 
 function allowDrop(ev) {
-    ev.preventDefault();   
+    ev.preventDefault();
 }
 
 function changePos(situation) {
+    loadTodos();
     todos[currentlyDraggedElement]['situation'] = situation;
-    defineGenerationZone(); 
+    saveTodos();
+    defineGenerationZone();
     showDropZone();
+    updateTaskNumbers();
+}
+
+// Neue Funktionen um Todos zu speichern und zu laden
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+function loadTodos() {
+    const storedTodos = localStorage.getItem('todos');
+    if (storedTodos) {
+        todos = JSON.parse(storedTodos);
+    }
+}
+
+function updateTaskNumbers() {
+    const situations = ['todo', 'progress', 'awaiting', 'done'];
+    for (const situation of situations) {
+        const count = todos.filter((t) => t['situation'] === situation).length;
+        const element = document.getElementById(`${situation}-count`);
+        if (element) {
+            element.innerHTML = count;
+        }
+    }
 }
 
 //arbeiten mit dragleave und dragend
@@ -98,28 +137,21 @@ function changePos(situation) {
 
 function showDropZone() {
     if (todos[currentlyDraggedElement]['situation'] === 'todo') {
-        document.getElementById(`dragdrop_progress}`).classList.add('dragdrop'); 
-        document.getElementById(`dragdrop_awaiting}`).classList.add('dragdrop'); 
-        document.getElementById(`dragdrop_done}`).classList.add('dragdrop'); 
+        document.getElementById(`dragdrop_progress}`).classList.add('dragdrop');
+        document.getElementById(`dragdrop_awaiting}`).classList.add('dragdrop');
+        document.getElementById(`dragdrop_done}`).classList.add('dragdrop');
         document.getElementById(`dragdrop_todo}`).classList.remove('dragdrop');
     }
-const draggables = document.querySelectorAll('.child-container')
-const containers = document.querySelectorAll('.dragdrop')
-//funktioniert so nicht, wenn in unterschiedlichen Divs
-containers.forEach(containers => {
-    containers.addEventListener('dragstart', () => {
-        containers.classList.remove('dragdrop')
-    })
-})
-
-
+    const draggables = document.querySelectorAll('.child-container');
+    const containers = document.querySelectorAll('.dragdrop');
+    //funktioniert so nicht, wenn in unterschiedlichen Divs
+    containers.forEach((containers) => {
+        containers.addEventListener('dragstart', () => {
+            containers.classList.remove('dragdrop');
+        });
+    });
 }
 // document.getElementById(`dragrop_${element['situation']}`).classList.add('dragdrop');
-
-
-
-
-
 
 /* FILTER */
 
