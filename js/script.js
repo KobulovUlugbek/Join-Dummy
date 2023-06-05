@@ -180,7 +180,9 @@ function createTask() {
         id: todos.length,
         title: title,
         //category: category,
+        situation: 'todo',
         description: description,
+        //team: 'contactA',
         deadline: dueDate,
     };
 
