@@ -44,12 +44,12 @@
                     <div class="child-container-left">
                         <div>
                             <h4>Title</h4>
-                            <input class="title" type="text" placeholder="Enter a title" />
+                            <input id="title-input" class="title" type="text" placeholder="Enter a title" />
                         </div>
 
                         <div>
                             <h4>Description</h4>
-                            <textarea class="description" rows="6" cols="32"
+                            <textarea id="description-input" class="description" rows="6" cols="32"
                                 placeholder="Enter a Description"></textarea>
                         </div>
 
@@ -120,7 +120,7 @@
                         <div class="right1">
                             <div>
                                 <h4>Due Date</h4>
-                                <input class="title" type="date" placeholder="Enter a date" />
+                                <input id="date-input" class="title" type="date" placeholder="Enter a date" />
                             </div>
 
                             <div>
@@ -148,7 +148,7 @@
                         <div class="right2">
                             <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b
                                         class="plus-x">x</b></button></a>
-                            <button class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png"
+                            <button onclick="createTask()" class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png"
                                         alt=""></b></button>
                         </div>
                     </div>
@@ -197,6 +197,8 @@
     <script src="js/template.js"></script>
 
     <script src="js/drop-down.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

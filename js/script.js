@@ -43,6 +43,7 @@ let todos = [
     },
 ];
 
+
 function init() {
     defineGenerationZone();
     document.getElementById('filterInput').addEventListener('keyup', filterTasks);
@@ -167,4 +168,23 @@ function filterTasks() {
             taskElement.style.display = 'none';
         }
     }
+}
+
+function createTask() {
+    const title = document.getElementById('title-input').value;
+    const description = document.getElementById('description-input').value;
+    //const category = document.getElementById('category-input').value;
+    const dueDate = document.getElementById('date-input').value;
+
+    const newTask = {
+        id: todos.length,
+        title: title,
+        //category: category,
+        description: description,
+        deadline: dueDate,
+    };
+
+    todos.push(newTask);
+
+    saveTodos();
 }
