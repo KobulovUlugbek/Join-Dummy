@@ -71,7 +71,7 @@ input{
     width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
-    gap: 600px;
+    justify-content: space-between;
     align-items: center;
 }
 
