@@ -1,204 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Task</title>
+        <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/add-task.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Task</title>
-    <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/add-task.css">
-</head>
+    <body>
+        <div onclick="hideLogoutBtn()">
+            <div class="main-container">
+                <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER + SIDEBAR -->
 
-<body>
+                <div class="Content">
+                    <!-- hier ist die rechte Seite der Webseits -->
 
-    <div class="main-container">
-        <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
-
-        <div class="Content"> <!-- hier ist die rechte Seite der Webseits -->
-
-            <div class="header-m" id="header-m">
-                <div>
-                    <img class="join-m" src="img/Capa1.png" alt="">
-                </div>
-                <div class="header2">
-                    <button class="add-task-btn3">Create<b class="plus-done"><img src="img/done.png"
-                        alt=""></b></button>
-                </div>
-            </div>
-
-            <div class="board-m">
-                <p>Kanban Project Management Tool</p>
-            </div>
-
-
-            
-
-            <div class="add-task-container-main">
-                <h1 class="add-task-h1">Add Task</h1>
-
-                <div class="first-container">
-                    <div class="child-container-left">
+                    <div class="header-m" id="header-m">
                         <div>
-                            <h4>Title</h4>
-                            <input id="title-input" class="title" type="text" placeholder="Enter a title" />
+                            <img class="join-m" src="img/Capa1.png" alt="" />
                         </div>
-
-                        <div>
-                            <h4>Description</h4>
-                            <textarea id="description-input" class="description" rows="6" cols="32"
-                                placeholder="Enter a Description"></textarea>
+                        <div class="header2">
+                            <button class="add-task-btn3">
+                                Create<b class="plus-done"><img src="img/done.png" alt="" /></b>
+                            </button>
                         </div>
-
-                        
-                        <div>
-                            <h4>Category</h4>
-                            <div class="drop-down-selector category">
-                              <div id="select-tsk" class="select-tsk" onclick="toggleDropdown()">
-                                <div id="change" class="margin-null">
-                                  <h4 id="selected-category">Select task category</h4>
-                                </div>
-                                <div><img src="img/arrow-down.png" alt="arrow-down"></div>
-                              </div>
-                              <div class="overflow hidden">
-                                <div id="subfolder-0" class="subfolder" onclick="selectCategory(0)">
-                                  <h4>New category<div class="circle-00"></div></h4>
-                                </div>
-                                <div id="subfolder-1" class="subfolder" onclick="selectCategory(1)">
-                                  <h4>Design<div class="circle-0"></div></h4>
-                                </div>
-                                <div id="subfolder-2" class="subfolder" onclick="selectCategory(2)">
-                                  <h4>Sales<div class="circle-1"></div></h4>
-                                </div>
-                                <div id="subfolder-3" class="subfolder" onclick="selectCategory(3)">
-                                  <h4>Backoffice<div class="circle-2"></div></h4>
-                                </div>
-                                <div id="subfolder-4" class="subfolder" onclick="selectCategory(4)">
-                                  <h4>Marketing<div class="circle-3"></div></h4>
-                                </div>
-                                <div id="subfolder-5" class="subfolder" onclick="selectCategory(5)">
-                                  <h4>Other<div class="circle-4"></div></h4>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-         
-
-                        <div>
-                            <h4>Assigned to</h4>
-                            <div class="drop-down-selector2 category">
-                                <div id="select-tsk2" class="select-tsk2" onclick="toggleDropdown2()">
-                                    <h4 class="margin-null">Select contacts to assign</h4>
-                                    <div><img src="img/arrow-down.png" alt="arrow-down"></div>
-                                </div>
-                                <div class="overflow">
-                                <div id="subfolder-2" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-2')">
-                                    <h4>You</h4>
-                                    <input class="checkbox" type="checkbox" name="checkbox-2" id="checkbox-2">
-                                </div>
-                                <div id="subfolder-3" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-3')">
-                                    <h4>Maximillian Vogel</h4>
-                                    <input class="checkbox" type="checkbox" name="checkbox-3" id="checkbox-3">
-                                </div>
-                                <div id="subfolder-4" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-4')">
-                                    <h4>Invite new contact</h4>
-                                    <img class="invite-png" src="img/invite-contact.png" alt="">
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-
                     </div>
 
-                    <div class="strich-gray3"></div>
+                    <div class="board-m">
+                        <p>Kanban Project Management Tool</p>
+                    </div>
 
-                    <div class="child-container-right">
-                        <div class="right1">
-                            <div>
-                                <h4>Due Date</h4>
-                                <input id="date-input" class="title" type="date" placeholder="Enter a date" />
-                            </div>
+                    <div class="add-task-container-main">
+                        <h1 class="add-task-h1">Add Task</h1>
 
-                            <div>
-                                <h4>Prio</h4>
-                                <div class="difficulty-level">
-                                    <button class="add-task-btn21">Urgent <b class="plus"><img class="change-color-white" src="img/urgent.icon2.png"
-                                                alt=""></b></button>
-                                    <button class="add-task-btn22">Medium <b class="plus"><img class="change-color-white" src="img/urgent-icon3.png"
-                                                alt=""></b></button>
-                                    <button class="add-task-btn23">Low <b class="plus"><img class="change-color-white" src="img/urgent-icon4.png"
-                                                alt=""></b></button>
+                        <div class="first-container">
+                            <div class="child-container-left">
+                                <div>
+                                    <h4>Title</h4>
+                                    <input id="title-input" class="title" type="text" placeholder="Enter a title" />
+                                </div>
+
+                                <div>
+                                    <h4>Description</h4>
+                                    <textarea
+                                        id="description-input"
+                                        class="description"
+                                        rows="6"
+                                        cols="32"
+                                        placeholder="Enter a Description"></textarea>
+                                </div>
+
+                                <div>
+                                    <h4>Category</h4>
+                                    <div class="drop-down-selector category">
+                                        <div id="select-tsk" class="select-tsk" onclick="toggleDropdown()">
+                                            <div id="change" class="margin-null">
+                                                <h4 id="selected-category">Select task category</h4>
+                                            </div>
+                                            <div><img src="img/arrow-down.png" alt="arrow-down" /></div>
+                                        </div>
+                                        <div class="overflow hidden">
+                                            <div id="subfolder-0" class="subfolder" onclick="selectCategory(0)">
+                                                <h4>
+                                                    New category
+                                                    <div class="circle-00"></div>
+                                                </h4>
+                                            </div>
+                                            <div id="subfolder-1" class="subfolder" onclick="selectCategory(1)">
+                                                <h4>
+                                                    Design
+                                                    <div class="circle-0"></div>
+                                                </h4>
+                                            </div>
+                                            <div id="subfolder-2" class="subfolder" onclick="selectCategory(2)">
+                                                <h4>
+                                                    Sales
+                                                    <div class="circle-1"></div>
+                                                </h4>
+                                            </div>
+                                            <div id="subfolder-3" class="subfolder" onclick="selectCategory(3)">
+                                                <h4>
+                                                    Backoffice
+                                                    <div class="circle-2"></div>
+                                                </h4>
+                                            </div>
+                                            <div id="subfolder-4" class="subfolder" onclick="selectCategory(4)">
+                                                <h4>
+                                                    Marketing
+                                                    <div class="circle-3"></div>
+                                                </h4>
+                                            </div>
+                                            <div id="subfolder-5" class="subfolder" onclick="selectCategory(5)">
+                                                <h4>
+                                                    Other
+                                                    <div class="circle-4"></div>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4>Assigned to</h4>
+                                    <div class="drop-down-selector2 category">
+                                        <div id="select-tsk2" class="select-tsk2" onclick="toggleDropdown2()">
+                                            <h4 class="margin-null">Select contacts to assign</h4>
+                                            <div><img src="img/arrow-down.png" alt="arrow-down" /></div>
+                                        </div>
+                                        <div class="overflow">
+                                            <div id="subfolder-2" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-2')">
+                                                <h4>You</h4>
+                                                <input class="checkbox" type="checkbox" name="checkbox-2" id="checkbox-2" />
+                                            </div>
+                                            <div id="subfolder-3" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-3')">
+                                                <h4>Maximillian Vogel</h4>
+                                                <input class="checkbox" type="checkbox" name="checkbox-3" id="checkbox-3" />
+                                            </div>
+                                            <div id="subfolder-4" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-4')">
+                                                <h4>Invite new contact</h4>
+                                                <img class="invite-png" src="img/invite-contact.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <h4>Subtasks</h4>
-                                <input class="title" type="text" placeholder="Add new subtask" />
-                            </div>
-                            <div class="checkbox1">
-                                <input type="checkbox" name="" id="">
-                                <h5>Subtask 1</h5>
-                            </div>
-                        </div>
+                            <div class="strich-gray3"></div>
 
-                        <div class="right2">
-                            <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b
-                                        class="plus-x">x</b></button></a>
-                            <button onclick="createTask()" class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png"
-                                        alt=""></b></button>
+                            <div class="child-container-right">
+                                <div class="right1">
+                                    <div>
+                                        <h4>Due Date</h4>
+                                        <input id="date-input" class="title" type="date" placeholder="Enter a date" />
+                                    </div>
+
+                                    <div>
+                                        <h4>Prio</h4>
+                                        <div class="difficulty-level">
+                                            <button class="add-task-btn21">
+                                                Urgent <b class="plus"><img class="change-color-white" src="img/urgent.icon2.png" alt="" /></b>
+                                            </button>
+                                            <button class="add-task-btn22">
+                                                Medium <b class="plus"><img class="change-color-white" src="img/urgent-icon3.png" alt="" /></b>
+                                            </button>
+                                            <button class="add-task-btn23">
+                                                Low <b class="plus"><img class="change-color-white" src="img/urgent-icon4.png" alt="" /></b>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4>Subtasks</h4>
+                                        <input class="title" type="text" placeholder="Add new subtask" />
+                                    </div>
+                                    <div class="checkbox1">
+                                        <input type="checkbox" name="" id="" />
+                                        <h5>Subtask 1</h5>
+                                    </div>
+                                </div>
+
+                                <div class="right2">
+                                    <a href="startseite.html"
+                                        ><button class="add-task-btn-cancel">Cancel <b class="plus-x">x</b></button></a
+                                    >
+                                    <button onclick="createTask()" class="add-task-btn3">
+                                        Create Task <b class="plus-done"><img src="img/done.png" alt="" /></b>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <footer class="footer">
+                <div class="footer">
+                    <a href="startseite.html">
+                        <div class="sm">
+                            <img src="img/summary-icon.png" alt="" />
+                            <h4>Summary</h4>
+                        </div>
+                    </a>
 
+                    <a href="board.html">
+                        <div class="bm">
+                            <img src="img/board-icon.png" alt="" />
+                            <h4>Board</h4>
+                        </div>
+                    </a>
+
+                    <a href="add-task.html">
+                        <div class="am">
+                            <img src="img/add-task-icon.png" alt="" />
+                            <h4>Add Task</h4>
+                        </div>
+                    </a>
+
+                    <a href="contacts.html">
+                        <div class="cm">
+                            <img src="img/contacts-icon.png" alt="" />
+                            <h4>Contacts</h4>
+                        </div>
+                    </a>
+                </div>
+            </footer>
         </div>
+        <script src="js/template.js"></script>
 
-    </div>
+        <script src="js/drop-down.js"></script>
 
-    <footer class="footer">
-        <div class="footer">
-
-            <a href="startseite.html">
-                <div class="sm">
-                    <img src="img/summary-icon.png" alt="">
-                    <h4>Summary</h4>
-                </div>
-            </a>
-
-            <a href="board.html">
-                <div class="bm">
-                    <img src="img/board-icon.png" alt="">
-                    <h4>Board</h4>
-                </div>
-            </a>
-
-            <a href="add-task.html">
-                <div class="am">
-                    <img src="img/add-task-icon.png" alt="">
-                    <h4>Add Task</h4>
-                </div>
-            </a>
-
-            <a href="contacts.html">
-                <div class="cm">
-                    <img src="img/contacts-icon.png" alt="">
-                    <h4>Contacts</h4>
-                </div>
-            </a>
-
-        </div>
-    </footer>
-
-    <script src="js/template.js"></script>
-
-    <script src="js/drop-down.js"></script>
-
-    <script src="js/script.js"></script>
-</body>
-
+        <script src="js/script.js"></script>
+    </body>
 </html>

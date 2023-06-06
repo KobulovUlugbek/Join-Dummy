@@ -223,3 +223,13 @@ function createTask() {
     saveTodos();
     updateTaskNumbers();
 }
+
+function toggleLogoutBtn(event) {
+    event.stopPropagation();
+    let button = document.getElementById('logout-btn');
+    button.classList.toggle('d-none');
+}
+
+function hideLogoutBtn() {
+    document.getElementById('logout-btn').classList.add('d-none');
+}

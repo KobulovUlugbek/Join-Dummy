@@ -13,136 +13,137 @@
     </head>
 
     <body onload="actualDate(), date(), init()">
-        <div class="main-container">
-            <div id="header-template"></div>
-            <!-- TEMPLATE für HEADER + SIDEBAR -->
-            <div class="Content">
-                <!-- hier ist die rechte Seite der Webseits -->
+        <div onclick="hideLogoutBtn()">
+            <div class="main-container">
+                <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER + SIDEBAR -->
+                <div class="Content">
+                    <!-- hier ist die rechte Seite der Webseits -->
 
-                <div class="summary">
-                    <div class="summary-80">
-                        <h1>Summary</h1>
-                        <div class="strich"></div>
-                        <!-- hier kommt ein hellblaue Strich zum trennen -->
-                        <h3>Everything in a nutshell!</h3>
-                    </div>
-                    <div class="prozent"></div>
-                </div>
-
-                <div class="header-m" id="header-m">
-                    <div>
-                        <img class="join-m" src="img/Capa1.png" alt="" />
-                    </div>
-                    <div class="header2">
-                        <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild" /></a>
-                    </div>
-                </div>
-
-                <div class="boards-container">
-                    <div class="boards">
-                        <div class="summary-m">
-                            <p>Kanban Project Management Tool</p>
+                    <div class="summary">
+                        <div class="summary-80">
                             <h1>Summary</h1>
+                            <div class="strich"></div>
+                            <!-- hier kommt ein hellblaue Strich zum trennen -->
                             <h3>Everything in a nutshell!</h3>
-                            <div class="prozent-m"></div>
                         </div>
-                        <div class="board-1">
-                            <button class="box1">
-                                <p class="box" id="tasks-in-board"></p>
-                                <h4>Tasks in Board</h4>
-                            </button>
+                        <div class="prozent"></div>
+                    </div>
 
-                            <button class="box2">
-                                <p class="box" id="progress-count"></p>
-                                <h4>Tasks in Progress</h4>
-                            </button>
-
-                            <button class="box3">
-                                <p class="box" id="awaiting-count"></p>
-                                <h4>Awaiting Feedback</h4>
-                            </button>
+                    <div class="header-m" id="header-m">
+                        <div>
+                            <img class="join-m" src="img/Capa1.png" alt="" />
                         </div>
-
-                        <div class="board-2">
-                            <a class="box4" href="">
-                                <img src="img/urgent-icon.png" alt="" />
-
-                                <div>
-                                    <p class="number">1</p>
-                                    <h4>Urgent</h4>
-                                </div>
-
-                                <div class="strich-gray"></div>
-                                <!-- hier kommt ein grauer Stricht -->
-
-                                <div>
-                                    <p id="todays-date">Hier kommt aktueller Datum</p>
-                                    <h4>Upcoming Deadline</h4>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="board-3">
-                            <div class="box5">
-                                <img class="change-color" src="img/todo-icon.png" alt="" />
-
-                                <div>
-                                    <p class="number" id="todo-count"></p>
-                                    <h4>To-do</h4>
-                                </div>
-                            </div>
-
-                            <div class="box6">
-                                <img class="change-color" src="img/done-icon.png" alt="" />
-
-                                <div>
-                                    <p class="number" id="done-count"></p>
-                                    <h4>Done</h4>
-                                </div>
-                            </div>
+                        <div class="header2">
+                            <a href=""><img class="profilbild" src="img/profil-photo.png" alt="profilbild" /></a>
                         </div>
                     </div>
 
-                    <div class="greeting">
-                        <p id="greeting">Good Morning,</p>
-                        <h1 id="greet-user"></h1>
+                    <div class="boards-container">
+                        <div class="boards">
+                            <div class="summary-m">
+                                <p>Kanban Project Management Tool</p>
+                                <h1>Summary</h1>
+                                <h3>Everything in a nutshell!</h3>
+                                <div class="prozent-m"></div>
+                            </div>
+                            <div class="board-1">
+                                <button class="box1">
+                                    <p class="box" id="tasks-in-board"></p>
+                                    <h4>Tasks in Board</h4>
+                                </button>
+
+                                <button class="box2">
+                                    <p class="box" id="progress-count"></p>
+                                    <h4>Tasks in Progress</h4>
+                                </button>
+
+                                <button class="box3">
+                                    <p class="box" id="awaiting-count"></p>
+                                    <h4>Awaiting Feedback</h4>
+                                </button>
+                            </div>
+
+                            <div class="board-2">
+                                <a class="box4" href="">
+                                    <img src="img/urgent-icon.png" alt="" />
+
+                                    <div>
+                                        <p class="number">1</p>
+                                        <h4>Urgent</h4>
+                                    </div>
+
+                                    <div class="strich-gray"></div>
+                                    <!-- hier kommt ein grauer Stricht -->
+
+                                    <div>
+                                        <p id="todays-date">Hier kommt aktueller Datum</p>
+                                        <h4>Upcoming Deadline</h4>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="board-3">
+                                <div class="box5">
+                                    <img class="change-color" src="img/todo-icon.png" alt="" />
+
+                                    <div>
+                                        <p class="number" id="todo-count"></p>
+                                        <h4>To-do</h4>
+                                    </div>
+                                </div>
+
+                                <div class="box6">
+                                    <img class="change-color" src="img/done-icon.png" alt="" />
+
+                                    <div>
+                                        <p class="number" id="done-count"></p>
+                                        <h4>Done</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="greeting">
+                            <p id="greeting">Good Morning,</p>
+                            <h1 id="greet-user"></h1>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <footer class="footer">
+                <div class="footer">
+                    <a href="startseite.html">
+                        <div class="sm">
+                            <img src="img/summary-icon.png" alt="" />
+                            <h4>Summary</h4>
+                        </div>
+                    </a>
+
+                    <a href="board.html">
+                        <div class="bm">
+                            <img src="img/board-icon.png" alt="" />
+                            <h4>Board</h4>
+                        </div>
+                    </a>
+
+                    <a href="add-task.html">
+                        <div class="am">
+                            <img src="img/add-task-icon.png" alt="" />
+                            <h4>Add Task</h4>
+                        </div>
+                    </a>
+
+                    <a href="contacts.html">
+                        <div class="cm">
+                            <img src="img/contacts-icon.png" alt="" />
+                            <h4>Contacts</h4>
+                        </div>
+                    </a>
+                </div>
+            </footer>
         </div>
-
-        <footer class="footer">
-            <div class="footer">
-                <a href="startseite.html">
-                    <div class="sm">
-                        <img src="img/summary-icon.png" alt="" />
-                        <h4>Summary</h4>
-                    </div>
-                </a>
-
-                <a href="board.html">
-                    <div class="bm">
-                        <img src="img/board-icon.png" alt="" />
-                        <h4>Board</h4>
-                    </div>
-                </a>
-
-                <a href="add-task.html">
-                    <div class="am">
-                        <img src="img/add-task-icon.png" alt="" />
-                        <h4>Add Task</h4>
-                    </div>
-                </a>
-
-                <a href="contacts.html">
-                    <div class="cm">
-                        <img src="img/contacts-icon.png" alt="" />
-                        <h4>Contacts</h4>
-                    </div>
-                </a>
-            </div>
-        </footer>
-
         <script src="js/script.js"></script>
         <script src="js/template.js"></script>
         <script src="js/date.js"></script>
