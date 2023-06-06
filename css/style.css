@@ -8,6 +8,7 @@ body {
 
 button{
     font-family: 'Inter', sans-serif;
+    cursor: pointer;
 }
 
 textarea{
@@ -373,6 +374,7 @@ input{
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
+    cursor: pointer;
 }
 
 .box6 {
@@ -388,6 +390,7 @@ input{
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
+    cursor: pointer;
 }
 
 div.box5:hover {

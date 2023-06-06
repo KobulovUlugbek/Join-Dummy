@@ -43,7 +43,6 @@ let todos = [
     },
 ];
 
-
 function init() {
     defineGenerationZone();
     document.getElementById('filterInput').addEventListener('keyup', filterTasks);
@@ -137,10 +136,9 @@ function updateTaskNumbers() {
 // if (situation === 'done)
 // document.getElementById(`dragrop_${element['situation']}`).classList.add('dragdrop');
 
-
-
 // implementiert !!!
-function showDropZone() { //added d-none auf Dropzone von "todo" wenn etwas auf "todo Dropzone" gezogen wird
+function showDropZone() {
+    //added d-none auf Dropzone von "todo" wenn etwas auf "todo Dropzone" gezogen wird
     if (todos[currentlyDraggedElement]['situation'] === 'todo') {
         document.getElementById(`dragdrop_progress`).classList.add('d-none');
         document.getElementById(`dragdrop_awaiting`).classList.add('d-none');
@@ -162,7 +160,6 @@ function showDropZone() { //added d-none auf Dropzone von "todo" wenn etwas auf 
     });
 }
 
-
 //nicht implementiert !!!
 var todo = document.getElementById('dragdrop_todo');
 var progress = document.getElementById('dragdrop_progress');
@@ -175,20 +172,17 @@ function hideElement() {
     progress.classList.add('d-none');
     awaiting.classList.add('d-none');
     done.classList.add('d-none');
-  }
-  
+}
+
 function showElement() {
     todo.classList.remove('d-none');
     progress.classList.remove('d-none');
     awaiting.classList.remove('d-none');
     done.classList.remove('d-none');
-  }
-  
+}
+
 draggingElement.ondragstart = hideElement;
 draggingElement.ondragend = showElement;
-
-
-
 
 /* FILTER */
 
@@ -227,4 +221,5 @@ function createTask() {
     todos.push(newTask);
 
     saveTodos();
+    updateTaskNumbers();
 }
