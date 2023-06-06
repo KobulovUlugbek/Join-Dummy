@@ -78,7 +78,7 @@ function showContactDetails(index) {
                                         <div class="contactGeneral">
                                             <p>Contact Information</p>
                                         </div>
-                                        <div class="contactEdit">
+                                        <div onclick="openOverlayCardEdit()" class="contactEdit">
                                             <img class="editPencil" src="img/pencil-icon-edit.png">
                                             <p>Edit Contact</p>
                                         </div>
@@ -94,4 +94,26 @@ function showContactDetails(index) {
                                     <p>${contact.phone}</p>
                                 </div>`;
 
+};
+
+function openOverlayCardEdit() {
+    document.getElementById('overlayEditContactContainer').style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+};
+
+function closeOverlayCardEdit() {
+    document.getElementById('overlayEditContactContainer').style.display = "none";
+    document.body.style.overflow = "scroll";
+};
+
+function openOverlayCardADD() {
+    document.getElementById('overlayADDContactContainer').style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+};
+
+function closeOverlayCardADD() {
+    document.getElementById('overlayADDContactContainer').style.display = "none";
+    document.body.style.overflow = "scroll";
 };
