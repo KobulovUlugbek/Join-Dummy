@@ -211,6 +211,7 @@ function createTask() {
     const description = document.getElementById('description-input').value;
     //const category = document.getElementById('category-input').value;
     const dueDate = document.getElementById('date-input').value;
+    //const priority = document.getElementById('priority-input').value;
 
     const newTask = {
         id: todos.length,
@@ -218,8 +219,9 @@ function createTask() {
         //category: category,
         situation: 'todo',
         description: description,
-        //team: 'contactA',
+        //team: 'contactA', (assigned to)
         deadline: dueDate,
+        //priority: 'priority',
     };
 
     todos.push(newTask);
