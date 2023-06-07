@@ -93,16 +93,30 @@ function startdragging(id) {
   currentlyDraggedElement = id;
 }
 
-function allowDrop(ev) {
-  ev.preventDefault();
+function allowDrop(ev, task) {
+    ev.preventDefault();
+    document.getElementById('dragdrop_' + task).classList.add('border');
 }
+
+function endDrap(task) {
+    document.getElementById('dragdrop_' + task).classList.remove('border');
+}
+
+function endDrop() {
+    const situations = ['todo', 'progress', 'awaiting', 'done'];
+    for (const situation of situations) {
+      const elements = document.querySelectorAll('#dragdrop_' + situation);
+      elements.forEach((element) => {
+        element.classList.remove('border');
+      });
+    }
+  }
 
 function changePos(situation) {
   loadTodos();
   todos[currentlyDraggedElement]['situation'] = situation;
   saveTodos();
   defineGenerationZone();
-  showDropZone();
   updateTaskNumbers();
 }
 
@@ -129,60 +143,6 @@ function updateTaskNumbers() {
   }
 }
 
-//arbeiten mit dragleave und dragend
-//wenn ich zone verlasse, soll Dropzone-Rand eingeblendet werden
-//wenn ich draggen beendet habe, sollen alle zonen ausgeblendet werden
-// mit For-Schleife durch situationen und elements be id getten `dragdrop_${element[situation]}`
-// if (situation === 'done)
-// document.getElementById(`dragrop_${element['situation']}`).classList.add('dragdrop');
-
-// implementiert !!!
-function showDropZone() {
-  //added d-none auf Dropzone von "todo" wenn etwas auf "todo Dropzone" gezogen wird
-  if (todos[currentlyDraggedElement]['situation'] === 'todo') {
-    document.getElementById(`dragdrop_progress`).classList.add('d-none');
-    document.getElementById(`dragdrop_awaiting`).classList.add('d-none');
-    document.getElementById(`dragdrop_done`).classList.add('d-none');
-    document.getElementById(`dragdrop_todo`).classList.add('d-none');
-  }
-  const draggables = document.querySelectorAll('.child-container');
-  const containers = document.querySelectorAll('.d-none');
-  //funktioniert so nicht, wenn in unterschiedlichen Divs
-  containers.forEach((containers) => {
-    containers.addEventListener('dragstart', () => {
-      containers.classList.remove('d-none');
-    });
-  });
-  containers.forEach((containers) => {
-    containers.addEventListener('dragend', () => {
-      containers.classList.add('d-none');
-    });
-  });
-}
-
-//nicht implementiert !!!
-var todo = document.getElementById('dragdrop_todo');
-var progress = document.getElementById('dragdrop_progress');
-var awaiting = document.getElementById('dragdrop_awaiting');
-var done = document.getElementById('dragdrop_done');
-var draggingElement = document.getElementById('task0'); //zum Test für einen Task
-
-function hideElement() {
-  todo.classList.add('d-none');
-  progress.classList.add('d-none');
-  awaiting.classList.add('d-none');
-  done.classList.add('d-none');
-}
-
-function showElement() {
-  todo.classList.remove('d-none');
-  progress.classList.remove('d-none');
-  awaiting.classList.remove('d-none');
-  done.classList.remove('d-none');
-}
-
-draggingElement.ondragstart = hideElement;
-draggingElement.ondragend = showElement;
 
 /* FILTER */
 

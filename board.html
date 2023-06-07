@@ -64,7 +64,7 @@
                                     <img class="change-color2" src="img/plus-button.png" alt="" onclick="openPopup()" />
                                 </button>
                                 <div id="todo"></div>
-                                <div id="dragdrop_todo" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('todo')"></div>
+                                <div id="dragdrop_todo" class="dragdrop" ondragleave="endDrap('todo')" ondragover="allowDrop(event, 'todo')" ondrop="changePos('todo'), endDrop()"></div>
                             </div>
 
                             <div class="progress">
@@ -73,7 +73,7 @@
                                     <img class="change-color2" src="img/plus-button.png" alt="" onclick="openPopup()" />
                                 </button>
                                 <div id="progress"></div>
-                                <div id="dragdrop_progress" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('progress')"></div>
+                                <div id="dragdrop_progress" class="dragdrop" ondragleave="endDrap('progress')" ondragover="allowDrop(event, 'progress')" ondrop="changePos('progress'), endDrop()"></div>
                             </div>
 
                             <div class="awaiting">
@@ -82,7 +82,7 @@
                                     <img class="change-color2" src="img/plus-button.png" alt="" onclick="openPopup()" />
                                 </button>
                                 <div id="awaiting"></div>
-                                <div id="dragdrop_awaiting" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('awaiting')"></div>
+                                <div id="dragdrop_awaiting" class="dragdrop" ondragleave="endDrap('awaiting')" ondragover="allowDrop(event, 'awaiting')" ondrop="changePos('awaiting'), endDrop()"></div>
                             </div>
 
                             <div class="done">
@@ -91,7 +91,7 @@
                                     <img class="change-color2" src="img/plus-button.png" alt="" onclick="openPopup()" />
                                 </button>
                                 <div id="done"></div>
-                                <div id="dragdrop_done" class="dragdrop" ondragover="allowDrop(event)" ondrop="changePos('done')"></div>
+                                <div id="dragdrop_done" class="dragdrop" ondragleave="endDrap('done')" ondragover="allowDrop(event, 'done')" ondrop="changePos('done'), endDrop()"></div>
                             </div>
                         </div>
                     </div>

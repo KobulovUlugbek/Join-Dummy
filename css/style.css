@@ -525,9 +525,11 @@ footer{
 .dragdrop {
     width: 180px;
     height: 180px;
-    border-radius: 25px;
-    border: dotted gray;
-    transition: transform .2s ease-in;
+    border-radius: 25px;    
+}
+
+.border {
+    border: dotted gray;     
 }
 
 .box-container button {
