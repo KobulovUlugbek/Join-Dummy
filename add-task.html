@@ -26,7 +26,7 @@
                 </div>
                 <div class="header2">
                     <button class="add-task-btn3">Create<b class="plus-done"><img src="img/done.png"
-                        alt=""></b></button>
+                                alt=""></b></button>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
             </div>
 
 
-            
+
 
             <div class="add-task-container-main">
                 <h1 class="add-task-h1">Add Task</h1>
@@ -53,51 +53,62 @@
                                 placeholder="Enter a Description"></textarea>
                         </div>
 
-                        
+
                         <div>
                             <h4>Category</h4>
                             <div class="drop-down-selector category">
-                              <div id="select-tsk" class="select-tsk" onclick="toggleDropdown()">
-                                <div id="change" class="margin-null">
-                                  <h4 id="selected-category">Select task category</h4>
+                                <div id="select-tsk" class="select-tsk" onclick="toggleDropdown()">
+                                    <div id="change" class="margin-null">
+                                        <h4 id="selected-category">Select task category</h4>
+                                    </div>
+                                    <div><img src="img/arrow-down.png" alt="arrow-down"></div>
                                 </div>
-                                <div><img src="img/arrow-down.png" alt="arrow-down"></div>
-                              </div>
-                              <div class="overflow hidden">
-                                <div id="subfolder-0" class="subfolder" onclick="selectCategory(0)">
-                                    <h4 onclick="newCategoryInput()">New category<div class="circle-00"></div></h4>
+                                <div class="overflow hidden">
+                                    <div id="subfolder-0" class="subfolder" onclick="selectCategory(0)">
+                                        <h4 onclick="newCategoryInput()">New category<div class="circle-00"></div>
+                                        </h4>
+                                    </div>
+                                    <!-- Add the ID attribute to the container element -->
+                                    <div id="new-category-container" class="subfolder"></div>
+
+                                    <div id="subfolder-1" class="subfolder" onclick="selectCategory(1)">
+                                        <h4>Design<div class="circle-0"></div>
+                                        </h4>
+                                    </div>
+                                    <div id="subfolder-2" class="subfolder" onclick="selectCategory(2)">
+                                        <h4>Sales<div class="circle-1"></div>
+                                        </h4>
+                                    </div>
+                                    <div id="subfolder-3" class="subfolder" onclick="selectCategory(3)">
+                                        <h4>Backoffice<div class="circle-2"></div>
+                                        </h4>
+                                    </div>
+                                    <div id="subfolder-4" class="subfolder" onclick="selectCategory(4)">
+                                        <h4>Marketing<div class="circle-3"></div>
+                                        </h4>
+                                    </div>
+                                    <div id="subfolder-5" class="subfolder" onclick="selectCategory(5)">
+                                        <h4>Other<div class="circle-4"></div>
+                                        </h4>
+                                    </div>
                                 </div>
-                                <div id="subfolder-1" class="subfolder" onclick="selectCategory(1)">
-                                  <h4>Design<div class="circle-0"></div></h4>
-                                </div>
-                                <div id="subfolder-2" class="subfolder" onclick="selectCategory(2)">
-                                  <h4>Sales<div class="circle-1"></div></h4>
-                                </div>
-                                <div id="subfolder-3" class="subfolder" onclick="selectCategory(3)">
-                                  <h4>Backoffice<div class="circle-2"></div></h4>
-                                </div>
-                                <div id="subfolder-4" class="subfolder" onclick="selectCategory(4)">
-                                  <h4>Marketing<div class="circle-3"></div></h4>
-                                </div>
-                                <div id="subfolder-5" class="subfolder" onclick="selectCategory(5)">
-                                  <h4>Other<div class="circle-4"></div></h4>
-                                </div>
-                              </div>
                             </div>
-                          </div>
-         
+                        </div>
+
 
                         <form>
                             <div class="new-category-container">
-                                <input id="add-new-category" class="input-category" required type="text" maxlength="10" minlength="3" placeholder="Add new category">
-                        
+                                <input id="add-new-category" class="input-category" required type="text" maxlength="10"
+                                    minlength="3" placeholder="Add new category">
+
                                 <div class="position">
                                     <img class="cancel-icon" src="img/cross-icon.png" alt="cancel-icon">
                                     <div class="strich-gray4"></div>
-                                    <img onclick="renderNewCategory()" class="done-icon2" src="img/done-icon2.png" alt="done-icon">
+                                    <img onclick="renderNewCategory()" class="done-icon2" src="img/done-icon2.png"
+                                        alt="done-icon">
                                 </div>
                             </div>
-                        
+
                             <div class="colorCategory">
                                 <div class="color1"></div>
                                 <div class="color2"></div>
@@ -107,7 +118,6 @@
                                 <div class="color6"></div>
                                 <div class="color7"></div>
                             </div>
-                            
                         </form>
 
 
@@ -119,19 +129,22 @@
                                     <div><img src="img/arrow-down.png" alt="arrow-down"></div>
                                 </div>
                                 <div class="overflow">
-                                <div id="subfolder-2" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-2')">
-                                    <h4>You</h4>
-                                    <input class="checkbox" type="checkbox" name="checkbox-2" id="checkbox-2">
+                                    <div id="subfolder-2" class="subfolder2 hidden"
+                                        onclick="toggleCheckbox('checkbox-2')">
+                                        <h4>You</h4>
+                                        <input class="checkbox" type="checkbox" name="checkbox-2" id="checkbox-2">
+                                    </div>
+                                    <div id="subfolder-3" class="subfolder2 hidden"
+                                        onclick="toggleCheckbox('checkbox-3')">
+                                        <h4>Maximillian Vogel</h4>
+                                        <input class="checkbox" type="checkbox" name="checkbox-3" id="checkbox-3">
+                                    </div>
+                                    <div id="subfolder-4" class="subfolder2 hidden"
+                                        onclick="toggleCheckbox('checkbox-4')">
+                                        <h4>Invite new contact</h4>
+                                        <img class="invite-png" src="img/invite-contact.png" alt="">
+                                    </div>
                                 </div>
-                                <div id="subfolder-3" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-3')">
-                                    <h4>Maximillian Vogel</h4>
-                                    <input class="checkbox" type="checkbox" name="checkbox-3" id="checkbox-3">
-                                </div>
-                                <div id="subfolder-4" class="subfolder2 hidden" onclick="toggleCheckbox('checkbox-4')">
-                                    <h4>Invite new contact</h4>
-                                    <img class="invite-png" src="img/invite-contact.png" alt="">
-                                </div>
-                            </div>
                             </div>
                         </div>
 
@@ -150,12 +163,14 @@
                             <div>
                                 <h4>Prio</h4>
                                 <div class="difficulty-level">
-                                    <button class="add-task-btn21">Urgent <b class="plus"><img class="change-color-white" src="img/urgent.icon2.png"
+                                    <button class="add-task-btn21">Urgent <b class="plus"><img
+                                                class="change-color-white" src="img/urgent.icon2.png"
                                                 alt=""></b></button>
-                                    <button class="add-task-btn22">Medium <b class="plus"><img class="change-color-white" src="img/urgent-icon3.png"
+                                    <button class="add-task-btn22">Medium <b class="plus"><img
+                                                class="change-color-white" src="img/urgent-icon3.png"
                                                 alt=""></b></button>
-                                    <button class="add-task-btn23">Low <b class="plus"><img class="change-color-white" src="img/urgent-icon4.png"
-                                                alt=""></b></button>
+                                    <button class="add-task-btn23">Low <b class="plus"><img class="change-color-white"
+                                                src="img/urgent-icon4.png" alt=""></b></button>
                                 </div>
                             </div>
 
@@ -172,8 +187,8 @@
                         <div class="right2">
                             <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b
                                         class="plus-x">x</b></button></a>
-                            <button onclick="createTask()" class="add-task-btn3">Create Task <b class="plus-done"><img src="img/done.png"
-                                        alt=""></b></button>
+                            <button onclick="createTask()" class="add-task-btn3">Create Task <b class="plus-done"><img
+                                        src="img/done.png" alt=""></b></button>
                         </div>
                     </div>
                 </div>
@@ -227,7 +242,7 @@
     <script src="js/add-task.js"></script>
 
 
-    
+
 </body>
 
 </html>
