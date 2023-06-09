@@ -65,7 +65,7 @@
                               </div>
                               <div class="overflow hidden">
                                 <div id="subfolder-0" class="subfolder" onclick="selectCategory(0)">
-                                  <h4>New category<div class="circle-00"></div></h4>
+                                    <h4 onclick="newCategoryInput()">New category<div class="circle-00"></div></h4>
                                 </div>
                                 <div id="subfolder-1" class="subfolder" onclick="selectCategory(1)">
                                   <h4>Design<div class="circle-0"></div></h4>
@@ -86,6 +86,30 @@
                             </div>
                           </div>
          
+
+                        <form>
+                            <div class="new-category-container">
+                                <input id="add-new-category" class="input-category" required type="text" maxlength="10" minlength="3" placeholder="Add new category">
+                        
+                                <div class="position">
+                                    <img class="cancel-icon" src="img/cross-icon.png" alt="cancel-icon">
+                                    <div class="strich-gray4"></div>
+                                    <img onclick="renderNewCategory()" class="done-icon2" src="img/done-icon2.png" alt="done-icon">
+                                </div>
+                            </div>
+                        
+                            <div class="colorCategory">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                                <div class="color3"></div>
+                                <div class="color4"></div>
+                                <div class="color5"></div>
+                                <div class="color6"></div>
+                                <div class="color7"></div>
+                            </div>
+                            
+                        </form>
+
 
                         <div>
                             <h4>Assigned to</h4>
@@ -199,6 +223,11 @@
     <script src="js/drop-down.js"></script>
 
     <script src="js/script.js"></script>
+
+    <script src="js/add-task.js"></script>
+
+
+    
 </body>
 
 </html>
