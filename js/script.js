@@ -94,23 +94,23 @@ function startdragging(id) {
 }
 
 function allowDrop(ev, task) {
-    ev.preventDefault();
-    document.getElementById('dragdrop_' + task).classList.add('border');
+  ev.preventDefault();
+  document.getElementById('dragdrop_' + task).classList.add('border');
 }
 
 function endDrap(task) {
-    document.getElementById('dragdrop_' + task).classList.remove('border');
+  document.getElementById('dragdrop_' + task).classList.remove('border');
 }
 
 function endDrop() {
-    const situations = ['todo', 'progress', 'awaiting', 'done'];
-    for (const situation of situations) {
-      const elements = document.querySelectorAll('#dragdrop_' + situation);
-      elements.forEach((element) => {
-        element.classList.remove('border');
-      });
-    }
+  const situations = ['todo', 'progress', 'awaiting', 'done'];
+  for (const situation of situations) {
+    const elements = document.querySelectorAll('#dragdrop_' + situation);
+    elements.forEach((element) => {
+      element.classList.remove('border');
+    });
   }
+}
 
 function changePos(situation) {
   loadTodos();
@@ -142,7 +142,6 @@ function updateTaskNumbers() {
     }
   }
 }
-
 
 /* FILTER */
 
@@ -181,12 +180,33 @@ function createTask() {
   todos.push(newTask);
 
   saveTodos();
-  checkPageAndRedirect();
+  //checkPageAndRedirect();
+  document.getElementById('createTask').removeEventListener('click', createTask);
+  showTaskAddedButton();
   defineGenerationZone();
 }
 
+function resetTaskWindow() {
+  document.getElementById('title-input').value = '';
+  document.getElementById('description-input').value = '';
+  document.getElementById('date-input').value = '';
+}
+
+function showTaskAddedButton() {
+  const popup = document.getElementById('TaskAddedPopup');
+  popup.innerHTML = /* html */  `
+  <img src="./img/task-added.png" alt="">
+  
+  `
+  setTimeout(function () {
+    popup.innerHTML = '';
+  }, 3000);
+}
+document.getElementById('createTask').addEventListener('click', createTask);
+
 function closePopup() {
   popup.classList.remove('open-popup');
+  resetTaskWindow();
 }
 
 function redirectToBoard() {
