@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Task</title>
+        <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/add-task.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Task</title>
-    <link rel="icon" href="./img/Capa1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/add-task.css">
-</head>
+    <body>
+        <div onclick="hideLogoutBtn()">
+            <div class="main-container">
+                <div id="header-template"></div>
+                <!-- TEMPLATE für HEADER + SIDEBAR -->
 
-<body>
+                <div class="Content">
+                    <!-- hier ist die rechte Seite der Webseits -->
 
-    <div class="main-container">
-        <div id="header-template"></div><!-- TEMPLATE für HEADER + SIDEBAR -->
-
-        <div class="Content"> <!-- hier ist die rechte Seite der Webseits -->
-
-            <div class="header-m" id="header-m">
-                <div>
-                    <img class="join-m" src="img/Capa1.png" alt="">
-                </div>
-                <div class="header2">
-                    <button class="add-task-btn3">Create<b class="plus-done"><img src="img/done.png"
-                                alt=""></b></button>
-                </div>
-            </div>
-
-            <div class="board-m">
-                <p>Kanban Project Management Tool</p>
-            </div>
-
-
-
-
-            <div class="add-task-container-main">
-                <h1 class="add-task-h1">Add Task</h1>
-
-                <div class="first-container">
-                    <div class="child-container-left">
+                    <div class="header-m" id="header-m">
                         <div>
-                            <h4>Title</h4>
-                            <input id="title-input" class="title" type="text" placeholder="Enter a title" />
+                            <img class="join-m" src="img/Capa1.png" alt="" />
                         </div>
+                        <div class="header2">
+                            <button class="add-task-btn3">
+                                Create<b class="plus-done"><img src="img/done.png" alt="" /></b>
+                                    </button>
+                        </div>
+                    </div>
 
-                        <div>
-                            <h4>Description</h4>
-                            <textarea id="description-input" class="description" rows="6" cols="32"
-                                placeholder="Enter a Description"></textarea>
-                        </div>
+                    <div class="board-m">
+                        <p>Kanban Project Management Tool</p>
+                    </div>
+
+                    <div class="add-task-container-main">
+                        <h1 class="add-task-h1">Add Task</h1>
+
+                        <div class="first-container">
+                            <div class="child-container-left">
+                                <div>
+                                    <h4>Title</h4>
+                                    <input id="title-input" class="title" type="text" placeholder="Enter a title" />
+                                </div>
+
+                                <div>
+                                    <h4>Description</h4>
+                                    <textarea
+                                        id="description-input"
+                                        class="description"
+                                        rows="6"
+                                        cols="32"
+                                        placeholder="Enter a Description"></textarea>
+                                </div>
 
 
                         <div>
@@ -151,14 +154,14 @@
 
                     </div>
 
-                    <div class="strich-gray3"></div>
+                            <div class="strich-gray3"></div>
 
-                    <div class="child-container-right">
-                        <div class="right1">
-                            <div>
-                                <h4>Due Date</h4>
-                                <input id="date-input" class="title" type="date" placeholder="Enter a date" />
-                            </div>
+                            <div class="child-container-right">
+                                <div class="right1">
+                                    <div>
+                                        <h4>Due Date</h4>
+                                        <input id="date-input" class="title" type="date" placeholder="Enter a date" />
+                                    </div>
 
                             <div>
                                 <h4>Prio</h4>
@@ -174,68 +177,67 @@
                                 </div>
                             </div>
 
-                            <div>
-                                <h4>Subtasks</h4>
-                                <input class="title" type="text" placeholder="Add new subtask" />
-                            </div>
-                            <div class="checkbox1">
-                                <input type="checkbox" name="" id="">
-                                <h5>Subtask 1</h5>
+                                    <div>
+                                        <h4>Subtasks</h4>
+                                        <input class="title" type="text" placeholder="Add new subtask" />
+                                    </div>
+                                    <div class="checkbox1">
+                                        <input type="checkbox" name="" id="" />
+                                        <h5>Subtask 1</h5>
+                                    </div>
+                                </div>
+
+                                <div class="right2">
+                                    <a href="startseite.html"
+                                        ><button class="add-task-btn-cancel">Cancel <b class="plus-x">x</b></button></a
+                                    >
+                                    <button id="createTask" onclick="createTask()" class="add-task-btn3">
+                                        Create Task <b class="plus-done"><img src="img/done.png" alt="" /></b>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="right2">
-                            <a href="startseite.html"><button class="add-task-btn-cancel">Cancel <b
-                                        class="plus-x">x</b></button></a>
-                            <button onclick="createTask()" class="add-task-btn3">Create Task <b class="plus-done"><img
-                                        src="img/done.png" alt=""></b></button>
-                        </div>
+                        <div id="TaskAddedPopup" class="TaskAddedPopup"></div>
                     </div>
                 </div>
             </div>
 
+            <footer class="footer">
+                <div class="footer">
+                    <a href="startseite.html">
+                        <div class="sm">
+                            <img src="img/summary-icon.png" alt="" />
+                            <h4>Summary</h4>
+                        </div>
+                    </a>
 
+                    <a href="board.html">
+                        <div class="bm">
+                            <img src="img/board-icon.png" alt="" />
+                            <h4>Board</h4>
+                        </div>
+                    </a>
+
+                    <a href="add-task.html">
+                        <div class="am">
+                            <img src="img/add-task-icon.png" alt="" />
+                            <h4>Add Task</h4>
+                        </div>
+                    </a>
+
+                    <a href="contacts.html">
+                        <div class="cm">
+                            <img src="img/contacts-icon.png" alt="" />
+                            <h4>Contacts</h4>
+                        </div>
+                    </a>
+                </div>
+            </footer>
         </div>
+        <script src="js/template.js"></script>
 
-    </div>
-
-    <footer class="footer">
-        <div class="footer">
-
-            <a href="startseite.html">
-                <div class="sm">
-                    <img src="img/summary-icon.png" alt="">
-                    <h4>Summary</h4>
-                </div>
-            </a>
-
-            <a href="board.html">
-                <div class="bm">
-                    <img src="img/board-icon.png" alt="">
-                    <h4>Board</h4>
-                </div>
-            </a>
-
-            <a href="add-task.html">
-                <div class="am">
-                    <img src="img/add-task-icon.png" alt="">
-                    <h4>Add Task</h4>
-                </div>
-            </a>
-
-            <a href="contacts.html">
-                <div class="cm">
-                    <img src="img/contacts-icon.png" alt="">
-                    <h4>Contacts</h4>
-                </div>
-            </a>
-
-        </div>
-    </footer>
-
-    <script src="js/template.js"></script>
-
-    <script src="js/drop-down.js"></script>
+        <script src="js/drop-down.js"></script>
 
     <script src="js/script.js"></script>
 

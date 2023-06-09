@@ -8,6 +8,7 @@ body {
 
 button{
     font-family: 'Inter', sans-serif;
+    cursor: pointer;
 }
 
 textarea{
@@ -145,6 +146,7 @@ input{
     border: solid 2px rgb(5, 5, 5);
     padding: 2px;
     background-color: rgb(248, 248, 248);
+    cursor: pointer;
 }
 
 .summary {
@@ -373,6 +375,7 @@ input{
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
+    cursor: pointer;
 }
 
 .box6 {
@@ -388,6 +391,7 @@ input{
     border-radius: 20px;
     transition: transform .2s;
     gap: 20px;
+    cursor: pointer;
 }
 
 div.box5:hover {
@@ -521,9 +525,11 @@ footer{
 .dragdrop {
     width: 180px;
     height: 180px;
-    border-radius: 25px;
-    border: dotted gray;
-    transition: transform .2s ease-in;
+    border-radius: 25px;    
+}
+
+.border {
+    border: dotted gray;     
 }
 
 .box-container button {
@@ -659,3 +665,25 @@ footer{
     color: #28ABE2;
 }
 
+.logout-container {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 110px;
+}
+
+.logout-container a {
+    color: #CDCDCD !important;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    width: 70px;
+    padding: 12px 20px;
+    background-color: #2B3647;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    border-top-right-radius: 0px !important;
+}
