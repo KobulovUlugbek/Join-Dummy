@@ -38,6 +38,40 @@ let categories = JSON.parse(localStorage.getItem("categories")) || [
   }
 ];
 
+let category = document.getElementById('category-d-none');
+let form = document.getElementById('form-d-none');
+form.style.display = "none";
+
+// Funktion zum Rendern der neuen Aufgabekategorie
+function renderNewTaskCategory(categories) {
+  const selectedCategory = categories.find(category => category.id === 0 && category.name === "New category" && category.circleClass === "circle-00" && category.onClick === "selectCategory(0)");
+  
+  // Event Listener für Klick auf selectedCategory hinzufügen
+  const selectedCategoryElement = document.getElementById('subfolder-0');
+  selectedCategoryElement.addEventListener('click', () => {
+    if (selectedCategory) {
+      category.style.display = "none";
+      form.style.display = "";
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  renderNewTaskCategory(categories);
+});
+
+function addCategory(){
+  form.style.display = "none"
+  category.style.display = '';
+  renderNewTaskCategory(categories);
+} 
+
+function closeCategory(){
+  form.style.display = "none"
+  category.style.display = '';
+  renderNewTaskCategory(categories);
+}
+
 // Funktion zum Umschalten der Dropdown-Liste
 function toggleDropdown() {
   let dropdown = document.querySelector(".overflow");

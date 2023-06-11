@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/add-task.css" />
     </head>
 
-    <body>
+    <body>  
         <div onclick="hideLogoutBtn()">
             <div class="main-container">
                 <div id="header-template"></div>
@@ -57,7 +57,7 @@
                                 </div>
 
 
-                        <div>
+                        <div id="category-d-none">
 
                             <h4>Category</h4>
 
@@ -81,15 +81,16 @@
                         </div>
 
 
-                        <form>
+                        <form id="form-d-none">
+                            <h4>Category</h4>
                             <div class="new-category-container">
                                 <input id="add-new-category" class="input-category" required type="text" maxlength="10"
                                     minlength="3" placeholder="Add new category">
 
                                 <div class="position">
-                                    <img class="cancel-icon" src="img/cross-icon.png" alt="cancel-icon">
+                                    <img onclick="closeCategory()" class="cancel-icon" src="img/cross-icon.png" alt="cancel-icon">
                                     <div class="strich-gray4"></div>
-                                    <img onclick="renderNewCategory()" class="done-icon2" src="img/done-icon2.png"
+                                    <img onclick="renderNewCategory(); addCategory()" class="done-icon2" src="img/done-icon2.png"
                                         alt="done-icon">
                                 </div>
                             </div>
