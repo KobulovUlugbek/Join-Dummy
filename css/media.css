@@ -14,6 +14,24 @@
     height: 10vh;
     background-color: #2B3647;
   }
+  .board-1{
+    width: 100%;
+  }
+  .board-2{
+    width: 70%;
+  }
+
+  .box4{
+    width: 100%;
+  }
+  .board-3{
+    width: 100%;
+    gap: 140px;
+  }
+
+  .box4:hover {
+    width: 100%;
+  }
 
   .footer {
     display: flex;
@@ -79,6 +97,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .join-m {
@@ -99,7 +118,7 @@
     flex-direction: column;
     justify-content: center;
     line-height: 35px;
-    width: 78%;
+    width: 67%;
   }
 
   .summary-m h3 {
@@ -166,7 +185,7 @@
   }
 
   .box-container {
-    width: 100%;
+    width: 85%;
     padding: 0;
     margin: 0;
   }
@@ -224,7 +243,7 @@
 
   .box-container {
     padding-top: 10px;
-    width: 90%;
+    width: 85%;
     margin-left: 45px;
   }
 
@@ -247,12 +266,12 @@
 
   .add-task-container-main{
     height: 130vh;
-    width: 100%;
-  }
+/*     width: 100%;
+ */  }
 
   .first-container{
     display: flex;
-    width: 90%;
+    width: 98%;
     flex-direction: column !important;
   }
   .child-container-left{
@@ -539,6 +558,57 @@
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .board-2{
+    width: 75%;
+  }
+  .summary-m {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .board-2{
+    width: 78%;
+  }
+  .summary-m {
+    width: 79%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .board-2{
+    width: 83%;
+  }
+  .summary-m {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .board-2{
+    width: 83%;
+  }
+  .summary-m {
+    width: 88%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .board-2{
+    width: 87%;
+  }
+  .summary-m {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .board-2{
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .board-2{
+    width: 102%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
 
   .box-container {
@@ -559,6 +629,12 @@
     height: 250px;
     margin-left: 25px;
     margin-right: 25px;
+  }
+  .board-3{
+    gap: 5px;
+  }
+  .board-1{
+    gap: 5px;
   }
 }
 
@@ -598,4 +674,69 @@
   footer a{
     text-decoration: none;
   }
+}
+
+
+/*  Kontakt Seite */
+
+
+@media only screen and (max-width: 1000px) {
+  .sidebar{
+    display: none !important;
+  }
+  #header{
+    display: none;
+  }
+
+  .contactBoard{
+    display: flex;
+    height: 150vh;
+  }
+  .addContactBtn{
+    position: absolute;
+    top: 83px;
+    z-index: 1;
+    position: fixed;
+  }
+  .header-c{
+    box-shadow: 0 -7px 6px -5px rgba(0, 0, 0, 0.17);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F7F8;
+    position: fixed;
+    z-index: 1;
+    margin-top: 70px;
+  }
+  
+  .boardDescription,
+  .contactOverview{
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contactContainer{
+    display: flex;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .contactListing{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .boardSlogan{
+    display: none !important;
+    margin: 0;
+    width: 0;
+    padding: 0;
+  }
+
+
 }
