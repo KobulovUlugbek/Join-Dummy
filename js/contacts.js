@@ -36,6 +36,7 @@ function initContacts() {
 }
 
 function renderContactLeft() {
+    document.getElementById(`sortContactListing`).innerHTML = '';
     contacts.sort((a, b) => a.lastName.localeCompare(b.lastName));
 
     for (let i = 0; i < contacts.length; i++) {
@@ -43,6 +44,7 @@ function renderContactLeft() {
         const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
 
         // Erstellen des HTML-Codes für den Kontakt
+
         document.getElementById('sortContactListing').innerHTML += `
           <div onclick="showContactDetails(${i})" class="initialsSectionLeft">
             <div class="circleLeft">
@@ -117,3 +119,38 @@ function closeOverlayCardADD() {
     document.getElementById('overlayADDContactContainer').style.display = "none";
     document.body.style.overflow = "scroll";
 };
+
+function createContact() {
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let phone = document.getElementById('phone');
+
+    let names = splitNames(name.value);
+
+    if (names.length >= 2) {
+
+        let firstName = names[0];
+        let lastName = names[1];
+
+        let newContact = {
+            'firstName': firstName,
+            'lastName': lastName,
+            'email': email.value,
+            'phone': phone.value,
+        };
+        contacts.push(newContact);
+        renderContactLeft();
+    } else {
+        console.log('Ungültiger Name');
+    }
+}
+
+function splitNames(name) {
+    //var name = "Susan Cain";
+    var names = name.split(' ');
+    //console.log("firstName=" + names[0]);
+    //console.log("lastName=" + names[1]);
+
+    console.log("names=" + names); // Überprüfung der Ausgabe im Konsolen-Log
+    return names;
+}

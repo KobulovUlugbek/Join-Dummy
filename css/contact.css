@@ -43,7 +43,7 @@
     /*position: absolute;*/
     width: 453px;
     /*width: 250px;*/
-    height: 100vh;
+    min-height: 100vh;
     left: 232px;
     top: 89px;
     background: #FFFFFF;
@@ -52,13 +52,16 @@
 
 .contactListing {
     /*padding: 2px 48px 0px 48px; */
-    margin: 2px 48px 0px 48px;
+    margin: 2px 0px 0px 48px;
     /*border-bottom: 1px solid #D1D1D1;
     width: 323px;*/
     /* height: 0px; */
     /* border: 1px solid #D1D1D1; */
     border-radius: 3px;
-    width: 300px;
+    /*width: 300px;*/
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 
 .line {
