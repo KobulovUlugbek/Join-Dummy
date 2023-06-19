@@ -80,7 +80,7 @@ function showContactDetails(index) {
                                         <div class="contactGeneral">
                                             <p>Contact Information</p>
                                         </div>
-                                        <div onclick="openOverlayCardEdit()" class="contactEdit">
+                                        <div onclick="openOverlayCardEdit(${index})" class="contactEdit">
                                             <img class="editPencil" src="img/pencil-icon-edit.png">
                                             <p>Edit Contact</p>
                                         </div>
@@ -143,14 +143,19 @@ function createContact() {
     } else {
         console.log('Ungültiger Name');
     }
+    //document.getElementById(`message${i}`).value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
 }
 
 function splitNames(name) {
-    //var name = "Susan Cain";
     var names = name.split(' ');
-    //console.log("firstName=" + names[0]);
-    //console.log("lastName=" + names[1]);
 
     console.log("names=" + names); // Überprüfung der Ausgabe im Konsolen-Log
     return names;
+}
+
+function deleteContact() {
+
 }
