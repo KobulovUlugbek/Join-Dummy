@@ -80,7 +80,7 @@ function showContactDetails(index) {
                                         <div class="contactGeneral">
                                             <p>Contact Information</p>
                                         </div>
-                                        <div onclick="openOverlayCardEdit(${index})" class="contactEdit">
+                                        <div onclick="editContact(${index})" class="contactEdit">
                                             <img class="editPencil" src="img/pencil-icon-edit.png">
                                             <p>Edit Contact</p>
                                         </div>
@@ -101,6 +101,52 @@ function showContactDetails(index) {
 function openOverlayCardEdit() {
     document.getElementById('overlayEditContactContainer').style.display = "flex";
     document.body.style.overflow = "hidden";
+};
+
+function editContact(i) {
+
+    const contact = contacts[i];
+    const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
+
+    document.getElementById('overlayEditContactContainer').style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+    const overlayContainer = document.getElementById('overlayEditContactContainer');
+    overlayContainer.innerHTML = `
+          <div class="headlineEdit">
+            <img class="overlayLogo" src="img/Join-icon.png" alt="Join Logo">
+            <div class="overlayHeadlineEdit">Edit contact</div>
+            <span class="overlayLine"></span>
+          </div>
+          <div class="editSection">
+            <div class="initialsSectionOverlay">
+              <div class="circle">
+                <span class="initials">${initials}</span>
+              </div>
+              <div class="editInputs">
+                <div class="closingCross">
+                  <img onclick="closeOverlayCardEdit()" src="img/cross.png" alt="Close Edit">
+                </div>
+                <input class="inputs" type="text" required="" placeholder="Name"
+                  style="background-image: url('./img/user.png')" value="${contact.firstName} ${contact.lastName}">
+                <input class="inputs" type="email" required="" placeholder="Email"
+                  style="background-image: url('./img/mail-icon.png')" value="${contact.email}">
+                <input class="inputs" type="text" required="" placeholder="Number"
+                  style="background-image: url('./img/phone-icon.png')" value="${contact.phone}">
+                <div>
+                  <div class="editContainer">
+                    <button onclick="deleteContact(${i})" class="deleteContactBtn">
+                      <h3 class="deletecontactBTNcontent">Delete</h3>
+                    </button>
+                    <button onclick="saveContact(${i})" class="editContactBtn">
+                      <h3 class="editcontactBTNcontent">Save</h3>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
 
 };
 
