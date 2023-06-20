@@ -24,7 +24,6 @@ input{
     color: #D1D1D1
 }
 
-/* Ich möchte gepusht werden. */
 .d-none {
     display: none;
 }
@@ -34,6 +33,7 @@ input{
     height: 100vh;
 }
 
+/* HEADER & NAV */
 .sidebar {
     width: 232px;
     height: 100vh;
@@ -65,7 +65,6 @@ input{
     background-color: #081931;
     color: white;
  }
-
  
 .med-container {
     height: 50%;
@@ -84,6 +83,7 @@ input{
     height: 46px;
     padding: 8px 0 5px 53px;
 }
+
 .med-container img {
     width: 24px;
     height: 24px;
@@ -127,7 +127,7 @@ input{
     padding: 0 33px 0 0 ;
 }
 
-/* Rechte Seite von der Container */
+/* STARTSEITE */
 .Content {
     background-color: #F6F7F8;
     height: -webkit-fill-available;
@@ -164,8 +164,8 @@ input{
 }
 
 .summary h1 {
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 61px;
+    font-weight: 700;
 }
 
 .summary h3 {
@@ -420,18 +420,20 @@ div.box6:hover .change-color {
     filter: contrast(300%) invert(1);
 }
 
-
-/* Ab hier geht CSS für Board Seite */
+/* BOARD */
 
 .board {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .board h1 {
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 61px;
+    font-weight: 700;
+    margin-left: 50px;
 }
 
 .find-task-input {
@@ -454,7 +456,8 @@ div.box6:hover .change-color {
     align-items: center;
     justify-content: center;
 }
-footer{
+
+footer {
     display: none;
 }
 
@@ -556,6 +559,8 @@ footer{
     padding-left: 5px;
 }
 
+/* BOARD - TASKS */
+
 .profilbild2 {
     height: 30px;
     width: 30px;
@@ -651,6 +656,8 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
+/* STARTSEITE */
 
 .g-name {
     color: #28ABE2;
