@@ -131,7 +131,7 @@ function editContact(i) {
                   style="background-image: url('./img/user.png')" value="${contact.firstName} ${contact.lastName}">
                 <input class="inputs" type="email" required="" placeholder="Email"
                   style="background-image: url('./img/mail-icon.png')" value="${contact.email}">
-                <input class="inputs" type="text" required="" placeholder="Number"
+                <input class="inputs" type="tel" required="" placeholder="Number"
                   style="background-image: url('./img/phone-icon.png')" value="${contact.phone}">
                 <div>
                   <div class="editContainer">
@@ -204,4 +204,39 @@ function splitNames(name) {
 
 function deleteContact() {
 
+}
+
+function saveContact() {
+    // Code zum Speichern des bearbeiteten Kontakts im Array und Local Storage
+    const initials = document.querySelector('.initials').textContent;
+    const nameInput = document.querySelector('.inputs[placeholder="Name"]');
+    const emailInput = document.querySelector('.inputs[placeholder="Email"]');
+    const numberInput = document.querySelector('.inputs[placeholder="Number"]');
+
+    const fullName = nameInput.value.split(' ');
+    const firstName = fullName[0];
+    const lastName = fullName[1];
+
+    // Finde den Kontakt im Array basierend auf den Initialen oder anderen eindeutigen Daten
+    const contactToUpdate = contacts.find(contact => contact.firstName.charAt(0) + contact.lastName.charAt(0) === initials);
+
+    if (contactToUpdate) {
+        // Aktualisiere die Kontaktdaten
+        contactToUpdate.firstName = firstName;
+        contactToUpdate.lastName = lastName;
+        contactToUpdate.email = emailInput.value;
+        contactToUpdate.phone = numberInput.value;
+
+        // Speichere das aktualisierte Array im Local Storage
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+
+        // Weitere Aktionen, z.B. Aktualisierung der Anzeige usw.
+        renderContactLeft();
+
+        // Schließe das Overlay
+        closeOverlayCardEdit();
+        showContactDetails(index);
+
+        console.log('Kontakt aktualisiert:', contactToUpdate);
+    }
 }
