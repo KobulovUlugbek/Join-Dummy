@@ -206,7 +206,7 @@ function deleteContact() {
 
 }
 
-function saveContact() {
+function saveContact(i) {
     // Code zum Speichern des bearbeiteten Kontakts im Array und Local Storage
     const initials = document.querySelector('.initials').textContent;
     const nameInput = document.querySelector('.inputs[placeholder="Name"]');
@@ -235,7 +235,7 @@ function saveContact() {
 
         // Schließe das Overlay
         closeOverlayCardEdit();
-        showContactDetails(index);
+        showContactDetails(i);
 
         console.log('Kontakt aktualisiert:', contactToUpdate);
     }
