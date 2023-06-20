@@ -202,8 +202,29 @@ function splitNames(name) {
     return names;
 }
 
-function deleteContact() {
+function deleteContact(i) {
+    // Code zum Löschen des ausgewählten Kontakts aus dem Array und Local Storage
+    const initials = document.querySelector('.initials').textContent;
 
+    // Finde den Kontakt im Array basierend auf den Initialen oder anderen eindeutigen Daten
+    const contactIndex = contacts.findIndex(contact => contact.firstName.charAt(0) + contact.lastName.charAt(0) === initials);
+
+    if (contactIndex !== -1) {
+        // Entferne den Kontakt aus dem Array
+        const deletedContact = contacts.splice(contactIndex, 1)[0];
+
+        // Speichere das aktualisierte Array im Local Storage
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+
+        // Weitere Aktionen, z.B. Aktualisierung der Anzeige usw.
+        renderContactLeft();
+        // Schließe das Overlay
+        closeOverlayCardEdit();
+        showContactDetails(i);
+
+
+        console.log('Kontakt gelöscht:', deletedContact);
+    }
 }
 
 function saveContact(i) {
