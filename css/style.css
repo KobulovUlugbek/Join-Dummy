@@ -170,7 +170,6 @@ input{
 
 .summary h3 {
     font-size: 20px;
-    font-weight: 100;
 }
 
 .strich {
@@ -257,7 +256,6 @@ input{
 
 .boards h4 {
     margin: 0;
-    font-weight: 100;
     word-wrap: break-word;
 }
 
@@ -452,7 +450,6 @@ div.box6:hover .change-color {
 
 .plus {
     font-size: 30px;
-    font-weight: 100;
     align-items: center;
     justify-content: center;
 }
