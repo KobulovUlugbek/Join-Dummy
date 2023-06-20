@@ -31,7 +31,6 @@
 }
 
 .close-btn {
-  font-weight: lighter;
   border: none;
   font-size: 25px;
   background-color: transparent;
@@ -421,7 +420,6 @@
 }
 
 .plus-x {
-  font-weight: lighter;
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -650,14 +648,12 @@ footer {
 .cancel-icon{
   width: 16px;
   height: 16px;
-  font-weight: lighter;
   cursor: pointer;
 }
 
 .done-icon2{
   width: 18px;
   height:18px;
-  font-weight: lighter;
   cursor: pointer;
   margin-right: 10px;
 }
