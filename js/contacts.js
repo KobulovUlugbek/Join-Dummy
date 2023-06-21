@@ -86,7 +86,7 @@ function showContactDetails(index, color) {
                                         <div class="contactGeneral">
                                             <p>Contact Information</p>
                                         </div>
-                                        <div onclick="editContact(${index})" class="contactEdit">
+                                        <div onclick="editContact(${index},'${color}')" class="contactEdit">
                                             <img class="editPencil" src="img/pencil-icon-edit.png">
                                             <p>Edit Contact</p>
                                         </div>
@@ -109,7 +109,7 @@ function openOverlayCardEdit() {
     document.body.style.overflow = "hidden";
 };
 
-function editContact(i) {
+function editContact(i, color) {
 
     const contact = contacts[i];
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
@@ -127,7 +127,7 @@ function editContact(i) {
           <div class="editSection">
             <div class="initialsSectionOverlay">
               <div class="circle">
-                <span class="initials">${initials}</span>
+                <span class="initials" style="background-color: ${color}">${initials}</span>
               </div>
               <div class="editInputs">
                 <div class="closingCross">
