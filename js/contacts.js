@@ -51,7 +51,7 @@ function renderContactLeft() {
         // Erstellen des HTML-Codes für den Kontakt
 
         document.getElementById('sortContactListing').innerHTML += `
-          <div onclick="showContactDetails(${i})" class="initialsSectionLeft" >
+          <div onclick="showContactDetails(${i},'${color}')" class="initialsSectionLeft" >
             <div class="circleLeft">
               <span class="initialsLeft" style="background-color: ${color}">${initials}</span>
             </div>
@@ -67,6 +67,7 @@ function renderContactLeft() {
 function showContactDetails(index, color) {
     const contact = contacts[index];
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
+
     document.getElementById(`initialsSectionRight`).innerHTML = '';
 
     document.getElementById(`initialsSectionRight`).innerHTML = `
