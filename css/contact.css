@@ -417,7 +417,7 @@
     padding-left: 15px;
     padding-top: 5px;
     font-size: 20px;
-    color:#000000;
+    color: #000000;
 }
 
 .editContainer {
@@ -581,6 +581,7 @@ h6 {
     border-radius: 10px;
     cursor: pointer;
     /*z-index: 10;*/
+    padding: 18px 15px 18px 15px;
 }
 
 .createContactBtn:hover {
@@ -617,6 +618,7 @@ h6 {
     border-radius: 10px;
     cursor: pointer;
     /*z-index: 10;*/
+    padding: 18px 15px 18px 15px;
 }
 
 .cancelcontactBTNcontent {

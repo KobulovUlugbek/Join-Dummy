@@ -46,23 +46,25 @@ function renderContactLeft() {
         const contact = contacts[i];
         const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
 
+        const color = contactColor();
+
         // Erstellen des HTML-Codes für den Kontakt
 
         document.getElementById('sortContactListing').innerHTML += `
-          <div onclick="showContactDetails(${i})" class="initialsSectionLeft">
+          <div onclick="showContactDetails(${i})" class="initialsSectionLeft" >
             <div class="circleLeft">
-              <span class="initialsLeft">${initials}</span>
+              <span class="initialsLeft" style="background-color: ${color}">${initials}</span>
             </div>
             <div class="contactNameLeft">
               <h2>${contact.firstName} ${contact.lastName}</h2>
-              <a href="${contact.email}" class="taskForNameLeft">${contact.email}</a>
+              <a href="mailto:${contact.email}" class="taskForNameLeft">${contact.email}</a>
             </div>
           </div>
         `;
     }
 }
 
-function showContactDetails(index) {
+function showContactDetails(index, color) {
     const contact = contacts[index];
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
     document.getElementById(`initialsSectionRight`).innerHTML = '';
@@ -70,7 +72,7 @@ function showContactDetails(index) {
     document.getElementById(`initialsSectionRight`).innerHTML = `
     <div class="initialsSection">
                                     <div class="circle">
-                                        <span class="initials">${initials}</span>
+                                        <span class="initials" style="background-color: ${color}">${initials}</span>
                                     </div>
                                     <div class="contactName">
                                         <h2>${contact.firstName} ${contact.lastName}</h2>
@@ -92,11 +94,11 @@ function showContactDetails(index) {
 
                                 <div class="">
                                     <p><b>Email</b></p>
-                                    <a href="#">${contact.email}</a>
+                                    <a href="mailto:${contact.email}">${contact.email}</a>
                                 </div>
                                 <div class="">
                                     <p><b>Phone</b></p>
-                                    <p>${contact.phone}</p>
+                                    <p><a href="tel:${contact.phone}"</a>${contact.phone}</p>
                                 </div>`;
 
 };
@@ -278,4 +280,13 @@ function load() {
     if (contactsAsText) {
         contacts = JSON.parse(contactsAsText);
     }
+}
+
+function contactColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
