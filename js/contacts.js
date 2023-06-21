@@ -31,8 +31,11 @@ let contacts = [
     },
 ]
 
+load();
+
 function initContacts() {
     renderContactLeft();
+
 }
 
 function renderContactLeft() {
@@ -193,6 +196,8 @@ function createContact() {
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
+    save();
+    closeOverlayCardADD();
 }
 
 function splitNames(name) {
@@ -218,6 +223,7 @@ function deleteContact(i) {
 
         // Weitere Aktionen, z.B. Aktualisierung der Anzeige usw.
         renderContactLeft();
+        save();
         // Schließe das Overlay
         closeOverlayCardEdit();
         showContactDetails(i);
@@ -253,11 +259,23 @@ function saveContact(i) {
 
         // Weitere Aktionen, z.B. Aktualisierung der Anzeige usw.
         renderContactLeft();
-
+        save();
         // Schließe das Overlay
         closeOverlayCardEdit();
         showContactDetails(i);
 
         console.log('Kontakt aktualisiert:', contactToUpdate);
+    }
+}
+
+function save() {
+    let contactsAsText = JSON.stringify(contacts);
+    localStorage.setItem('contacts', contactsAsText);
+}
+
+function load() {
+    let contactsAsText = localStorage.getItem('contacts');
+    if (contactsAsText) {
+        contacts = JSON.parse(contactsAsText);
     }
 }
