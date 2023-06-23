@@ -10,7 +10,12 @@
 }
 
 .contactOverview {
-    margin-left: 40px;
+    /*margin-left: 40px; */
+    margin-left: 500px;
+    /* position: sticky; */
+    /* margin-top: 0; */
+    position: absolute;
+    position: fixed;
 }
 
 .boardDescription {
@@ -40,7 +45,7 @@
 }
 
 .contactContainer {
-    /*position: absolute;*/
+    position: absolute;
     width: 453px;
     /*width: 250px;*/
     min-height: 100vh;
@@ -59,8 +64,8 @@
     /* border: 1px solid #D1D1D1; */
     border-radius: 3px;
     /*width: 300px;*/
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /*overflow-x: hidden;
+    overflow-y: scroll;*/
 
 }
 
