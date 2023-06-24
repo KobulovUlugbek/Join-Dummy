@@ -39,30 +39,57 @@ function initContacts() {
 }
 
 function renderContactLeft() {
-    document.getElementById(`sortContactListing`).innerHTML = '';
-    contacts.sort((a, b) => a.lastName.localeCompare(b.lastName));
+    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let contactList = document.getElementById(`sortContactListing`);
+    contactList.innerHTML = '';
 
-    for (let i = 0; i < contacts.length; i++) {
-        const contact = contacts[i];
-        const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
-
-        const color = contactColor();
-
-        // Erstellen des HTML-Codes für den Kontakt
-
-        document.getElementById('sortContactListing').innerHTML += `
-          <div onclick="showContactDetails(${i},'${color}')" class="initialsSectionLeft" >
-            <div class="circleLeft">
-              <span class="initialsLeft" style="background-color: ${color}">${initials}</span>
-            </div>
-            <div class="contactNameLeft">
-              <h2>${contact.firstName} ${contact.lastName}</h2>
-              <a href="mailto:${contact.email}" class="taskForNameLeft">${contact.email}</a>
-            </div>
-          </div>
-        `;
+    for (let j = 0; j < alphabet.length; j++) {
+        const letter = alphabet[j];
+        let contactsIncludingLetter = [];
+        for (let i = 0; i < contacts.length; i++) {
+            if (contacts[i].firstName.charAt(0).toLowerCase() === letter) {
+                contactsIncludingLetter.push(contacts[i]);
+            }
+        }
+        if (contactsIncludingLetter.length > 0) {
+            contactList.innerHTML += `
+        <div class="contactGroup">
+        <h2 class="groupLetter">${letter.toUpperCase()}<div class="line"></div></h2>${contactsIncludingLetter.map(contact => contactHTML(contact)).join('')}</div>
+        
+        `
+        }
     }
 }
+
+function contactHTML(contact) {
+    const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
+
+    const color = contactColor();
+    return `
+<div onclick="showContactDetails(${contacts.indexOf(contact)},'${color}')" class="initialsSectionLeft" >
+<div class="circleLeft">
+  <span class="initialsLeft" style="background-color: ${color}">${initials}</span>
+</div>
+<div class="contactNameLeft">
+  <h2>${contact.firstName} ${contact.lastName}</h2>
+  <a href="mailto:${contact.email}" class="taskForNameLeft">${contact.email}</a>
+</div>
+</div>
+`;
+}
+
+
+//contacts.sort((a, b) => a.lastName.localeCompare(b.lastName));
+//const contact = contacts[i];
+
+
+
+
+// Erstellen des HTML-Codes für den Kontakt
+
+
+
+
 
 function showContactDetails(index, color) {
     const contact = contacts[index];

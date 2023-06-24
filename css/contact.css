@@ -74,8 +74,9 @@
     width: 323px;
     /*padding-left: 17px;
     padding-right: 17px;*/
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     margin-right: 10px;
+    margin-top: 16px;
 }
 
 .contactLetter {
