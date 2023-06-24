@@ -63,8 +63,13 @@ function renderContactLeft() {
 
 function contactHTML(contact) {
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
+    // Überprüfe, ob der Kontakt bereits eine Farbe hat
+    const color = contact.color ? contact.color : contactColor();
 
-    const color = contactColor();
+    // Speichere die Farbe im Kontakt und im Local Storage
+    contact.color = color;
+    saveContactsToLocalStorage();
+    //const color = contactColor();
     return `
 <div onclick="showContactDetails(${contacts.indexOf(contact)},'${color}')" class="initialsSectionLeft" >
 <div class="circleLeft">
@@ -78,6 +83,9 @@ function contactHTML(contact) {
 `;
 }
 
+function saveContactsToLocalStorage() {
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+}
 
 //contacts.sort((a, b) => a.lastName.localeCompare(b.lastName));
 //const contact = contacts[i];
