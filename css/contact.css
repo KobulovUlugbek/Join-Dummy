@@ -19,7 +19,7 @@
 }
 
 .boardDescription {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
 }
 
@@ -37,11 +37,11 @@
     color: #2A3647;
     border-left: 3px solid #29ABE2;
     padding: 10px;
-    padding-left: 30px;
-    margin-left: 30px;
-    margin-top: 55px;
+    /*padding-left: 30px;*/
+    /*margin-left: 30px;
+    margin-top: 55px;*/
     margin-bottom: 47px;
-    margin-right: 40px;
+    /*margin-right: 40px;*/
 }
 
 .contactContainer {
@@ -49,7 +49,7 @@
     width: 453px;
     /*width: 250px;*/
     min-height: 100vh;
-    left: 232px;
+    /*left: 232px;*/
     top: 89px;
     background: #FFFFFF;
     box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
@@ -69,9 +69,13 @@
 
 }
 
+.contactGroup {
+    margin-right: 47px;
+}
+
 .line {
     border-bottom: 1px solid #D1D1D1;
-    width: 323px;
+    width: 357px;
     /*padding-left: 17px;
     padding-right: 17px;*/
     /*margin-left: 10px;*/
@@ -104,7 +108,7 @@
 .circle {
     display: flex;
     align-items: center;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
     border-radius: 50%;
 }
 
@@ -120,6 +124,9 @@
     color: #FFFFFF;
     /*display: inline-block;*/
     border-radius: 50%;
+    border: 3px;
+    border-style: solid;
+    border-color: white;
     width: 90px;
     height: 90px;
     text-align: center;
@@ -642,4 +649,50 @@ h6 {
     transition: trasform ease-in-out 100ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     border: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contactOverview {
+
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1001px) {
+    .contactContainer {
+
+
+        position: absolute;
+        width: 453px;
+        /* width: 250px; */
+        min-height: 100vh;
+        left: 232px !important;
+        top: 89px;
+        background: #FFFFFF;
+        box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media only screen and (min-width: 1176px) {
+
+    .boardSlogan {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 120%;
+        /* or 32px */
+        color: #2A3647;
+        border-left: 3px solid #29ABE2;
+        padding: 10px;
+        padding-left: 30px;
+        margin-left: 30px;
+        margin-top: 55px;
+        margin-bottom: 47px;
+        margin-right: 40px;
+    }
+
+    .boardDescription {
+        display: flex;
+        flex-direction: row;
+    }
 }
