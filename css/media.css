@@ -14,17 +14,20 @@
     height: 10vh;
     background-color: #2B3647;
   }
-  .board-1{
+
+  .board-1 {
     width: 100%;
   }
-  .board-2{
+
+  .board-2 {
     width: 70%;
   }
 
-  .box4{
+  .box4 {
     width: 100%;
   }
-  .board-3{
+
+  .board-3 {
     width: 100%;
     gap: 140px;
   }
@@ -43,7 +46,7 @@
     position: fixed;
   }
 
-  footer a{
+  footer a {
     text-decoration: none;
     color: white;
   }
@@ -264,31 +267,35 @@
   /* Add Task HTML*/
 
 
-  .add-task-container-main{
+  .add-task-container-main {
     height: 130vh;
-/*     width: 100%;
- */  }
+    /*     width: 100%;
+ */
+  }
 
-  .first-container{
+  .first-container {
     display: flex;
     width: 98%;
     flex-direction: column !important;
   }
-  .child-container-left{
+
+  .child-container-left {
     width: 100% !important;
     display: flex;
   }
-  .child-container-right{
+
+  .child-container-right {
     width: 100% !important;
     display: flex;
     margin-top: 40px;
   }
-  .add-task-h1{
+
+  .add-task-h1 {
     margin: 15px 0px 0px 30px !important;
   }
 
   .right2,
-  .strich-gray3{
+  .strich-gray3 {
     display: none !important;
   }
 }
@@ -301,7 +308,8 @@
   .summary-m {
     display: none;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 
@@ -327,9 +335,11 @@
   #greeting {
     font-size: 70px;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
+
   .greeting {
     vertical-align: top;
     width: 15%;
@@ -350,7 +360,8 @@
   #greeting {
     font-size: 50px;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 
@@ -375,7 +386,8 @@
   #greeting {
     font-size: 50px;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 
@@ -404,7 +416,8 @@
     padding: 25px;
     transition: transform 0.2s;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 
@@ -559,52 +572,63 @@
 }
 
 @media only screen and (max-width: 950px) {
-  .board-2{
+  .board-2 {
     width: 75%;
   }
+
   .summary-m {
     width: 70%;
   }
 }
+
 @media only screen and (max-width: 890px) {
-  .board-2{
+  .board-2 {
     width: 78%;
   }
+
   .summary-m {
     width: 79%;
   }
 }
+
 @media only screen and (max-width: 850px) {
-  .board-2{
+  .board-2 {
     width: 83%;
   }
+
   .summary-m {
     width: 85%;
   }
 }
+
 @media only screen and (max-width: 850px) {
-  .board-2{
+  .board-2 {
     width: 83%;
   }
+
   .summary-m {
     width: 88%;
   }
 }
+
 @media only screen and (max-width: 800px) {
-  .board-2{
+  .board-2 {
     width: 87%;
   }
+
   .summary-m {
     width: 95%;
   }
 }
+
 @media only screen and (max-width: 750px) {
-  .board-2{
+  .board-2 {
     width: 96%;
   }
 }
+
 @media only screen and (max-width: 700px) {
-  .board-2{
+  .board-2 {
     width: 102%;
   }
 }
@@ -630,10 +654,12 @@
     margin-left: 25px;
     margin-right: 25px;
   }
-  .board-3{
+
+  .board-3 {
     gap: 5px;
   }
-  .board-1{
+
+  .board-1 {
     gap: 5px;
   }
 }
@@ -656,7 +682,8 @@
     width: 320px;
     height: 250px;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 
@@ -671,7 +698,8 @@
     align-items: center;
     height: 96vh;
   }
-  footer a{
+
+  footer a {
     text-decoration: none;
   }
 }
@@ -681,24 +709,27 @@
 
 
 @media only screen and (max-width: 1000px) {
-  .sidebar{
+  .sidebar {
     display: none !important;
   }
-  #header{
+
+  #header {
     display: none;
   }
 
-  .contactBoard{
+  .contactBoard {
     display: flex;
     height: 150vh;
   }
-  .addContactBtn{
+
+  .addContactBtn {
     position: absolute;
     top: 83px;
     z-index: 1;
     position: fixed;
   }
-  .header-c{
+
+  .header-c {
     box-shadow: 0 -7px 6px -5px rgba(0, 0, 0, 0.17);
     height: 80px;
     width: 100%;
@@ -710,28 +741,32 @@
     z-index: 1;
     margin-top: 70px;
   }
-  
+
   .boardDescription,
-  .contactOverview{
+  .contactOverview {
     width: 0;
     margin: 0;
     padding: 0;
   }
 
-  .contactContainer{
+  .contactContainer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
+    padding-top: 125px;
+    padding-bottom: 125px;
   }
-  .contactListing{
-    width: 100vw;
+
+  .contactListing {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .boardSlogan{
+
+  .boardSlogan {
     display: none !important;
     margin: 0;
     width: 0;
