@@ -731,7 +731,7 @@
 
   .header-c {
     box-shadow: 0 -7px 6px -5px rgba(0, 0, 0, 0.17);
-    height: 80px;
+    /*height: 80px;*/
     width: 100%;
     display: flex;
     justify-content: space-between;
