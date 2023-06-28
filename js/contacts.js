@@ -127,7 +127,15 @@ function showContactDetails(index, color) {
                                 <div class="">
                                     <p><b>Phone</b></p>
                                     <p><a href="tel:${contact.phone}"</a>${contact.phone}</p>
-                                </div>`;
+                                </div>                                
+                                <div>
+                                <button onclick="deleteContact(${index})" class="cancelContactBtnMobile">
+                                    <img class="" src="img/delete.png" alt="delete contact">
+                                </button></div>
+                                <div><button onclick="editContact(${index},'${color}')" class="createContactBtnMobil">
+                                <img class="" src="img/whitePencil.png" alt="edit contact">
+                            </button></div>
+                                `;
 
 };
 
