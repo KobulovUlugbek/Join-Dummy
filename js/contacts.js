@@ -91,14 +91,6 @@ function saveContactsToLocalStorage() {
 //const contact = contacts[i];
 
 
-
-
-// Erstellen des HTML-Codes für den Kontakt
-
-
-
-
-
 function showContactDetails(index, color) {
     const contact = contacts[index];
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);

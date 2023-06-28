@@ -619,6 +619,32 @@ h6 {
     font-size: 20px;
 }
 
+.createContactBtnMobil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*position: fixed;*/
+    width: 55px;
+    height: 55px;
+    right: 52px;
+    /*top: 90%;*/
+    background-color: #2A3647;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+    /*z-index: 10;*/
+    padding: 18px 15px 18px 15px;
+}
+
+.createContactBtnMobil:hover {
+    background-color: #2ebbda;
+    transition: trasform ease-in-out 100ms;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    border: none;
+}
+
 
 .cancelContactBtn {
     display: flex;
@@ -656,8 +682,66 @@ h6 {
     border: none;
 }
 
+.cancelContactBtnMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*position: fixed;*/
+    width: 45px;
+    height: 45px;
+    right: 52px;
+    /*top: 90%;*/
+    background-color: #ffffff;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+    /*z-index: 10;*/
+    padding: 18px 15px 18px 15px;
+}
+
+.cancelContactBtnMobile:hover {
+    background-color: #2ebbda;
+    transition: trasform ease-in-out 100ms;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    border: none;
+}
+
+.backwartsContactList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*position: fixed;*/
+    width: 25px;
+    height: 25px;
+    right: 52px;
+    /*top: 90%;*/
+    /*background-color: #ffffff;
+    border: 1px solid #2A3647;
+    border-radius: 10px;*/
+    /*z-index: 10;*/
+    padding: 18px 15px 18px 15px;
+    border: none;
+}
+
+.backwartsContactList:hover {
+    /*background-color: F6F7F8;*/
+    transition: trasform ease-in-out 100ms;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;*/
+    border: none;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
-    .contactOverview {
+    .initialsSection {
+
+        display: none;
+    }
+
+    .boardDescription {
 
         display: none;
     }
