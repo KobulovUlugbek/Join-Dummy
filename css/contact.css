@@ -708,27 +708,15 @@ h6 {
     border: none;
 }
 
-.backwartsContactList {
+.backwardsContactList {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    /*position: fixed;*/
     width: 25px;
     height: 25px;
-    right: 52px;
-    /*top: 90%;*/
-    /*background-color: #ffffff;
-    border: 1px solid #2A3647;
-    border-radius: 10px;*/
-    /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
-    border: none;
+
 }
 
-.backwartsContactList:hover {
-    /*background-color: F6F7F8;*/
+.backwardsContactList:hover {
     transition: trasform ease-in-out 100ms;
     /*box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;*/
     border: none;
@@ -737,21 +725,17 @@ h6 {
 
 @media only screen and (max-width: 1000px) {
     .initialsSection {
-
-        display: none;
+        margin: 1px;
     }
 
     .boardDescription {
-
-        display: none;
+        margin: 1px;
     }
 }
 
 
 @media only screen and (min-width: 1001px) {
     .contactContainer {
-
-
         position: absolute;
         width: 453px;
         /* width: 250px; */

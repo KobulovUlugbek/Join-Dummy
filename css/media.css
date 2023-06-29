@@ -742,11 +742,15 @@
     margin-top: 70px;
   }
 
-  .boardDescription,
+  .boardDescription {
+    display: flow-root;
+    margin-top: 25px;
+  }
+
   .contactOverview {
-    width: 0;
-    margin: 0;
-    padding: 0;
+    display: flow-root;
+    margin: 25px;
+    display: none;
   }
 
   .contactContainer {
@@ -767,10 +771,7 @@
   }
 
   .boardSlogan {
-    display: none !important;
-    margin: 0;
-    width: 0;
-    padding: 0;
+    margin: 1;
   }
 
 
