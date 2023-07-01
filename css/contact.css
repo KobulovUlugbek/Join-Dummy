@@ -699,6 +699,7 @@ h6 {
     cursor: pointer;
     /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
+    margin: 10px;
 }
 
 .cancelContactBtnMobile:hover {
@@ -706,6 +707,12 @@ h6 {
     transition: trasform ease-in-out 100ms;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     border: none;
+}
+
+.backwards {
+    position: absolute;
+    top: 75px;
+    left: 75vw;
 }
 
 .backwardsContactList {
@@ -723,6 +730,16 @@ h6 {
     cursor: pointer;
 }
 
+.respBTNsAdaption {
+    position: absolute;
+    top: 65vh;
+    left: 75vw;
+}
+
+.hidden {
+    display: none;
+}
+
 @media only screen and (max-width: 1000px) {
     .initialsSection {
         margin: 1px;
@@ -730,6 +747,10 @@ h6 {
 
     .boardDescription {
         margin: 1px;
+    }
+
+    .contactEdit {
+        display: none;
     }
 }
 

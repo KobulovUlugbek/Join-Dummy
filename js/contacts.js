@@ -63,10 +63,10 @@ function renderContactLeft() {
 
 function contactHTML(contact) {
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
-    // Überprüfe, ob der Kontakt bereits eine Farbe hat
+    // Überprüft, ob der Kontakt bereits eine Farbe hat
     const color = contact.color ? contact.color : contactColor();
 
-    // Speichere die Farbe im Kontakt und im Local Storage
+    // Speichert die Farbe im Kontakt und im Local Storage
     contact.color = color;
     saveContactsToLocalStorage();
     //const color = contactColor();
@@ -97,6 +97,18 @@ function showContactDetails(index, color) {
 
     document.getElementById(`initialsSectionRight`).innerHTML = '';
 
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    const isResponsiveView = windowWidth < 1000;
+
+    if (isResponsiveView) {
+        // Ausblenden der Kontaktliste
+        document.getElementById('contactContainer').style.display = 'none';
+
+    } else {
+        // Einblenden der Kontaktliste
+        document.getElementById('contactContainer').style.display = '';
+    }
+
     document.getElementById(`initialsSectionRight`).innerHTML = `
     <div class="initialsSection">
                                     <div class="circle">
@@ -126,18 +138,27 @@ function showContactDetails(index, color) {
                                 </div>
                                 <div class="">
                                     <p><b>Phone</b></p>
-                                    <p><a href="tel:${contact.phone}"</a>${contact.phone}</p>
+                                    <p><a href="tel:${contact.phone}">${contact.phone}</a></p>
                                 </div>                                
-                                <div>
+                                <div> <div class="respBTNsAdaption">
                                 <button onclick="deleteContact(${index})" class="cancelContactBtnMobile">
                                     <img class="" src="img/delete.png" alt="delete contact">
-                                </button></div>
-                                <div><button onclick="editContact(${index},'${color}')" class="createContactBtnMobil">
+                                </button>
+                                <button onclick="editContact(${index},'${color}')" class="createContactBtnMobil">
                                 <img class="" src="img/whitePencil.png" alt="edit contact">
-                            </button></div>
+                            </button></div></div>
                                 `;
 
-};
+}
+window.addEventListener('resize', function () {
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    const isResponsiveView = windowWidth < 1000;
+
+    if (!isResponsiveView) {
+        // Einblenden der Kontaktliste
+        document.getElementById('contactContainer').style.display = '';
+    }
+});
 
 function openOverlayCardEdit() {
     document.getElementById('overlayEditContactContainer').style.display = "flex";
