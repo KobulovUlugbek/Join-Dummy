@@ -103,14 +103,16 @@ function showContactDetails(index, color) {
 
     if (isResponsiveView) {
         // Ausblenden der Kontaktliste
-        //document.getElementById('contactContainer').style.display = 'none';
+        document.getElementById('contactContainer').style.display = 'none';
         boardDescription.style.display = 'none';
         document.getElementById('initialsSectionRight').classList.add('hidden');
+
 
 
     } else {
         // Einblenden der Kontaktliste
         document.getElementById('contactContainer').style.display = '';
+
         boardDescription.style.display = '';
         document.getElementById('initialsSectionRight').classList.remove('hidden');
     }
@@ -362,6 +364,7 @@ function contactColor() {
     }
     return color;
 }
+
 
 
 
