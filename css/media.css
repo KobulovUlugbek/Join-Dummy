@@ -745,12 +745,13 @@
   .boardDescription {
     display: flow-root;
     margin-top: 25px;
+    display: none;
   }
 
   .contactOverview {
     display: flow-root;
     margin: 25px;
-    display: none;
+    /*display: none;*/
   }
 
   .contactContainer {

@@ -99,14 +99,20 @@ function showContactDetails(index, color) {
 
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
     const isResponsiveView = windowWidth < 1000;
+    const boardDescription = document.getElementById('boardDescription');
 
     if (isResponsiveView) {
         // Ausblenden der Kontaktliste
-        document.getElementById('contactContainer').style.display = 'none';
+        //document.getElementById('contactContainer').style.display = 'none';
+        boardDescription.style.display = 'none';
+        document.getElementById('initialsSectionRight').classList.add('hidden');
+
 
     } else {
         // Einblenden der Kontaktliste
         document.getElementById('contactContainer').style.display = '';
+        boardDescription.style.display = '';
+        document.getElementById('initialsSectionRight').classList.remove('hidden');
     }
 
     document.getElementById(`initialsSectionRight`).innerHTML = `
@@ -153,6 +159,15 @@ function showContactDetails(index, color) {
 window.addEventListener('resize', function () {
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
     const isResponsiveView = windowWidth < 1000;
+
+    if (isResponsiveView) {
+        // Ausblenden der initialsSectionRight
+        document.getElementById('initialsSectionRight').classList.add('hidden');
+    } else {
+        // Einblenden der initialsSectionRight
+        document.getElementById('initialsSectionRight').classList.remove('hidden');
+        boardDescription.style.display = '';
+    }
 
     if (!isResponsiveView) {
         // Einblenden der Kontaktliste
@@ -347,3 +362,7 @@ function contactColor() {
     }
     return color;
 }
+
+
+
+
