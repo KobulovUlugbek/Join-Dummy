@@ -148,7 +148,7 @@ function showContactDetails(index, color) {
                                     <p><b>Phone</b></p>
                                     <p><a href="tel:${contact.phone}">${contact.phone}</a></p>
                                 </div>                                
-                                <div> <div class="respBTNsAdaption">
+                                <div> <div id="respBTNsAdaption" class="respBTNsAdaption">
                                 <button onclick="deleteContact(${index})" class="cancelContactBtnMobile">
                                     <img class="" src="img/delete.png" alt="delete contact">
                                 </button>
@@ -176,6 +176,11 @@ window.addEventListener('resize', function () {
         document.getElementById('contactContainer').style.display = '';
     }
 });
+
+
+
+//show function  ende
+//letzter teil
 
 function openOverlayCardEdit() {
     document.getElementById('overlayEditContactContainer').style.display = "flex";

@@ -89,14 +89,15 @@
 
 
                         </div>
-                        <div class="contactOverview">
+                        <div class="contactOverview" id="contactOverview">
                             <div class="boardDescription" id="boardDescription">
                                 <div>
                                     <h1>Contacts</h1>
                                 </div>
                                 <div class="boardSlogan">Better with a team</div>
-                                <div onclick="renderContactLeft()" class="backwards"><img class="backwardsContactList"
-                                        src="img\Pfeil-links.png" alt="show contact list"></div>
+                                <div onclick="renderContactLeft()" id="backwards" class="backwards"><img
+                                        class="backwardsContactList" src="img\Pfeil-links.png" alt="show contact list">
+                                </div>
                             </div>
                             <div id="initialsSectionRight">
                                 <div style="display: none">
@@ -133,7 +134,7 @@
                                 </div>
 
                             </div>
-                            <div class="addContactContainer">
+                            <div class="addContactContainer" id="addContactContainer">
                                 <button onclick="openOverlayCardADD()" class="addContactBtn">
                                     <h3 class="contactBTNcontent">New contact</h3>
                                     <img src="img\add-new-contakt-icon.png" alt="add contact">
