@@ -104,10 +104,10 @@ function showContactDetails(index, color) {
     if (isResponsiveView) {
         // Ausblenden der Kontaktliste
         document.getElementById('contactContainer').style.display = 'none';
+        document.getElementById('addContactContainer').classList.add('hidden');
+
         boardDescription.style.display = 'none';
         document.getElementById('initialsSectionRight').classList.add('hidden');
-
-
 
     } else {
         // Einblenden der Kontaktliste
@@ -115,6 +115,8 @@ function showContactDetails(index, color) {
 
         boardDescription.style.display = '';
         document.getElementById('initialsSectionRight').classList.remove('hidden');
+        document.getElementById('addContactContainer').classList.remove('hidden');
+
     }
 
     document.getElementById(`initialsSectionRight`).innerHTML = `
@@ -169,11 +171,13 @@ window.addEventListener('resize', function () {
         // Einblenden der initialsSectionRight
         document.getElementById('initialsSectionRight').classList.remove('hidden');
         boardDescription.style.display = '';
+        document.getElementById('addContactContainer').classList.remove('hidden');
     }
 
     if (!isResponsiveView) {
         // Einblenden der Kontaktliste
         document.getElementById('contactContainer').style.display = '';
+
     }
 });
 
