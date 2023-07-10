@@ -143,42 +143,44 @@
                             </div>
 
                         </div>
-
-                        <div id="overlayEditContactContainer" class="overlayEditContactContainer" style="display:none">
-                            <div class="headlineEdit">
-                                <img class="overlayLogo" src="img\Join-icon.png" alt="Join Logo">
-                                <div class="overlayHeadlineEdit">Edit contact</div>
-                                <span class="overlayLine"></span>
-                            </div>
-                            <div class="editSection">
-                                <div class="initialsSectionOverlay">
-                                    <div class="circle">
-                                        <span class="initials">AM</span>
-                                    </div>
-                                    <div class="editInputs">
-                                        <div class="closingCross">
-                                            <img onclick="closeOverlayCardEdit()" src="img\cross.png" alt="Close Edit">
+                        <div class="overlayContainer" id="overlayContainer" style="display:none">
+                            <div id="overlayEditContactContainer" class="overlayEditContactContainer">
+                                <div class="headlineEdit">
+                                    <img class="overlayLogo" src="img\Join-icon.png" alt="Join Logo">
+                                    <div class="overlayHeadlineEdit">Edit contact</div>
+                                    <span class="overlayLine"></span>
+                                </div>
+                                <div class="editSection">
+                                    <div class="initialsSectionOverlay">
+                                        <div class="circle">
+                                            <span class="initials">AM</span>
                                         </div>
-                                        <input class="inputs" type="text" required="" placeholder="Name"
-                                            style="background-image: url('./img/user.png')" id="">
-                                        <input class="inputs" type="email" required="" placeholder="Email"
-                                            style="background-image: url('./img/mail-icon.png')" id="">
-                                        <input class="inputs" type="number" required="" placeholder="Number"
-                                            style="background-image: url('./img/phone-icon.png')" id="">
-                                        <div>
-                                            <div class="editContainer">
-                                                <button onclick="deleteContact()" class="deleteContactBtn">
-                                                    <h3 class="deletecontactBTNcontent">Delete</h3>
-                                                </button>
-                                                <button onclick="editContact()" class="editContactBtn">
-                                                    <h3 class="editcontactBTNcontent">Save</h3>
-                                                </button>
+                                        <div class="editInputs">
+                                            <div class="closingCross">
+                                                <img onclick="closeOverlayCardEdit()" src="img\cross.png"
+                                                    alt="Close Edit">
+                                            </div>
+                                            <input class="inputs" type="text" required="" placeholder="Name"
+                                                style="background-image: url('./img/user.png')" id="">
+                                            <input class="inputs" type="email" required="" placeholder="Email"
+                                                style="background-image: url('./img/mail-icon.png')" id="">
+                                            <input class="inputs" type="number" required="" placeholder="Number"
+                                                style="background-image: url('./img/phone-icon.png')" id="">
+                                            <div>
+                                                <div class="editContainer">
+                                                    <button onclick="deleteContact()" class="deleteContactBtn">
+                                                        <h3 class="deletecontactBTNcontent">Delete</h3>
+                                                    </button>
+                                                    <button onclick="editContact()" class="editContactBtn">
+                                                        <h3 class="editcontactBTNcontent">Save</h3>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
 
                                 </div>
-
                             </div>
                         </div>
 

@@ -196,12 +196,13 @@ function editContact(i, color) {
     const contact = contacts[i];
     const initials = contact.firstName.charAt(0) + contact.lastName.charAt(0);
 
-    document.getElementById('overlayEditContactContainer').style.display = "flex";
+    document.getElementById('overlayContainer').style.display = "flex"; //overlayContainer //overlayEditContactContainer
     document.body.style.overflow = "hidden";
 
-    const overlayContainer = document.getElementById('overlayEditContactContainer');
+    const overlayContainer = document.getElementById('overlayContainer');//overlayEditContactContainer
     overlayContainer.innerHTML = `
-          <div class="headlineEdit">
+    <div id="overlayEditContactContainer" class="overlayEditContactContainer">      
+    <div class="headlineEdit">
             <img class="overlayLogo" src="img/Join-icon.png" alt="Join Logo">
             <div class="overlayHeadlineEdit">Edit contact</div>
             <span class="overlayLine"></span>
@@ -234,12 +235,13 @@ function editContact(i, color) {
               </div>
             </div>
           </div>
+          </div>
         `;
 
 };
 
 function closeOverlayCardEdit() {
-    document.getElementById('overlayEditContactContainer').style.display = "none";
+    document.getElementById('overlayContainer').style.display = "none";
     document.body.style.overflow = "scroll";
 };
 

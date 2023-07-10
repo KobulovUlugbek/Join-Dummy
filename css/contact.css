@@ -1,72 +1,46 @@
 .contactBoard {
     display: flex;
     flex-direction: row;
-    /*justify-content: space-between;*/
-    /*align-items: center;
-    /*margin-top: 68px;
-    margin-left: 40px;*/
     margin-right: 40px;
     margin-bottom: 70px;
 }
 
 .contactOverview {
-    /*margin-left: 40px; */
     margin-left: 500px;
-    /* position: sticky; */
-    /* margin-top: 0; */
     position: absolute;
     position: fixed;
 }
 
 .boardDescription {
-    /*display: flex;*/
     flex-direction: row;
 }
 
 .contactBoard h1 {
     font-size: 61px;
     font-weight: 700;
-    /*margin-left: 40px;*/
 }
 
 .boardSlogan {
     font-weight: 400;
     font-size: 27px;
     line-height: 120%;
-    /* or 32px */
     color: #2A3647;
     border-left: 3px solid #29ABE2;
     padding: 10px;
-    /*padding-left: 30px;*/
-    /*margin-left: 30px;
-    margin-top: 55px;*/
     margin-bottom: 47px;
-    /*margin-right: 40px;*/
 }
 
 .contactContainer {
     position: absolute;
     width: 453px;
-    /*width: 250px;*/
     min-height: 100vh;
-    /*left: 232px;*/
-    /*top: 89px;*/
     background: #FFFFFF;
     box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
 }
 
 .contactListing {
-    /*padding: 2px 48px 0px 48px; */
     margin: 2px 0px 0px 48px;
-    /*border-bottom: 1px solid #D1D1D1;
-    width: 323px;*/
-    /* height: 0px; */
-    /* border: 1px solid #D1D1D1; */
     border-radius: 3px;
-    /*width: 300px;*/
-    /*overflow-x: hidden;
-    overflow-y: scroll;*/
-
 }
 
 .contactGroup {
@@ -76,10 +50,6 @@
 .line {
     border-bottom: 1px solid #D1D1D1;
     width: 357px;
-    /*padding-left: 17px;
-    padding-right: 17px;*/
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     margin-top: 16px;
 }
 
@@ -87,7 +57,6 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 120%;
-    /* or 25px */
     display: flex;
     align-items: center;
     color: #000000;
@@ -108,12 +77,10 @@
 .circle {
     display: flex;
     align-items: center;
-    /*border: 2px solid white;*/
     border-radius: 50%;
 }
 
 .initials {
-    /*display: flex;*/
     font-weight: 500;
     font-size: 47px;
     line-height: 182%;
@@ -122,7 +89,6 @@
     justify-content: center;
     text-align: center;
     color: #FFFFFF;
-    /*display: inline-block;*/
     border-radius: 50%;
     border: 3px;
     border-style: solid;
@@ -185,7 +151,6 @@
     color: #FFFFFF;
     justify-content: center;
     text-transform: capitalize;
-    /*display: inline-block;*/
     border-radius: 50%;
     width: 42px;
     height: 42px;
@@ -197,7 +162,6 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 120%;
-    /* or 56px */
     display: flex;
     align-items: center;
     color: #000000;
@@ -208,7 +172,6 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 120%;
-    /* or 56px */
     display: flex;
     align-items: center;
     color: #ffffff;
@@ -219,10 +182,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
-    /* or 19px */
     display: flex;
     align-items: center;
-    /* Ligth blue */
     color: #29ABE2;
     cursor: pointer;
 }
@@ -235,7 +196,6 @@
     font-weight: 500;
     font-size: 47px;
     line-height: 120%;
-    /* or 56px */
     display: flex;
     align-items: center;
     color: #000000;
@@ -246,10 +206,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
-    /* or 19px */
     display: flex;
     align-items: center;
-    /* Ligth blue */
     color: #29ABE2;
     cursor: pointer;
 }
@@ -267,7 +225,6 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 120%;
-    /* or 25px */
     display: flex;
     align-items: center;
     color: #000000;
@@ -277,17 +234,14 @@
     width: 15px;
     height: auto;
     padding-right: 5px;
-
 }
 
 .contactEdit {
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
-    /* or 19px */
     display: flex;
     align-items: center;
-    /* Version 2/ main color  */
     color: #2A3647;
     padding-left: 45px;
     cursor: pointer;
@@ -319,7 +273,6 @@
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
-
 }
 
 .contactBTNcontent {
@@ -343,17 +296,30 @@
 
 /*Overlay Edit start*/
 
+.overlayContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
 .overlayEditContactContainer {
-    /*display: none;*/
     display: flex;
     position: fixed;
-
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
     width: 1100px;
     height: 494px;
+    transition: trasform ease-in 2s;
 }
 
 .overlayLogo {
@@ -393,10 +359,8 @@
     z-index: 1;
     display: flex;
     position: absolute;
-    /* right: 22.43%; */
     left: 7%;
     top: 49.17%;
-    /* flex-direction: column; */
     border-radius: 10px;
 }
 
@@ -450,16 +414,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 153px;
     height: 55px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #2A3647;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
 }
 
 .editcontactBTNcontent {
@@ -485,16 +446,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 98px;
     height: 55px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #ffffff;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
 }
 
 .deletecontactBTNcontent {
@@ -517,10 +475,8 @@
 /*Overlay end*/
 
 .overlayADDContactContainer {
-    /*display: none;*/
     display: flex;
     position: fixed;
-
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
@@ -547,15 +503,12 @@ h6 {
     z-index: 1;
     display: flex;
     position: absolute;
-    /* right: 22.43%; */
     left: 7%;
     top: 51.17%;
-    /* flex-direction: column; */
     border-radius: 10px;
 }
 
 .createUserPic {
-    /*display: flex;*/
     font-weight: 500;
     font-size: 47px;
     line-height: 182%;
@@ -564,7 +517,6 @@ h6 {
     justify-content: center;
     text-align: center;
     color: #FFFFFF;
-    /*display: inline-block;*/
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -589,16 +541,13 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 215px;
     height: 55px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #2A3647;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
 }
 
@@ -625,16 +574,13 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 55px;
     height: 55px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #2A3647;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
 }
 
@@ -652,16 +598,13 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 115px;
     height: 55px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #ffffff;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
 }
 
@@ -688,16 +631,13 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /*position: fixed;*/
     width: 45px;
     height: 45px;
     right: 52px;
-    /*top: 90%;*/
     background-color: #ffffff;
     border: 1px solid #2A3647;
     border-radius: 10px;
     cursor: pointer;
-    /*z-index: 10;*/
     padding: 18px 15px 18px 15px;
     margin: 10px;
 }
@@ -725,7 +665,6 @@ h6 {
 
 .backwardsContactList:hover {
     transition: trasform ease-in-out 100ms;
-    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;*/
     border: none;
     cursor: pointer;
 }
@@ -740,6 +679,20 @@ h6 {
     display: none;
 }
 
+@media only screen and (max-width: 1120px) {
+    .overlayEditContactContainer {
+        width: 1000px;
+    }
+
+    .editSection {
+        padding-left: 32px;
+    }
+
+    .editInputs {
+        margin-left: 32px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .initialsSection {
         margin: 1px;
@@ -750,20 +703,18 @@ h6 {
     }
 
     .overlayEditContactContainer {
-        /* display: none; */
-        /* display: flex; */
-        display: flex;
+        /*display: flex;*/
         z-index: 1;
         flex-direction: column;
         width: 100%;
         height: 100%;
-        position: fixed;
-        align-items: center;
-        background-color: white;
-        box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
-        border-radius: 30px;
+        /*position: fixed;
+        /*align-items: center;
+        /*background-color: white;
+        /*box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+        /*border-radius: 30px;
         /* width: 1100px; */
-        max-width: 100%;
+        /*max-width: 100%;
         /* height: 494px; */
         /* max-height: 100%; */
     }
@@ -775,14 +726,14 @@ h6 {
         width: 100%;
         height: 100%;
         border-radius: 30px 30px 0px 0px;
-        display: flex;
+        /*display: flex;
         justify-content: center;
         align-items: center;
         font-style: normal;
         font-weight: 700;
         font-size: 35px;
         line-height: 120%;
-        color: #FFFFFF;
+        color: #FFFFFF;*/
     }
 
     .overlayLogo {
@@ -817,7 +768,7 @@ h6 {
     }
 
     .initialsSectionOverlay {
-        display: flex;
+        /*display: flex;*/
         margin-bottom: 56px;
         justify-content: center;
         flex-direction: column;
@@ -826,9 +777,9 @@ h6 {
 
     .circle {
         /* display: flex; */
-        align-items: center;
+        /*align-items: center;
         /* border: 2px solid white; */
-        border-radius: 50%;
+        /*border-radius: 50%;*/
         position: absolute;
         top: 43%;
         /*left: 43%;*/
