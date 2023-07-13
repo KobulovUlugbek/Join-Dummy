@@ -273,7 +273,7 @@
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
-    transition: right ease-in 3000ms;
+    transition: left ease-in 300ms;
 }
 
 .contactBTNcontent {
