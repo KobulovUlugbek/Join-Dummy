@@ -142,11 +142,11 @@ function showContactDetails(index, color) {
                                     </div>
                                 </div>
 
-                                <div class="">
+                                <div class="mailContact">
                                     <p><b>Email</b></p>
                                     <a href="mailto:${contact.email}">${contact.email}</a>
                                 </div>
-                                <div class="">
+                                <div class="phoneContact">
                                     <p><b>Phone</b></p>
                                     <p><a href="tel:${contact.phone}">${contact.phone}</a></p>
                                 </div>                                
@@ -246,13 +246,13 @@ function closeOverlayCardEdit() {
 };
 
 function openOverlayCardADD() {
-    document.getElementById('overlayADDContactContainer').style.display = "flex";
+    document.getElementById('overlayContainerADD').style.display = "flex";//overlayADDContactContainer
     document.body.style.overflow = "hidden";
 
 };
 
 function closeOverlayCardADD() {
-    document.getElementById('overlayADDContactContainer').style.display = "none";
+    document.getElementById('overlayContainerADD').style.display = "none";
     document.body.style.overflow = "scroll";
 };
 

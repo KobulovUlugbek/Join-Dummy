@@ -93,8 +93,8 @@
     border: 3px;
     border-style: solid;
     border-color: white;
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     text-align: center;
     background-color: orange;
 }
@@ -273,6 +273,7 @@
     border-radius: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: right ease-in 3000ms;
 }
 
 .contactBTNcontent {
@@ -297,6 +298,20 @@
 /*Overlay Edit start*/
 
 .overlayContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.overlayContainerADD {
     display: none;
     position: absolute;
     top: 0;
@@ -366,6 +381,11 @@
 
 .editSection {
     padding-left: 56px;
+}
+
+.circleAdd {
+    display: flex;
+    align-items: center;
 }
 
 .closingCross {
@@ -679,8 +699,71 @@ h6 {
     display: none;
 }
 
+/*Media start*/
+
+
+@media only screen and (min-width: 1176px) {
+
+    .boardSlogan {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 120%;
+        /* or 32px */
+        color: #2A3647;
+        border-left: 3px solid #29ABE2;
+        padding: 10px;
+        padding-left: 30px;
+        margin-left: 30px;
+        margin-top: 55px;
+        margin-bottom: 47px;
+        margin-right: 40px;
+    }
+
+    .boardDescription {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .contactContainer {
+        width: 410px;
+    }
+
+    .contactListing {
+        margin: 2px 0px 0px 25px;
+    }
+
+    .contactOverview {
+        margin-left: 455px;
+    }
+
+    .addContactBtn {
+        right: 15px;
+        top: 92%;
+    }
+
+    .mailContact {
+        display: flex;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .phoneContact {
+        display: flex;
+        align-items: baseline;
+        gap: 22px;
+
+    }
+}
+
 @media only screen and (max-width: 1120px) {
     .overlayEditContactContainer {
+        width: 1000px;
+    }
+
+    .overlayADDContactContainer {
         width: 1000px;
     }
 
@@ -719,6 +802,23 @@ h6 {
         /* max-height: 100%; */
     }
 
+    .overlayADDContactContainer {
+        /*display: flex;*/
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /*position: fixed;
+        /*align-items: center;
+        /*background-color: white;
+        /*box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+        /*border-radius: 30px;
+        /* width: 1100px; */
+        /*max-width: 100%;
+        /* height: 494px; */
+        /* max-height: 100%; */
+    }
+
     .headlineEdit {
         background-color: #2A3647;
         /* width: 989px; */
@@ -736,11 +836,31 @@ h6 {
         color: #FFFFFF;*/
     }
 
+
+
     .overlayLogo {
         display: none;
     }
 
     .overlayLine {
+        height: 99px;
+        border: 1.5px solid #29ABE2;
+        transform: rotate(90deg);
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        z-index: 1;
+        display: flex;
+        position: absolute;
+        /* position: fixed; */
+        /* right: 22.43%; */
+        left: 35.9%;
+        top: 25.0%;
+        /* flex-direction: column; */
+        border-radius: 10px;
+    }
+
+    .overlayLineAdd {
         height: 99px;
         border: 1.5px solid #29ABE2;
         transform: rotate(90deg);
@@ -781,7 +901,17 @@ h6 {
         /* border: 2px solid white; */
         /*border-radius: 50%;*/
         position: absolute;
-        top: 43%;
+        top: 41%;
+        /*left: 43%;*/
+    }
+
+    .circleAdd {
+        /* display: flex; */
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        top: 40%;
         /*left: 43%;*/
     }
 
@@ -802,6 +932,11 @@ h6 {
         gap: 25px;
         margin-left: 0px;
     }
+
+    .createContainer {
+        /*add overlay*/
+        margin-left: 0px;
+    }
 }
 
 
@@ -809,34 +944,12 @@ h6 {
     .contactContainer {
         position: absolute;
         width: 453px;
+        /*width: 453px;*/
         /* width: 250px; */
         min-height: 100vh;
         left: 232px !important;
         top: 89px;
         background: #FFFFFF;
         box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
-    }
-}
-
-@media only screen and (min-width: 1176px) {
-
-    .boardSlogan {
-        font-weight: 400;
-        font-size: 27px;
-        line-height: 120%;
-        /* or 32px */
-        color: #2A3647;
-        border-left: 3px solid #29ABE2;
-        padding: 10px;
-        padding-left: 30px;
-        margin-left: 30px;
-        margin-top: 55px;
-        margin-bottom: 47px;
-        margin-right: 40px;
-    }
-
-    .boardDescription {
-        display: flex;
-        flex-direction: row;
     }
 }
